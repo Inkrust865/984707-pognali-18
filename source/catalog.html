@@ -6,21 +6,21 @@
   </head>
   <body>
     <header class="page-header page-header--scroll">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img src="page-header__logo-image" src="img/logotype-mobile.svg" width="100" height="19" alt="Погнали">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav-list site-list">
+          <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="#">О сервисе</a>
             </li>
-            <li>
+            <li class="site-list__item">
               <a href="form.html">Направления</a>
             </li>
-            <li>
-              <a href="catalog.html">Попутчики</a>
+            <li class="site-list__item">
+              <a>Попутчики</a>
             </li>
           </ul>
           <ul class="main-nav__list user-list">
@@ -33,18 +33,18 @@
               <a href="tel:88005558628">8 800 555-86-28</a>
             </li>
             <li class="contacts-list__item">
-              <a href="#">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="main-nav__list social-list">
             <li class="social-list__item">
-              <a href="#">Facebook</a>
+              <a class="social-list__icon-fb" href="#">Facebook</a>
             </li>
             <li class="social-list__item">
-              <a href="#">Vkontakte</a>
+              <a class="social-list__icon-vk" href="#">Vkontakte</a>
             </li>
             <li class="social-list__item">
-              <a href="#">Instagram</a>
+              <a class="social-list__icon-ins" href="#">Instagram</a>
             </li>
           </ul>
         </div>
@@ -61,7 +61,7 @@
 
       <section class="form-travelmates">
         <h2 class="visually-hidden">Форма выбора попутчика</h2>
-        <span class="form-travelmates__frase">Подберите идеального попутчика</span>
+        <span class="form-travelmates__phrase">Подберите идеального попутчика</span>
         <form action="">
 
         </form>
@@ -72,9 +72,9 @@
         <ul class="catalog__list">
           <li class="catalog__item">
             <div class="catalog__item-header">
-              <a href="#"><img class="catalog__image catalog__image--like" src="img/catalog-items/1.jpg" width="70" height="70" alt="Изображение Кати Фирсовой"></a>
+              <a href="#"><img class="catalog__image catalog__image--like" src="img/catalog-items/1.jpg" width="70" height="70" alt="Изображение Тани Фирсовой"></a>
               <div class="catalog__title-wrapper">
-                <h3 class="catalog__name catalog__name--offline"><a href="#">Катя Фирсова</a></h3>
+                <h3 class="catalog__name catalog__name--offline"><a href="#">Таня Фирсова</a></h3>
                 <span class="catalog__distance">1,5 м</span>
               </div>
             </div>
@@ -99,10 +99,10 @@
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
                 <ul class="catalog__transport">
-                  <li class="catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li><span class="visually-hidden">Автобус</span></li>
-                  <li><span class="visually-hidden">Велосипед</span></li>
-                  <li><span class="visually-hidden">Пешком</span></li>
+                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport--bus"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport--bike"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport--man"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">
@@ -139,10 +139,10 @@
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
                 <ul class="catalog__transport">
-                  <li class="catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li class="catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
-                  <li><span class="visually-hidden">Велосипед</span></li>
-                  <li class="catalog__transport--current"><span class="visually-hidden">Пешком</span></li>
+                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport--bus catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport--bike"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport--man catalog__transport--current"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">
@@ -182,10 +182,10 @@
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
                 <ul class="catalog__transport">
-                  <li class="catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li><span class="visually-hidden">Автобус</span></li>
-                  <li class="catalog__transport--current"><span class="visually-hidden">Велосипед</span></li>
-                  <li><span class="visually-hidden">Пешком</span></li>
+                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport--bus"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport--bike catalog__transport--current"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport--man"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">
@@ -222,10 +222,10 @@
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
                 <ul class="catalog__transport">
-                  <li class="catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li class="catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
-                  <li><span class="visually-hidden">Велосипед</span></li>
-                  <li><span class="visually-hidden">Пешком</span></li>
+                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport--bus catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport--bike"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport--man"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">
@@ -249,18 +249,18 @@
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo">
+      <a class="page-footer__logo" href="index.html">
         <img src="page-footer__logo-image" src="img/logotype-mobile.svg" width="100" height="19" alt="Погнали">
       </a>
       <ul class="page-footer__list social-list">
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Facebook</a>
+          <a class="social-list__icon-fb" href="#"><span class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Vkontakte</a>
+          <a class="social-list__icon-vk" href="#"><span class="visually-hidden">Vkontakte</span></a>
         </li>
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Instagram</a>
+          <a class="social-list__icon-ins" href="#"><span class="visually-hidden">Instagram</span></a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">

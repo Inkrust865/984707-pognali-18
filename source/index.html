@@ -10,16 +10,16 @@
         <img src="page-header__logo-image" src="img/logotype-mobile.svg" width="100" height="19" alt="Погнали">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav-list site-list">
+          <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="#">О сервисе</a>
             </li>
-            <li>
+            <li class="site-list__item">
               <a href="form.html">Направления</a>
             </li>
-            <li>
+            <li class="site-list__item">
               <a href="catalog.html">Попутчики</a>
             </li>
           </ul>
@@ -33,18 +33,18 @@
               <a href="tel:88005558628">8 800 555-86-28</a>
             </li>
             <li class="contacts-list__item">
-              <a href="#">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="main-nav__list social-list">
             <li class="social-list__item">
-              <a href="#">Facebook</a>
+              <a class="social-list__icon-fb" href="#">Facebook</a>
             </li>
             <li class="social-list__item">
-              <a href="#">Vkontakte</a>
+              <a class="social-list__icon-vk" href="#">Vkontakte</a>
             </li>
             <li class="social-list__item">
-              <a href="#">Instagram</a>
+              <a class="social-list__icon-ins" href="#">Instagram</a>
             </li>
           </ul>
         </div>
@@ -82,41 +82,20 @@
             <cite>Мурат Эльтазин главный редактор газеты «гаджетлайф»</cite>
           </p>
         </header>
-
-        <table class="intro__steps">
-          <tr>
-            <td class="intro__step-value">
-              Выберите направление
-            </td>
-            <td class="intro__step-number">
-              1
-            </td>
-          </tr>
-          <tr>
-            <td class="intro__step-value">
-              Изучите идеи путешественников
-            </td>
-            <td class="intro__step-number">
-              2
-            </td>
-          </tr>
-          <tr>
-            <td class="intro__step-value">
-              Находите тех, кто похож на вас
-            </td>
-            <td class="intro__step-number">
-              3
-            </td>
-          </tr>
-          <tr>
-            <td class="intro__step-value">
-              Путешествуйте вместе!
-            </td>
-            <td class="intro__step-number">
-              4
-            </td>
-          </tr>
-        </table>
+        <ul class="intro__steps">
+          <li class="intro__step-value intro__step-value--first">
+            Выберите направление
+          </li>
+          <li class="intro__step-value intro__step-value--second">
+            Изучите идеи путешественников
+          </li>
+          <li class="intro__step-value intro__step-value--third">
+            Находите тех, кто похож на вас
+          </li>
+          <li class="intro__step-value intro__step-value--fourth">
+            Путешествуйте вместе!
+          </li>
+        </ul>
       </section>
 
       <section class="about">
@@ -191,10 +170,10 @@
                 #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
               </p>
               <ul class="travelmates__transports">
-                <li class="travelmates__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                <li><span class="visually-hidden">Автобус</span></li>
-                <li><span class="visually-hidden">Велосипед</span></li>
-                <li><span class="visually-hidden">Пешком</span></li>
+                <li class="travelmates__transport--plane travelmates__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                <li class="travelmates__transport--bus"><span class="visually-hidden">Автобус</span></li>
+                <li class="travelmates__transport--bike"><span class="visually-hidden">Велосипед</span></li>
+                <li class="travelmates__transport--man"><span class="visually-hidden">Пешком</span></li>
               </ul>
               <p class="travelmates__level">
                 <span class="travelmates__level-value">99</span>level
@@ -217,10 +196,10 @@
                 #бургер #бар #футбол #концерт #крафт
               </p>
               <ul class="travelmates__transport">
-                <li class="travelmates__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                <li class="travelmates__transport--current"><span class="visually-hidden">Автобус</span></li>
-                <li><span class="visually-hidden">Велосипед</span></li>
-                <li class="travelmates__transport--current"><span class="visually-hidden">Пешком</span></li>
+                <li class="travelmates__transport--plane travelmates__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                <li class="travelmates__transport--bus travelmates__transport--current"><span class="visually-hidden">Автобус</span></li>
+                <li class="travelmates__transport--bike"><span class="visually-hidden">Велосипед</span></li>
+                <li class="travelmates__transport--man travelmates__transport--current"><span class="visually-hidden">Пешком</span></li>
               </ul>
               <p class="travelmates__level">
                 <span class="travelmates__level-value">80</span>level
@@ -233,36 +212,21 @@
 
       <section class="tariffs">
         <h2 class="visually-hidden">Тарифы</h2>
-        <b class="tariffs__frase">Добавьте свой профиль</b>
-        <table class="tariffs__list">
-          <tr>
-            <td class="tariffs__value">
-              Базовое размещение
-              <span class="tariffs__price">Бесплатно</span>
-            </td>
-            <td class="tariffs_number">
-              1
-            </td>
-          </tr>
-          <tr>
-            <td class="tariffs__value">
-              Вывод на первых позициях
-              <span class="tariffs__price">99 руб./мес</span>
-            </td>
-            <td class="tariffs_number">
-              2
-            </td>
-          </tr>
-          <tr>
-            <td class="tariffs__value">
-              Кастомный цвет карточки
-              <span class="tariffs__price">59 руб./мес</span>
-            </td>
-            <td class="tariffs__number">
-              3
-            </td>
-          </tr>
-        </table>
+        <b class="tariffs__phrase">Добавьте свой профиль</b>
+        <ul class="tariffs__list">
+          <li class="tariffs__value tariffs__value--first">
+            Базовое размещение
+            <span class="tariffs__price">Бесплатно</span>
+          </li>
+          <li class="tariffs__value tariffs__value--second">
+            Вывод на первых позициях
+            <span class="tariffs__price">99 руб./мес</span>
+          </li>
+          <li class="tariffs__value tariffs__value--third">
+            Кастомный цвет карточки
+            <span class="tariffs__price">59 руб./мес</span>
+          </li>
+        </ul>
         <a href="#" class="tariffs__button">Показать тарифы для бизнеса</a>
 
         <div class="modal">
@@ -301,13 +265,13 @@
       </a>
       <ul class="page-footer__list social-list">
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Facebook</a>
+          <a class="social-list__icon-fb" href="#"><span class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Vkontakte</a>
+          <a class="social-list__icon-vk" href="#"><span class="visually-hidden">Vkontakte</span></a>
         </li>
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Instagram</a>
+          <a class="social-list__icon-ins" href="#"><span class="visually-hidden">Instagram</span></a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">

@@ -6,20 +6,20 @@
   </head>
   <body>
     <header class="page-header page-header--scroll">
-      <a class="page-header__logo">
+      <a class="page-header__logo" href="index.html">
         <img src="page-header__logo-image" src="img/logotype-mobile.svg" width="100" height="19" alt="Погнали">
       </a>
       <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+        <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
         <div class="main-nav__wrapper">
-          <ul class="main-nav-list site-list">
+          <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a href="#">О сервисе</a>
             </li>
-            <li>
-              <a href="form.html">Направления</a>
+            <li class="site-list__item">
+              <a>Направления</a>
             </li>
-            <li>
+            <li class="site-list__item">
               <a href="catalog.html">Попутчики</a>
             </li>
           </ul>
@@ -33,18 +33,18 @@
               <a href="tel:88005558628">8 800 555-86-28</a>
             </li>
             <li class="contacts-list__item">
-              <a href="#">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="main-nav__list social-list">
             <li class="social-list__item">
-              <a href="#">Facebook</a>
+              <a class="social-list__icon-fb" href="#">Facebook</a>
             </li>
             <li class="social-list__item">
-              <a href="#">Vkontakte</a>
+              <a class="social-list__icon-vk" href="#">Vkontakte</a>
             </li>
             <li class="social-list__item">
-              <a href="#">Instagram</a>
+              <a class="social-list__icon-ins" href="#">Instagram</a>
             </li>
           </ul>
         </div>
@@ -57,18 +57,18 @@
     </main>
 
     <footer class="page-footer">
-      <a class="page-footer__logo">
+      <a class="page-footer__logo" href="index.html">
         <img src="page-footer__logo-image" src="img/logotype-mobile.svg" width="100" height="19" alt="Погнали">
       </a>
       <ul class="page-footer__list social-list">
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Facebook</a>
+          <a class="social-list__icon-fb" href="#"><span class="visually-hidden">Facebook</span></a>
         </li>
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Vkontakte</a>
+          <a class="social-list__icon-vk" href="#"><span class="visually-hidden">Vkontakte</span></a>
         </li>
         <li class="social-list__item social-list__item--yellow">
-          <a href="#">Instagram</a>
+          <a class="social-list__icon-ins" href="#"><span class="visually-hidden">Instagram</span></a>
         </li>
       </ul>
       <div class="page-footer__copyright copyright">
