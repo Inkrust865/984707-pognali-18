@@ -56,14 +56,123 @@
 
       <section class="filter">
         <h2 class="filter__title">Фильтрация по странам</h2>
-        <button class="filter__button">Открыть фильтры</button>
+        <button class="filter__button" aria-label="Открыть фильтры"></button>
+        <div class="filter__modal">
+          <ul class="filter__list-parts-world">
+            <li class="filter__part-world filter__part-world--current">Европа</li>
+            <li class="filter__part-world">Азия</li>
+            <li class="filter__part-world">Америка</li>
+            <li class="filter__part-world">Острова</li>
+          </ul>
+          <table class="filter__alphabet">
+            <tr>
+              <td class="filter__letter filter__letter--current">a</td>
+              <td class="filter__letter">б</td>
+              <td class="filter__letter">в</td>
+              <td class="filter__letter">г</td>
+              <td class="filter__letter">д</td>
+            </tr>
+            <tr>
+              <td class="filter__letter">е</td>
+              <td class="filter__letter">з</td>
+              <td class="filter__letter">и</td>
+              <td class="filter__letter">к</td>
+              <td class="filter__letter">л</td>
+            </tr>
+            <tr>
+              <td class="filter__letter">м</td>
+              <td class="filter__letter">н</td>
+              <td class="filter__letter">о</td>
+              <td class="filter__letter">п</td>
+              <td class="filter__letter">р</td>
+            </tr>
+            <tr>
+              <td class="filter__letter">с</td>
+              <td class="filter__letter">т</td>
+              <td class="filter__letter">у</td>
+              <td class="filter__letter">ф</td>
+              <td class="filter__letter">х</td>
+            </tr>
+            <tr>
+              <td class="filter__letter">ч</td>
+              <td class="filter__letter">ш</td>
+              <td class="filter__letter">э</td>
+              <td class="filter__letter">ю</td>
+              <td class="filter__letter">я</td>
+            </tr>
+          </table>
+          <ul class="filter__countries">
+            <li class="filter__country">Афганистан</li>
+            <li class="filter__country">Албания</li>
+            <li class="filter__country">Алжир</li>
+            <li class="filter__country">Андорра</li>
+            <li class="filter__country">Аргентина</li>
+            <li class="filter__country">Армения</li>
+            <li class="filter__country">Австралия</li>
+            <li class="filter__country">Австрия</li>
+            <li class="filter__country">Азербайджан</li>
+          </ul>
+          <button class="filter__modal-close" type="button">Свернуть</button>
+        </div>
       </section>
 
-      <section class="form-travelmates">
+      <section class="select-travelmates">
         <h2 class="visually-hidden">Форма выбора попутчика</h2>
-        <span class="form-travelmates__phrase">Подберите идеального попутчика</span>
-        <form action="">
-
+        <span class="select-travelmates__phrase">Подберите идеального попутчика</span>
+        <form class="select-travelmates__form form-travelmates"  action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="form-travelmates__parameter parameter">
+            <legend class="form-travelmates__legend parameter__legend">Хобби</legend>
+          </fieldset>
+          <fieldset class="form-travelmates__parameter parameter">
+            <legend class="form-travelmates__legend parameter__legend">Музыка</legend>
+            <ul class="parameter__list">
+              <li class="parameter__item parameter__item--checkbox">
+                <label class="" for="checkbox1">Тяжелый рок</label>
+                <input class="visually-hidden input-checkbox" name="music" value="hard-rock" type="checkbox" id="checkbox1" checked>
+              </li>
+              <li class="parameter__item parameter__item--checkbox">
+                <label class="" for="checkbox2">Русский рэп</label>
+                <input class="visually-hidden input-checkbox" name="music" value="russian-rap" type="checkbox" id="checkbox2">
+              </li>
+              <li class="parameter__item parameter__item--checkbox">
+                <label class="" for="checkbox3">Евроденс</label>
+                <input class="visually-hidden input-checkbox" name="music" value="eurodance" type="checkbox" id="checkbox3">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form-travelmates__parameter parameter">
+            <legend class="form-travelmates__legend parameter__legend">Еда</legend>
+          </fieldset>
+          <fieldset class="form-travelmates__parameter parameter">
+            <legend class="form-travelmates__legend parameter__legend">Транспорт</legend>
+            <ul class="form-travelmates__transport transport-list">
+              <li class="form-travelmates__transport transport-item transport-item--plane form-travelmates__transport--current">
+                <label for="transport-plane"><span class="visually-hidden">Самолёт</span></label>
+                <input class="visually-hidden" name="transport" value="plane" id="transport-plane" type="checkbox" checked>
+              </li>
+              <li class="form-travelmates__transport transport-item transport-item--bus form-travelmates__transport--current">
+                <label for="transport-bus"><span class="visually-hidden">Автобус</span></label>
+                <input class="visually-hidden" name="transport" value="bus" id="transport-bus" type="checkbox" checked>
+              </li>
+              <li class="form-travelmates__transport transport-item transport-item--bike">
+                <label for="transport-bike"><span class="visually-hidden">Велосипед</span></label>
+                <input class="visually-hidden" name="transport" value="bike" id="transport-bike" type="checkbox">
+              </li>
+              <li class="form-travelmates__transport transport-item transport-item--man form-travelmates__transport--current">
+                <label for="transport-man"><span class="visually-hidden">Пешком</span></label>
+                <input class="visually-hidden" name="transport" value="man" id="transport-man" type="checkbox" checked>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="form-travelmates__parameter parameter">
+            <legend class="form-travelmates__legend parameter__legend">Левел</legend>
+            <div class="input-range-wrapper">
+              <input class="input-range--min" type="number" placeholder="30" aria-label="Минимальное значение">
+              <input class="input-range--max" type="number" placeholder="100" aria-label="Максимальное значение">
+            </div>
+            <input type="range" min="0" max="100" aria-label="Выбрать уровень попутчика">
+          </fieldset>
+          <button class="form-travelmates__button" type="submit">Показать</button>
         </form>
       </section>
 
@@ -83,14 +192,14 @@
             </p>
             <div class="catalog__flags-wrapper">
               <span class="catalog__flags-label">хочет посетить:</span>
-              <ul class="catalog__flags">
-                <li class="catalog__flag catalog__flag--sri-lanka">
+              <ul class="catalog__flags flags">
+                <li class="catalog__flag flag flag--sri-lanka">
                   <span>Шри-Ланка</span>
                 </li>
-                <li class="catalog__flag catalog__flag--thailand">
+                <li class="catalog__flag flag flag--thailand">
                   <span>Таиланд</span>
                 </li>
-                <li class="catalog__flag catalog__flag--seychelles">
+                <li class="catalog__flag flag flag--seychelles">
                   <span>Сейшелы</span>
                 </li>
               </ul>
@@ -98,11 +207,11 @@
             <div class="catalog__properties-wrapper">
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
-                <ul class="catalog__transport">
-                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li class="catalog__transport--bus"><span class="visually-hidden">Автобус</span></li>
-                  <li class="catalog__transport--bike"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="catalog__transport--man"><span class="visually-hidden">Пешком</span></li>
+                <ul class="catalog__transport transport-list">
+                  <li class="catalog__transport transport-item transport-item--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport transport-item transport-item--bus"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport transport-item transport-item--bike"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport transport-item transport-item--man"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">
@@ -126,11 +235,11 @@
             </p>
             <div class="catalog__flags-wrapper">
               <span class="catalog__flags-label">хочет посетить:</span>
-              <ul class="catalog__flags">
-                <li class="catalog__flag catalog__flag--belgium">
+              <ul class="catalog__flags flags">
+                <li class="catalog__flag flag flag--belgium">
                   <span>Бельгия</span>
                 </li>
-                <li class="catalog__flag catalog__flag--czech">
+                <li class="catalog__flag flag flag--czech">
                   <span>Чехия</span>
                 </li>
               </ul>
@@ -138,11 +247,11 @@
             <div class="catalog__properties-wrapper">
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
-                <ul class="catalog__transport">
-                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li class="catalog__transport--bus catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
-                  <li class="catalog__transport--bike"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="catalog__transport--man catalog__transport--current"><span class="visually-hidden">Пешком</span></li>
+                <ul class="catalog__transport transport-list">
+                  <li class="catalog__transport transport-item transport-item--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport transport-item transport-item--bus catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport transport-item transport-item--bike"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport transport-item transport-item--man catalog__transport--current"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">
@@ -166,14 +275,14 @@
             </p>
             <div class="catalog__flags-wrapper">
               <span class="catalog__flags-label">хочет посетить:</span>
-              <ul class="catalog__flags">
-                <li class="catalog__flag catalog__flag--usa">
+              <ul class="catalog__flags flags">
+                <li class="catalog__flag flag flag--usa">
                   <span>США</span>
                 </li>
-                <li class="catalog__flag catalog__flag--australia">
+                <li class="catalog__flag flag flag--australia">
                   <span>Австралия</span>
                 </li>
-                <li class="catalog__flag catalog__flag--dominican">
+                <li class="catalog__flag flag flag--dominican">
                   <span>Доминикана</span>
                 </li>
               </ul>
@@ -181,11 +290,11 @@
             <div class="catalog__properties-wrapper">
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
-                <ul class="catalog__transport">
-                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li class="catalog__transport--bus"><span class="visually-hidden">Автобус</span></li>
-                  <li class="catalog__transport--bike catalog__transport--current"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="catalog__transport--man"><span class="visually-hidden">Пешком</span></li>
+                <ul class="catalog__transport transport-list">
+                  <li class="catalog__transport transport-item transport-item--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport transport-item transport-item--bus"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport transport-item transport-item--bike catalog__transport--current"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport transport-item transport-item--man"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">
@@ -209,11 +318,11 @@
             </p>
             <div class="catalog__flags-wrapper">
               <span class="catalog__flags-label">хочет посетить:</span>
-              <ul class="catalog__flags">
-                <li class="catalog__flag catalog__flag--britain">
+              <ul class="catalog__flags flags">
+                <li class="catalog__flag flag flag--britain">
                   <span>Великобритания</span>
                 </li>
-                <li class="catalog__flag catalog__flag--germany">
+                <li class="catalog__flag flag flag--germany">
                   <span>Германия</span>
                 </li>
               </ul>
@@ -221,11 +330,11 @@
             <div class="catalog__properties-wrapper">
               <div class="catalog__transport-wrapper">
                 <span class="catalog__transport-label">транпорт:</span>
-                <ul class="catalog__transport">
-                  <li class="catalog__transport--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li class="catalog__transport--bus catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
-                  <li class="catalog__transport--bike"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="catalog__transport--man"><span class="visually-hidden">Пешком</span></li>
+                <ul class="catalog__transport transport-list">
+                  <li class="catalog__transport transport-item transport-item--plane catalog__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                  <li class="catalog__transport transport-item transport-item--bus catalog__transport--current"><span class="visually-hidden">Автобус</span></li>
+                  <li class="catalog__transport transport-item transport-item--bike"><span class="visually-hidden">Велосипед</span></li>
+                  <li class="catalog__transport transport-item transport-item--man"><span class="visually-hidden">Пешком</span></li>
                 </ul>
               </div>
               <div class="catalog__level">

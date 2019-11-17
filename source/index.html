@@ -155,28 +155,28 @@
             <img class="travelmates__item-image" src="img/travelmates-items/1.jpg" width="270" height="270" alt="Изображение Тани Фирсовой">
             <div class="travelmates__item-description">
               <h3 class="travelmates__name travelmates__name--offline">Таня Фирсова</h3>
-              <ul class="travelmates__flags">
-                <li class="travelmates__flag travelmates__flag--sri-lanka">
+              <ul class="travelmates__flags flags">
+                <li class="travelmates__flag flag flag--sri-lanka">
                   <span class="visually-hidden">Шри-Ланка</span>
                 </li>
-                <li class="travelmates__flag travelmates__flag--thailand">
+                <li class="travelmates__flag flag flag--thailand">
                   <span class="visually-hidden">Таиланд</span>
                 </li>
-                <li class="travelmates__flag travelmates__flag--seychelles">
+                <li class="travelmates__flag flag flag--seychelles">
                   <span class="visually-hidden">Сейшелы</span>
                 </li>
               </ul>
               <p class="travelmates__hashtags">
                 #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
               </p>
-              <ul class="travelmates__transports">
-                <li class="travelmates__transport--plane travelmates__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                <li class="travelmates__transport--bus"><span class="visually-hidden">Автобус</span></li>
-                <li class="travelmates__transport--bike"><span class="visually-hidden">Велосипед</span></li>
-                <li class="travelmates__transport--man"><span class="visually-hidden">Пешком</span></li>
+              <ul class="travelmates__transports transport-list">
+                <li class="travelmates__transport travelmates__transport--current transport-item transport-item--plane"><span class="visually-hidden">Самолёт</span></li>
+                <li class="travelmates__transport transport-item transport-item--bus"><span class="visually-hidden">Автобус</span></li>
+                <li class="travelmates__transport transport-item transport-item--bike"><span class="visually-hidden">Велосипед</span></li>
+                <li class="travelmates__transport transport-item transport-item--man"><span class="visually-hidden">Пешком</span></li>
               </ul>
-              <p class="travelmates__level">
-                <span class="travelmates__level-value">99</span>level
+              <p class="travelmates__level level">
+                <span class="travelmates__level-value level-value">99</span>level
               </p>
             </div>
           </li>
@@ -184,25 +184,25 @@
             <img class="travelmates__item-image" src="img/travelmates-items/2.jpg" width="270" height="270" alt="Изображение Пети Демина">
             <div class="travelmates__item-description">
               <h3 class="travelmates__name">Петя Демин</h3>
-              <ul class="travelmates__flags">
-                <li class="travelmates__flag travelmates__flag--belgium">
+              <ul class="travelmates__flags flags">
+                <li class="travelmates__flag flag flag--belgium">
                   <span class="visually-hidden">Бельгия</span>
                 </li>
-                <li class="travelmates__flag travelmates__flag--czech">
+                <li class="travelmates__flag flag flag--czech">
                   <span class="visually-hidden">Чехия</span>
                 </li>
               </ul>
               <p class="travelmates__hashtags">
                 #бургер #бар #футбол #концерт #крафт
               </p>
-              <ul class="travelmates__transport">
-                <li class="travelmates__transport--plane travelmates__transport--current"><span class="visually-hidden">Самолёт</span></li>
-                <li class="travelmates__transport--bus travelmates__transport--current"><span class="visually-hidden">Автобус</span></li>
-                <li class="travelmates__transport--bike"><span class="visually-hidden">Велосипед</span></li>
-                <li class="travelmates__transport--man travelmates__transport--current"><span class="visually-hidden">Пешком</span></li>
+              <ul class="travelmates__transport transport-list">
+                <li class="travelmates__transport transport-item transport-item--plane travelmates__transport--current"><span class="visually-hidden">Самолёт</span></li>
+                <li class="travelmates__transport transport-item transport-item--bus travelmates__transport--current"><span class="visually-hidden">Автобус</span></li>
+                <li class="travelmates__transport transport-item transport-item--bike"><span class="visually-hidden">Велосипед</span></li>
+                <li class="travelmates__transport transport-item transport-item--man travelmates__transport--current"><span class="visually-hidden">Пешком</span></li>
               </ul>
-              <p class="travelmates__level">
-                <span class="travelmates__level-value">80</span>level
+              <p class="travelmates__level level">
+                <span class="travelmates__level-value level-value">80</span>level
               </p>
             </div>
           </li>
@@ -255,7 +255,33 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
-
+        <span class="contacts__title">Заинтересовались?</span>
+        <p class="contacts__intro">
+          Зарегистрируйтесь, это быстро и бесплатно! Уже зарегистрированы? Тогда скорее
+          <a class="contacts__link" href="#">авторизуйтесь</a>.
+        </p>
+        <form  action="https://echo.htmlacademy.ru" method="post">
+          <input class="contacts__input" type="email" placeholder="E-mail" aria-label="Введите свой e-mail">
+          <button class="contacts__button" type="submit" aria-label="Регистрация"></button>
+        </form>
+        <p class="contacts__intro">
+          Остались вопросы? Мы с радостью на них ответим!
+        </p>
+        <ul class="contacts__list-bottom contacts-list">
+          <li class="contacts-list__item contacts-list__item--bottom">
+            <a href="tel:88005558628">8 800 555-86-28</a>
+          </li>
+          <li class="contacts-list__item contacts-list__item--bottom">
+            <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+        <div class="contacts__route-wrapper">
+          <address class="contacts__address">
+            ул. Большая Конюшенная, 19/8
+          </address>
+          <a class="contacts__route-button" href="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387192,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474">Проложить маршрут</a>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002735!2d30.320858715590237!3d59.938719169054785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1573673300030!5m2!1sru!2sru" width="100%" height="320" style="border:0;" allowfullscreen=""></iframe>
       </section>
     </main>
 
