@@ -58,7 +58,7 @@ body {
   margin: 0;
   padding: 0;
 
-  font-family: "BloggerSans", Arial, sans-serif;
+  font-family: "BloggerSans", "Arial", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -91,9 +91,6 @@ input[type="checkbox"].visually-hidden {
 
   white-space: nowrap;
 
-  -webkit-clip-path: inset(100%);
-
-          clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
@@ -107,7 +104,7 @@ input[type="checkbox"].visually-hidden {
   background-color: #ffd74b;
   border-radius: 35px;
 
-  font-family: "BloggerSans", Arial, sans-serif;
+  font-family: "BloggerSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
@@ -124,7 +121,7 @@ input[type="checkbox"].visually-hidden {
 .page__title {
   padding-bottom: 5px;
 
-  font-family: "BloggerSans", Arial, sans-serif;
+  font-family: "BloggerSans", "Arial", sans-serif;
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
@@ -142,4 +139,3 @@ input[type="checkbox"].visually-hidden {
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/catalog.scss";
-
