@@ -1,0 +1,48 @@
+.main-nav__wrapper {
+  padding: 0 25px 40px;
+
+  background-color: #ffffff
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-transform: uppercase;
+}
+
+.site-list {
+  padding: 55px 0;
+
+  font-family: "BloggerSans", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.site-list__item a {
+  color: #192144;
+}
+
+.user-list {
+  margin-bottom: 68px;
+
+  text-align: center;
+}
+
+.contacts-list {
+  margin-bottom: 35px;
+
+  font-family: "BloggerSans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.contacts-list a {
+  padding-left: 60px;
+
+  color: #192144;
+}

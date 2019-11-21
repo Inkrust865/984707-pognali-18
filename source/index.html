@@ -8,7 +8,7 @@
   <body>
     <header class="page-header page-header--scroll">
       <a class="page-header__logo">
-        <img src="page-header__logo-image" src="img/logotype-mobile.svg" width="100" height="19" alt="Погнали">
+        <img src="page-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Погнали">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
@@ -26,7 +26,7 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a class="user-list__login" href="#">Авторизация</a>
+              <a class="button user-list__login" href="#">Авторизация</a>
             </li>
           </ul>
           <ul class="main-nav__list contacts-list">
@@ -39,13 +39,19 @@
           </ul>
           <ul class="main-nav__list social-list">
             <li class="social-list__item">
-              <a class="social-list__icon-fb" href="#">Facebook</a>
+              <a class="social-list__icon-fb" href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__icon-vk" href="#">Vkontakte</a>
+              <a class="social-list__icon-vk" href="#">
+                <span class="visually-hidden">Vkontakte</span>
+              </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__icon-ins" href="#">Instagram</a>
+              <a class="social-list__icon-ins" href="#">
+                <span class="visually-hidden">Instagram</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -58,7 +64,10 @@
       <section class="intro">
         <header class="intro__header">
           <h2 class="visually-hidden">Введение в "Погнали"</h2>
-          <b class="intro__slogan">В путешествие с крутыми попутчиками!</b>
+          <div class="intro__slogan-wrapper">
+            <b class="intro__slogan">В путешествие с крутыми попутчиками!</b>
+          </div>
+
           <div class="intro__links-wrapper">
             <ul class="main-nav__list contacts-list contacts-list--icons">
               <li class="contacts-list__item contacts-list__item--icon">
@@ -74,7 +83,7 @@
             </ul>
             <ul class="main-nav__list user-list">
               <li class="user-list__item">
-                <a class="user-list__login" href="#">Авторизация</a>
+                <a class="button user-list__login" href="#">Авторизация</a>
               </li>
             </ul>
           </div>

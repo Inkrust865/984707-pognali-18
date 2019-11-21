@@ -1,0 +1,41 @@
+.tariffs {
+  padding: 0 25px;
+}
+
+.tariffs__phrase {
+  display: block;
+  margin: 75px 25px 0;
+  width: 100px;
+
+  font-family: "BloggerSans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: #ff8d30;
+}
+
+.tariffs__list {
+  margin: 45px 25px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tariffs__value {
+  padding: 10px 0;
+}
+
+.tariffs__price {
+  display: block;
+}
+
+.tariffs__button {
+  display: block;
+  text-align: center;
+  margin-bottom: 40px;
+
+  font-family: "BloggerSans", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: #192144;
+}
