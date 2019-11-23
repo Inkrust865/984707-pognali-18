@@ -3,22 +3,22 @@
   min-height: 350px;
 
   background-image: url("../../img/about-mobile@1x.png");
-  background-color: #192144;
+  background-color: $blue;
   background-repeat: no-repeat;
   background-position: top center;
 
-  color: #ffffff;
+  color: $white;
 }
 
 .about__title {
   margin: 0 25px;
   padding-top: 30px;
 
-  font-family: "BloggerSans", "Arial", sans-serif;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: #ff8d30;
+  color: $orange;
 }
 
 .about__intro {

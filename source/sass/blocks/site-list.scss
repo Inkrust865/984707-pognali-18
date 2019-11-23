@@ -1,0 +1,13 @@
+.site-list {
+  padding: 55px 0;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.site-list__item a {
+  color: $blue;
+}

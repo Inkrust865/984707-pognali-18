@@ -3,7 +3,7 @@
 
   background-color: #161c36;
 
-  color: #ffffff;
+  color: $white;
 }
 
 .intro__slogan-wrapper {
@@ -22,7 +22,7 @@
   display: block;
   padding-top: 40px;
 
-  font-family: "BloggerSans", "Arial", sans-serif;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
@@ -40,7 +40,7 @@
 }
 
 .intro__quote cite {
-  font-family: "BloggerSans", "Arial", sans-serif;
+  font-family: $main-font;
   font-weight: 700;
   font-style: normal;
   font-size: 16px;
@@ -54,11 +54,11 @@
 
   list-style: none;
 
-  font-family: "BloggerSans", "Arial", sans-serif;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: #161c35;
+  color: $dark-blue;
 
   overflow: hidden;
 }
@@ -66,5 +66,5 @@
 .intro__step-value {
   padding: 20px 25px;
 
-  background-color: #ff8d30;
+  background-color: $orange;
 }

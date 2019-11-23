@@ -1,5 +1,5 @@
 .modal {
-  background-color: #ffffff;
+  background-color: $white;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -8,11 +8,11 @@
   display: block;
   padding-top: 30px;
 
-  font-family: "BloggerSans", "Arial", sans-serif;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: #ff8d30;
+  color: $orange;
   text-align: center;
 }
 
@@ -34,13 +34,13 @@
   width: 100%;
   padding: 18px 70px;
 
-  background-color: #f3f4f8;
+  background-color: $background-modal;
   border: none;
 
-  font-family: "BloggerSans", "Arial", sans-serif;
+  font-family: $main-font;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  color: #192144;
+  color: $blue;
   text-transform: uppercase;
 }

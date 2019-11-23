@@ -1,135 +1,11 @@
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 400;
-  font-style: normal;
-  src: url("../fonts/Bloggersans.woff2") format("woff2"), url("../fonts/bloggersans.woff") format("woff");
-}
-
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 700;
-  font-style: normal;
-  src: url("../fonts/Bloggersansbold.woff2") format("woff2"), url("../fonts/bloggersans-bold.woff") format("woff");
-}
-
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 700;
-  font-style: italic;
-  src: url("../fonts/Bloggersansbolditalic.woff2") format("woff2"), url("../fonts/bloggersans-bolditalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 400;
-  font-style: italic;
-  src: url("../fonts/Bloggersansitalic.woff2") format("woff2"), url("../fonts/bloggersans-italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 300;
-  font-style: normal;
-  src: url("../fonts/Bloggersanslight.woff2") format("woff2"), url("../fonts/bloggersans-light.woff") format("woff");
-}
-
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 300;
-  font-style: italic;
-  src: url("../fonts/Bloggersanslightitalic.woff2") format("woff2"), url("../fonts/bloggersans-lightitalic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 500;
-  font-style: normal;
-  src: url("../fonts/Bloggersansmedium.woff2") format("woff2"), url("../fonts/bloggersans-medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "BloggerSans";
-  font-weight: 500;
-  font-style: italic;
-  src: url("../fonts/Bloggersansmediumitalic.woff2") format("woff2"), url("../fonts/bloggersans-mediumitalic.woff") format("woff");
-}
-
-body {
-  margin: 0;
-  padding: 0;
-
-  font-family: "BloggerSans", "Arial", sans-serif;
-  font-weight: 300;
-  font-size: 16px;
-  line-height: 22px;
-  color: #444444;
-
-  background-color: #edeff6;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-
-  vertical-align: top;
-}
-
-.visually-hidden:not(:focus):not(:active),
-input[type="range"].visually-hidden,
-input[type="checkbox"].visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.button {
-  display: inline-block;
-  vertical-align: top;
-
-  padding: 10px 75px;
-
-  background-color: #ffd74b;
-  border-radius: 35px;
-
-  font-family: "BloggerSans", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 30px;
-  color: #161c35;
-  text-transform: uppercase;
-}
-
-.page__title-wrapper {
-  padding: 35px 25px 0;
-
-  background-color: #161c35;
-}
-
-.page__title {
-  padding-bottom: 5px;
-
-  font-family: "BloggerSans", "Arial", sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  color: #ffffff;
-}
-
+@import "variables/colors.scss";
+@import "variables/fonts.scss";
+@import "blocks/body.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
+@import "blocks/site-list.scss";
+@import "blocks/user-list.scss";
+@import "blocks/contacts-list.scss";
 @import "blocks/intro.scss";
 @import "blocks/about.scss";
 @import "blocks/countries.scss";
@@ -139,3 +15,4 @@ input[type="checkbox"].visually-hidden {
 @import "blocks/contacts.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/catalog.scss";
+@import "blocks/pagination.scss";
