@@ -1,0 +1,96 @@
+.filter {
+  padding: 40px 25px 20px;
+
+  background-color: $filter-background;
+}
+
+.filter__title {
+  padding: 0 25px;
+  margin: 0;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $base-color-2;
+  text-transform: uppercase;
+}
+
+.filter__modal {
+  padding: 0 25px;
+  padding-top: 35px;
+}
+
+.filter__list-parts-world {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $base-color-2;
+  text-transform: uppercase;
+}
+
+.filter__part-world {
+  padding-top: 5px;
+
+  opacity: 0.3;
+
+  &--current {
+    opacity: 1;
+  }
+}
+
+.filter__alphabet {
+  margin: 20px 0;
+
+  background-color: $base-color-1;
+  border-collapse: collapse;
+  border: 1px solid $border-table;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-4;
+  text-transform: uppercase;
+}
+
+.filter__letter {
+  padding: 11px 15px;
+  border: 1px solid $border-table;
+
+  &--current {
+    background-color: $base-color-4;
+
+    color: $base-color-1;
+  }
+}
+
+.filter__countries {
+  margin: 25px 0;
+  padding: 0;
+  list-style: none;
+
+  font-weight: 400;
+}
+
+.filter__modal-close {
+  margin-top: 10px;
+  padding: 10px 10px 10px 25px;
+  border: none;
+  border-radius: 35px;
+
+  background-color: $filter-button;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: $base-color-3;
+  text-transform: uppercase;
+  text-align: center;
+}

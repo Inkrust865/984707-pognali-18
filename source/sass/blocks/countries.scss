@@ -1,0 +1,65 @@
+.countries {
+  padding: 0 25px 30px;
+}
+
+.countries__title {
+  margin: 0 25px;
+  padding-top: 65px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $accent-color-2;
+}
+
+.countries__intro {
+  margin: 0 25px;
+  margin-top: 20px;
+}
+
+.countries__list {
+  margin: 0;
+  margin-top: 65px;
+  padding: 0;
+  list-style: none;
+}
+
+.countries__item {
+  width: 100%;
+  margin-top: 10px;
+
+  background-color: $base-color-1;
+  border-radius: 15px;
+}
+
+.countries__item-description {
+  padding: 20px;
+}
+
+.countries__name {
+  margin: 0;
+  padding-top: 25px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 21px;
+  color: $base-color-3;
+}
+
+.countries__slogan,
+.countries__visitors {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: $text-color-opacity;
+}
+
+.countries__button {
+  padding: 15px 56px 15px 23px;
+  border-radius: 15px;
+
+  text-transform: none;
+}

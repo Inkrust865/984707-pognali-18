@@ -26,26 +26,32 @@
           </ul>
           <ul class="main-nav__list user-list">
             <li class="user-list__item">
-              <a class="user-list__login" href="#">Авторизация</a>
+              <a class="button user-list__login" href="#">Авторизация</a>
             </li>
           </ul>
-          <ul class="main-nav__list contacts-list">
-            <li class="contacts-list__item">
+          <ul class="main-nav__list contacts-list contacts-list--top">
+            <li class="contacts-list__item contacts-list__item--top">
               <a href="tel:88005558628">8 800 555-86-28</a>
             </li>
-            <li class="contacts-list__item">
+            <li class="contacts-list__item contacts-list__item--top">
               <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="main-nav__list social-list">
             <li class="social-list__item">
-              <a class="social-list__icon-fb" href="#">Facebook</a>
+              <a class="social-list__icon-fb" href="#">
+                <span class="visually-hidden">Facebook</span>
+              </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__icon-vk" href="#">Vkontakte</a>
+              <a class="social-list__icon-vk" href="#">
+                <span class="visually-hidden">Vkontakte</span>
+              </a>
             </li>
             <li class="social-list__item">
-              <a class="social-list__icon-ins" href="#">Instagram</a>
+              <a class="social-list__icon-ins" href="#">
+                <span class="visually-hidden">Instagram</span>
+              </a>
             </li>
           </ul>
         </div>
@@ -53,7 +59,9 @@
     </header>
 
     <main class="page-catalog">
-      <h1 class="page-catalog__title">Попутчики</h1>
+      <div class="page__title-wrapper">
+        <h1 class="page-catalog__title page__title">Попутчики</h1>
+      </div>
 
       <section class="filter">
         <h2 class="filter__title">Фильтрация по странам</h2>
@@ -349,10 +357,14 @@
         <a class="catalog__button" href="#">Показать еще</a>
         <ul class="catalog__pagination pagination">
           <li>
-            <a class="pagination__button pagination__button--back" href="#">Показать предыдущую страницу</a>
+            <a class="pagination__button pagination__button--back" href="#">
+              <span class="visually-hidden">Показать предыдущую страницу</span>
+            </a>
           </li>
           <li>
-            <a class="pagination__button pagination__button--next" href="#">Показать следующую страницу</a>
+            <a class="pagination__button pagination__button--next" href="#">
+              <span class="visually-hidden">Показать следующую страницу</span>
+            </a>
           </li>
         </ul>
       </section>

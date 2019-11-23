@@ -1,0 +1,103 @@
+.catalog {
+  padding: 30px 25px 45px;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__item {
+  padding: 15px 20px 20px 25px;
+  margin-top: 10px;
+  border-radius: 15px;
+
+  background-color: $base-color-1;
+}
+
+.catalog__name {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.catalog__name a {
+  color: $base-color-4;
+}
+
+.catalog__distance {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: $base-color-3;
+}
+
+.catalog__flags {
+  margin: 15px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__flag {
+  margin-top: 10px;
+  padding-left: 40px;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+  color: $base-color-4;
+  text-transform: uppercase;
+}
+
+.catalog__transport {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__level-value {
+  display: block;
+  width: 24px;
+  height: 20px;
+  padding: 10px 9px 10px 7px;
+  border: 2px solid $level-border;
+  border-radius: 50%;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 18px;
+  color: $base-color-4;
+}
+
+.catalog__item-button {
+  margin-top: 20px;
+  padding: 5px 75px;
+}
+
+.catalog__button {
+  display: block;
+  padding-left: 35px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: $base-color-4;
+  text-align: center;
+}
+
+.catalog__pagination {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

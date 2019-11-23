@@ -1,3 +1,23 @@
-body {
-  background: white;
-}
+@import "variables/colors.scss";
+@import "variables/fonts.scss";
+@import "blocks/body.scss";
+@import "blocks/page.scss";
+@import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/site-list.scss";
+@import "blocks/user-list.scss";
+@import "blocks/contacts-list.scss";
+@import "blocks/intro.scss";
+@import "blocks/about.scss";
+@import "blocks/countries.scss";
+@import "blocks/travelmates.scss";
+@import "blocks/tariffs.scss";
+@import "blocks/modal.scss";
+@import "blocks/contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/catalog.scss";
+@import "blocks/pagination.scss";
+@import "blocks/filter.scss";
+@import "blocks/select-travelmates.scss";
+@import "blocks/form-travelmates.scss";

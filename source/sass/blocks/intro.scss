@@ -1,0 +1,70 @@
+.intro {
+  padding: 0 25px 40px;
+
+  background-color: $base-color-3;
+
+  color: $base-color-1;
+}
+
+.intro__slogan-wrapper {
+  min-height: 400px;
+
+  background-image:
+    url("../../img/traveller-illustration-mobile@1x.png"),
+    url("../../img/globe-back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-position:
+    bottom center,
+    top center;
+}
+
+.intro__slogan {
+  display: block;
+  padding-top: 40px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.intro__quote {
+  margin: 25px 25px 30px;
+  width: 160px;
+}
+
+.intro__quote q {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.intro__quote cite {
+  font-family: $main-font;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.intro__steps {
+  margin: 0;
+  padding: 0;
+  border-radius: 15px;
+
+  list-style: none;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $base-color-3;
+
+  overflow: hidden;
+}
+
+.intro__step-value {
+  padding: 20px 25px;
+
+  background-color: $accent-color-2;
+}

@@ -1,0 +1,104 @@
+.contacts {
+  background-color: $base-color-2;
+
+  color: $base-color-1;
+}
+
+.contacts__title {
+  display: block;
+  margin: 0 25px;
+  padding-top: 95px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $accent-color-2;
+  text-align: center;
+}
+
+.contacts__intro {
+  margin: 0 25px;
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+.contacts__link {
+  color: $accent-color-1;
+  text-decoration: underline;
+}
+
+.contacts__form {
+  padding: 0 25px;
+  margin: 30px 0;
+}
+
+.contacts__input {
+  padding: 20px 85px 20px 25px;
+  border-radius: 15px;
+  border: none;
+
+  background-color: $base-color-1;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $text-color-opacity;
+}
+
+.contacts__input::placeholder {
+  color: $text-color-opacity;
+}
+
+.contacts__button {
+  border: none;
+
+  background-color: $accent-color-1;
+}
+
+.contacts__list-bottom {
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.contacts__list-bottom a {
+  padding-left: 85px;
+
+  color: $accent-color-1;
+}
+
+.contacts__route-wrapper {
+  padding: 60px 25px 35px;
+  background-color: $accent-color-1;
+}
+
+.contacts__address {
+  padding-left: 60px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: $base-color-2;
+}
+
+.contacts__route-button {
+  display: block;
+  margin-top: 30px;
+  padding: 20px 50px 20px 20px;
+  border: 2px solid $base-color-2;
+  border-radius: 15px;
+
+  background-color: $button-background;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  color: $base-color-4;
+}
