@@ -1,5 +1,5 @@
 .modal {
-  background-color: $white;
+  background-color: $base-color-1;
   border-radius: 15px;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: $orange;
+  color: $accent-color-2;
   text-align: center;
 }
 
@@ -41,6 +41,6 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  color: $blue;
+  color: $base-color-2;
   text-transform: uppercase;
 }

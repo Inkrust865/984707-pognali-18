@@ -1,9 +1,9 @@
 .intro {
   padding: 0 25px 40px;
 
-  background-color: #161c36;
+  background-color: $base-color-3;
 
-  color: $white;
+  color: $base-color-1;
 }
 
 .intro__slogan-wrapper {
@@ -58,7 +58,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  color: $dark-blue;
+  color: $base-color-3;
 
   overflow: hidden;
 }
@@ -66,5 +66,5 @@
 .intro__step-value {
   padding: 20px 25px;
 
-  background-color: $orange;
+  background-color: $accent-color-2;
 }

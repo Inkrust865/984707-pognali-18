@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  vertical-align: top;
+
+  padding: 10px 75px;
+
+  background-color: $accent-color-1;
+  border-radius: 35px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: #161c35;
+  text-transform: uppercase;
+}

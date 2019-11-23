@@ -1,0 +1,20 @@
+.select-travelmates {
+  margin: 0 25px;
+  margin-top: 25px;
+  padding: 25px 25px 20px;
+  border-radius: 25px;
+
+  background-color: $accent-color-1;
+}
+
+.select-travelmates__phrase {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 22.5px;
+  line-height: 22.5px;
+  color: $base-color-4;
+}
+
+.select-travelmates__form {
+  margin: 20px 0;
+}

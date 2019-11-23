@@ -3,11 +3,11 @@
   min-height: 350px;
 
   background-image: url("../../img/about-mobile@1x.png");
-  background-color: $blue;
+  background-color: $base-color-2;
   background-repeat: no-repeat;
   background-position: top center;
 
-  color: $white;
+  color: $base-color-1;
 }
 
 .about__title {
@@ -18,17 +18,19 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: $orange;
+  color: $accent-color-2;
 }
 
 .about__intro {
-  margin: 20px 25px 0;
+  margin: 0 25px;
+  margin-top: 20px;
 }
 
 .about__accent {
   display: block;
 
-  margin: 20px 25px 0;
+  margin: 0 25px;
+  margin-top: 20px;
 
   font-weight: 700;
 }

@@ -1,14 +1,16 @@
 .contacts-list {
-  margin-bottom: 35px;
+  padding: 0;
+  list-style: none;
 
   font-family: $main-font;
   font-weight: 700;
   font-size: 16px;
   line-height: 22px;
+  text-transform: uppercase;
 }
 
-.contacts-list a {
+.contacts-list__item--top a {
   padding-left: 60px;
 
-  color: $blue;
+  color: $base-color-2;
 }

@@ -62,9 +62,9 @@ body {
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
-  color: $grey;
+  color: $text-color;
 
-  background-color: $light-grey;
+  background-color: $body-background;
 }
 
 a {
@@ -93,37 +93,4 @@ input[type="checkbox"].visually-hidden {
 
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-.button {
-  display: inline-block;
-  vertical-align: top;
-
-  padding: 10px 75px;
-
-  background-color: $yellow;
-  border-radius: 35px;
-
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 17px;
-  line-height: 30px;
-  color: #161c35;
-  text-transform: uppercase;
-}
-
-.page__title-wrapper {
-  padding: 35px 25px 0;
-
-  background-color: $dark-blue;
-}
-
-.page__title {
-  padding-bottom: 5px;
-
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 40px;
-  color: $white;
 }

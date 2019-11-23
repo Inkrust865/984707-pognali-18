@@ -4,18 +4,20 @@
 
 .tariffs__phrase {
   display: block;
-  margin: 75px 25px 0;
+  margin: 0 25px;
+  margin-top: 75px;
   width: 100px;
 
   font-family: $main-font;
   font-weight: 700;
   font-size: 24px;
   line-height: 24px;
-  color: $orange;
+  color: $accent-color-2;
 }
 
 .tariffs__list {
-  margin: 45px 25px 0;
+  margin: 0 25px;
+  margin-top: 45px;
   padding: 0;
   list-style: none;
 }
@@ -37,5 +39,5 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  color: $blue;
+  color: $base-color-2;
 }
