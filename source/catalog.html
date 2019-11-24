@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Погнали</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -179,9 +182,12 @@
               <input class="input-range input-range--min" type="number" placeholder="30" aria-label="Минимальное значение">
               <input class="input-range input-range--max" type="number" placeholder="100" aria-label="Максимальное значение">
             </div>
-            <input class="input-range__multirange" type="range" min="0" max="100" aria-label="Выбрать уровень попутчика">
+            <div class="input-range__multirange">
+              <span class="input-range__marker input-range__marker--min" tabindex="0"></span>
+              <span class="input-range__marker input-range__marker--max" tabindex="0"></span>
+            </div>
           </fieldset>
-          <button class="form-travelmates__button button" type="submit">Показать</button>
+          <button class="form-travelmates__button button">Показать</button>
         </form>
       </section>
 

@@ -1,5 +1,6 @@
 @import "variables/colors.scss";
 @import "variables/fonts.scss";
+@import "variables/width.scss";
 @import "blocks/body.scss";
 @import "blocks/page.scss";
 @import "blocks/button.scss";
@@ -31,4 +32,4 @@
 @import "blocks/parameter-count.scss";
 @import "blocks/checkbox.scss";
 @import "blocks/calendar.scss";
-@import "blocks/country-choise.scss";
+@import "blocks/country-choise__select.scss";
