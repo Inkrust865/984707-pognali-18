@@ -71,12 +71,13 @@
           </p>
           <img class="personal-data__image" src="img/personal-data/1.jpg" width="100" height="100" alt="Мое изображение">
         </div>
-        <button class="personal-data__button" type="button">Сменить фото</button>
+        <button class="personal-data__button button" type="button">Сменить фото</button>
         <div class="personal-data__hashtags personal-data__parameter">
           <label class="personal-data__caption" for="textarea1">Тэги</label>
-          <textarea name="hashtags" id="textarea1" cols="30" rows="10">#бургер #бар #футбол #концерт #крафт</textarea>
+          <textarea class="personal-data__textarea" name="hashtags" id="textarea1">#бургер #бар #футбол #концерт #крафт</textarea>
         </div>
         <div class="personal-data__parameter">
+          <span class="personal-data__caption">Транспорт</span>
           <ul class="transport-list personal-data__transports">
             <li class="personal-data__transport transport-item transport-item--plane personal-data__transport--current">
               <label for="transport-plane"><span class="visually-hidden">Самолёт</span></label>
@@ -99,10 +100,13 @@
       </section>
 
       <section class="plans">
-        <h2 class="plans__title">Мои планы</h2>
+        <h2 class="plans__title">Мои планы:</h2>
         <ol class="plans__list">
           <li class="plans__item">
-            <span class="plans__countries">Франция, Италия</span>
+            <p class="plans__countries">
+              <span class="plans__number">1.</span>
+              Франция, Италия
+            </p>
             <p class="plans__details">
               <span class="plans__travelmates">3 попутчика</span>
               <span class="plans__dates">26 мар — 29 мар</span>
@@ -110,7 +114,10 @@
             <a class="plans__button" href="#">Изменить</a>
           </li>
           <li class="plans__item">
-            <span class="plans__countries">Таиланд, Индонезия</span>
+            <p class="plans__countries">
+              <span class="plans__number">1.</span>
+              Таиланд, Индонезия
+            </p>
             <p class="plans__details">
               <span class="plans__travelmates">1 попутчик</span>
               <span class="plans__dates">1 июл — 15 июл</span>
@@ -122,7 +129,7 @@
 
       <form action="https://echo.htmlacademy.ru" method="post">
         <section class="add-plan">
-          <h2 class="add-plan__title">Добавить план</h2>
+          <h2 class="add-plan__title">Добавить план:</h2>
           <ul class="add-plan__navigation-list">
             <li class="add-plan__navigation-item">
               <a class="add-plan__navigation-button add-plan__navigation-button--current" href="#">
@@ -150,31 +157,31 @@
             </p>
             <p class="step__parameter-count parameter-count">
               <label for="input-travelmates-count">
-                Ищу попутчиков
+                Ищу попутчиков:
                 <span class="parameter-count__unit">чел.</span>
               </label>
               <input class="parameter-count__input" name="travelmates-count" id="input-travelmates-count" type="number" value="2">
-              <button class="parameter-count__minus" type="button" aria-label="Уменьшить"></button>
-              <button class="parameter-count__plus" type="button" aria-label="Увеличить"></button>
+              <button class="parameter-count__button parameter-count__button--minus" type="button" aria-label="Уменьшить"></button>
+              <button class="parameter-count__button parameter-count__button--plus" type="button" aria-label="Увеличить"></button>
             </p>
             <p class="step__parameter-count parameter-count">
               <label for="input-days-count">
-                Длительность
+                Длительность:
                 <span class="parameter-count__unit">дн.</span>
               </label>
               <input class="parameter-count__input" name="days-count" id="input-days-count" type="number" value="2">
-              <button class="parameter-count__minus" type="button" aria-label="Уменьшить"></button>
-              <button class="parameter-count__plus" type="button" aria-label="Увеличить"></button>
+              <button class="parameter-count__button parameter-count__button--minus" type="button" aria-label="Уменьшить"></button>
+              <button class="parameter-count__button parameter-count__button--plus" type="button" aria-label="Увеличить"></button>
             </p>
             <p class="step__checkbox checkbox">
               <label for="checkbox-children">Можно с детьми</label>
-              <input class="checkbox__input" name="with-children" id="checkbox-children" type="checkbox" checked>
+              <input class="visually-hidden" name="with-children" id="checkbox-children" type="checkbox" checked>
             </p>
             <div class="calendar">
               <p class="calendar__title">
                 <span class="calendar__month-name">Март 2019</span>
-                <button class="calendar__button-prev" type="button" aria-label="Предыдущий месяц"></button>
-                <button class="calendar__button-next" type="button" aria-label="Следующий месяц"></button>
+                <button class="calendar__button calendar__button--prev" type="button" aria-label="Предыдущий месяц"></button>
+                <button class="calendar__button calendar__button--next" type="button" aria-label="Следующий месяц"></button>
               </p>
               <ul class="calendar__week">
                 <li class="calendar__day-week">п</li>
@@ -187,105 +194,105 @@
               </ul>
               <table class="calendar__month">
                 <tr>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     23
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     24
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     25
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     26
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     27
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     28
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     1
                   </td>
                 </tr>
                 <tr>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     2
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     3
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     4
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     5
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     6
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     7
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     8
                   </td>
                 </tr>
                 <tr>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     9
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     10
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     11
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     12
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     13
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     14
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     15
                   </td>
                 </tr>
                 <tr>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     16
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     17
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     18
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     19
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     20
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     21
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     22
                   </td>
                 </tr>
                 <tr>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     23
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-number">
                     24
                   </td>
-                  <td class="calendar__day-number calendar__day-number--last">
+                  <td class="calendar__day-numbert">
                     25
                   </td>
                   <td class="calendar__day-number calendar__day-number--current calendar__day-number--today">
@@ -329,7 +336,7 @@
                 </tr>
               </table>
             </div>
-            <a class="button--next-step" href="#">Следующий шаг</a>
+            <a class="button step__button" href="#">Следующий шаг</a>
           </div>
           <div class="step">
             <h3 class="step__title">
@@ -357,10 +364,10 @@
               </select>
             </div>
             <div class="step__country-choise country-choise country-choise--add">
-              <button class="country-choise__button" type="button">Добавить страну</button>
+              <button class="country-choise__select country-choise__select--button" type="button">Добавить страну</button>
             </div>
-            <a class="button--next-step" href="#">Следующий шаг</a>
-            <a class="button--prev-step" href="#">На шаг назад</a>
+            <a class="button step__button" href="#">Следующий шаг</a>
+            <a class="button step__button step__button--prev" href="#">На шаг назад</a>
           </div>
           <div class="step">
             <h3 class="step__title">
@@ -375,17 +382,17 @@
                 <span class="step__country-name">Босния и Герцеговина</span>
                 <span class="step__country-flag flag flag--bosnia"></span>
               </label>
-              <textarea name="action-plan-bosnia" id="action-plan-1" cols="30" rows="10" placeholder="План действий"></textarea>
+              <textarea class="step__country-textarea" name="action-plan-bosnia" id="action-plan-1" cols="30" rows="10" placeholder="План действий"></textarea>
             </div>
             <div class="step__country-item">
               <label class="step__country-title" for="action-plan-2">
                 <span class="step__country-name">Чехия</span>
                 <span class="step__country-flag flag flag--czech"></span>
               </label>
-              <textarea name="action-plan-czech" id="action-plan-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+              <textarea class="step__country-textarea" name="action-plan-czech" id="action-plan-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
             </div>
-            <button class="step__button-submit" type="submit">Отправить</button>
-            <a class="button--prev-step" href="#">На шаг назад</a>
+            <button class="button step__button--submit" type="submit">Отправить</button>
+            <a class="button step__button step__button--prev" href="#">На шаг назад</a>
           </div>
         </section>
       </form>

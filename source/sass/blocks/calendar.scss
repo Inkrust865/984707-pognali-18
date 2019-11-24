@@ -1,0 +1,68 @@
+.calendar {
+  margin-top: 20px;
+}
+
+.calendar__title {
+  margin: 0;
+  padding: 10px 35px;
+  border-top: 1px solid $border-element;
+  border-bottom: 1px solid $border-element;
+
+  text-align: center;
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: $base-color-4;
+}
+
+.calendar__button {
+  border: none;
+  background-color: $element-background;
+}
+
+.calendar__week {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color;
+  text-transform: uppercase;
+}
+
+.calendar__month {
+  margin-top: 10px;
+
+  background-color: $element-background;
+  border-collapse: collapse;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color-opacity;
+}
+
+.calendar__day-number {
+  border: 1px solid $border-element;
+  padding: 6px 7.5px;
+
+  text-align: center;
+
+  &--current {
+    background-color: $base-color-4;
+
+    color: $base-color-1;
+  }
+
+  &--future {
+    background-color: $element-background-3;
+
+    color: $text-color;
+  }
+}

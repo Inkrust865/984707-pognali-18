@@ -1,0 +1,67 @@
+.personal-data {
+  padding: 40px 25px 35px;
+}
+
+.personal-data__level {
+  width: 50px;
+  height: 56px;
+  padding: 18px 22px 19px 21px;
+  border: 2px solid $accent-color-2;
+  border-radius: 50%;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: $text-color;
+  text-align: center;
+}
+
+.personal-data__level-value {
+  display: block;
+  border-bottom: 2px solid $border-element;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 38px;
+  color: $base-color-3;
+}
+
+.personal-data__button {
+  margin-top: 20px;
+
+  background-color: $element-background-2;
+}
+
+.personal-data__parameter {
+  margin-top: 20px;
+  border: 1px solid $border-element;
+  border-radius: 10px;
+}
+
+.personal-data__caption {
+  display: block;
+  margin-top: -10px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  color: $base-color-4;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.personal-data__textarea {
+  background-color: $element-background;
+  border: none;
+  padding: 20px 25px;
+  width: 100%;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color;
+}

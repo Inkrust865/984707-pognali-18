@@ -1,0 +1,69 @@
+.plans {
+  padding: 30px 25px 50px;
+
+  background-color: $element-background-2;
+}
+
+.plans__title {
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $base-color-4;
+}
+
+.plans__list {
+  margin-top: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.plans__item {
+  padding: 20px;
+  margin-top: 10px;
+
+  background-color: $base-color-1;
+  border-radius: 10px;
+}
+
+.plans__countries {
+  margin: 0;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  color: $base-color-4;
+}
+
+.plans__number {
+  font-weight: 500;
+}
+
+.plans__details {
+  margin-top: 20px;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 14px;
+  color: $base-color-4;
+  text-transform: uppercase;
+}
+
+.plans__dates {
+  display: block;
+  margin-top: 7px;
+}
+
+.plans__button {
+  display: block;
+  margin-top: 25px;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $text-color-opacity-2;
+  text-transform: uppercase;
+}

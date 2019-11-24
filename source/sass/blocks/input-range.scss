@@ -1,0 +1,27 @@
+.input-range {
+  padding: 10px 30px;
+  margin: 0;
+  border: 1px solid $border-element;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 13.5px;
+  color: $base-color-4;
+
+  &::placeholder {
+    color: $base-color-4;
+  }
+
+  &--min {
+    border-radius: 5px 0 0 5px;
+  }
+
+  &--max {
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.input-range__multirange {
+  margin-top: 20px;
+}

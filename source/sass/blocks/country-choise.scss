@@ -1,0 +1,17 @@
+.country-choise__select {
+  padding: 10px 30px 10px 10px;
+  border: 1px solid $border-element;
+  background-color: $element-background;
+  border-radius: 5px;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-4;
+  text-transform: uppercase;
+
+  &--button {
+    background-color: $element-background-3;
+  }
+}

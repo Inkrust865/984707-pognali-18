@@ -1,0 +1,82 @@
+.step {
+  padding: 20px 25px;
+  margin-top: 10px;
+
+  background-color: $base-color-1;
+  border-radius: 10px;
+}
+
+.step__title {
+  margin: 0;
+
+  font-family: $main-font;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: $base-color-4;
+}
+
+.step__subtitle {
+  display: block;
+}
+
+.step__intro {
+  margin: 0;
+  margin-top: 15px;
+
+  font-weight: 400;
+}
+
+.step__parameter-count {
+  margin-top: 20px;
+}
+
+.step__country-choise {
+  margin-top: 20px;
+}
+
+.step__country-title {
+  display: block;
+  padding-left: 10px;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: $base-color-4;
+}
+
+.step__country-textarea {
+  margin-top: 15px;
+  padding: 10px;
+  border: 1px solid $border-element;
+  border-radius: 5px;
+
+  font-family: $main-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: $text-color;
+
+  &::placeholder {
+    opacity: 0.3;
+  }
+}
+
+.step__country-item {
+  margin-top: 20px;
+}
+
+.step__button {
+  margin-top: 20px;
+  padding: 10px 40px;
+
+  &--prev {
+    background-color: $element-background;
+  }
+
+  &--submit {
+    padding: 10px 60px;
+    margin-top: 20px;
+  }
+}
