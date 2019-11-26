@@ -1,0 +1,35 @@
+.parameter-count__label {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: $base-color-4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.parameter-count__unit {
+  opacity: 0.3;
+}
+
+.parameter-count__input {
+  display: block;
+  margin-top: 10px;
+  padding: 15px 35px;
+  border: 1px solid $border-element;
+  border-radius: 5px;
+  text-align: center;
+
+  background-color: $element-background;
+
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 13.5px;
+  color: $base-color-4;
+}
+
+.parameter-count__button {
+  border: none;
+  background-color: $element-background;
+}
