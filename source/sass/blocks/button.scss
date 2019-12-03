@@ -14,4 +14,16 @@
   line-height: 30px;
   color: $base-color-3;
   text-transform: uppercase;
+
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+
+    padding: 28px 30px;
+  }
 }

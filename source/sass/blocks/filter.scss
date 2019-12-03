@@ -22,9 +22,7 @@
 }
 
 .filter__list-parts-world {
-  margin: 0;
-  padding: 0;
-  list-style: none;
+  @include list-reset;
 
   font-family: $main-font;
   font-weight: 700;
@@ -71,9 +69,9 @@
 }
 
 .filter__countries {
+  @include list-reset;
+
   margin: 25px 0;
-  padding: 0;
-  list-style: none;
 
   font-weight: 400;
 }

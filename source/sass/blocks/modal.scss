@@ -17,9 +17,9 @@
 }
 
 .modal__list {
+  @include list-reset;
+
   margin: 30px 25px 35px;
-  padding: 0;
-  list-style: none;
 }
 
 .modal__item {

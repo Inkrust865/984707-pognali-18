@@ -1,3 +1,33 @@
 .user-list {
+  display: flex;
   position: relative;
+
+  &--intro {
+    flex-grow: 1;
+  }
+}
+
+.user-list__item {
+  flex-grow: 1;
+}
+
+.user-list__login {
+  &--intro {
+    display: block;
+    padding: 5px 30px;
+
+    text-align: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .user-list {
+    align-items: center;
+
+    order: 3;
+  }
+
+  .user-list__login {
+    padding: 10px 25px;
+  }
 }
