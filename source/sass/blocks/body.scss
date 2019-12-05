@@ -94,15 +94,3 @@ input[type="checkbox"].visually-hidden {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
-@media (min-width: $tablet-width) {
-  .tablet-hidden {
-    display: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .desktop-hidden {
-    display: none;
-  }
-}
