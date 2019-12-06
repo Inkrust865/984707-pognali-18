@@ -1,36 +1,107 @@
 .about {
-  padding: 0 25px;
-  min-height: 350px;
+  border-radius: 0 0 25px 25px;
 
-  background-image: url("../../img/about-mobile@1x.png");
   background-color: $base-color-2;
-  background-repeat: no-repeat;
-  background-position: top center;
 
   color: $base-color-1;
 }
 
-.about__title {
-  margin: 0 25px;
-  padding-top: 30px;
+.about__container {
+  background-image: url("../../img/about-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+}
 
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  color: $accent-color-2;
+.about__title {
+  padding-top: 30px;
 }
 
 .about__intro {
-  margin: 0 25px;
   margin-top: 20px;
+  width: 210px;
 }
 
 .about__accent {
   display: block;
 
-  margin: 0 25px;
   margin-top: 20px;
+  margin-bottom: 80px;
+}
 
-  font-weight: 700;
+.about__button {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .about {
+    padding: 105px 0 85px;
+    border-radius: 0 0 60px 60px;
+
+    text-align: left;
+  }
+
+  .about__container {
+    align-items: flex-start;
+
+    background-image: url("../../img/about-tablet@1x.png");
+    background-repeat: no-repeat;
+    background-position: 97% 30px;
+  }
+
+  .about__intro {
+    margin-top: 35px;
+    width: 300px;
+
+    font-size: 28px;
+    line-height: 33px;
+  }
+
+  .about__accent {
+    margin-top: 30px;
+    margin-bottom: 0;
+    width: 260px;
+  }
+
+  .about__button {
+    display: inline-block;
+    margin-top: 50px;
+    border-radius: 15px;
+
+    text-transform: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .about {
+    margin-top: -60px;
+    padding-top: 60px;
+    padding-bottom: 0;
+  }
+
+  .about__container {
+    padding: 130px 0 165px;
+    background-image: url("../../img/about-desktop@1x.png");
+    background-repeat: no-repeat;
+    background-position: 93% bottom;
+  }
+
+  .about__title {
+    margin: 0 65px;
+  }
+
+  .about__intro {
+    margin: 0 65px;
+    margin-top: 50px;
+    width: 620px;
+  }
+
+  .about__accent {
+    margin: 0 65px;
+    margin-top: 40px;
+    width: 420px;
+  }
+
+  .about__button {
+    margin: 85px 65px 0;
+  }
 }

@@ -1,6 +1,5 @@
 .transport-list {
-  margin: 0;
+  @include list-reset;
+
   margin-bottom: 20px;
-  padding: 0;
-  list-style: none;
 }

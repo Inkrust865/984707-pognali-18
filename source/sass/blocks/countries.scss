@@ -1,28 +1,26 @@
 .countries {
-  padding: 0 25px 30px;
+  position: relative;
+  padding-bottom: 30px;
+
+  border-radius: 0 0 25px 25px;
+  background-color: $element-background-3;
+
+  z-index: 6;
 }
 
 .countries__title {
-  margin: 0 25px;
   padding-top: 65px;
-
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
-  color: $accent-color-2;
 }
 
 .countries__intro {
-  margin: 0 25px;
   margin-top: 20px;
+  width: 195px;
 }
 
 .countries__list {
-  margin: 0;
+  @include list-reset;
+
   margin-top: 65px;
-  padding: 0;
-  list-style: none;
 }
 
 .countries__item {
@@ -31,15 +29,18 @@
 
   background-color: $base-color-1;
   border-radius: 15px;
+
+  overflow: hidden;
 }
 
 .countries__item-description {
-  padding: 20px;
+  padding: 25px 20px;
+
+  border-radius: 15px;
 }
 
 .countries__name {
   margin: 0;
-  padding-top: 25px;
 
   font-family: $main-font;
   font-weight: 700;
@@ -57,9 +58,123 @@
   color: $text-color-opacity;
 }
 
-.countries__button {
-  padding: 15px 56px 15px 23px;
-  border-radius: 15px;
+.countries__visitors {
+  padding-left: 20px;
+}
 
-  text-transform: none;
+.countries__button {
+  margin-top: 25px;
+}
+
+@media (min-width: $tablet-width) {
+  .countries {
+    border-radius: 0 0 60px 60px;
+    padding-bottom: 80px;
+  }
+
+  .countries__container {
+    background-image: url("../../img/flags-back@1x.png");
+    background-repeat: no-repeat;
+    background-position: 92% 85px;
+  }
+
+  .countries__title {
+    padding-top: 70px;
+  }
+
+  .countries__intro {
+    margin-top: 55px;
+    width: 340px;
+  }
+
+  .countries__list {
+    margin: 0 35px;
+    margin-top: 110px;
+  }
+
+  .countries__item {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contries__item-image {
+    width: 185px;
+    height: auto;
+
+    order: 2;
+  }
+
+  .countries__item-description {
+    flex-grow: 1;
+
+    padding: 30px 30px 20px;
+    border-radius: 15px 0 0 15px;
+  }
+
+  .countries__name {
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .countries__slogan {
+    margin-top: 5px;
+
+    font-size: 20px;
+    line-height: 18px;
+  }
+
+  .countries__visitors {
+    margin-top: 15px;
+    padding-left: 30px;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .countries {
+    padding-bottom: 0;
+  }
+
+  .countries__container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    max-height: 750px;
+    padding-bottom: 140px;
+
+    background-position: 95% 85px;
+  }
+
+  .countries__title {
+    margin-top: 160px;
+    margin-left: 30px;
+    padding: 0;
+
+    order: 2;
+  }
+
+  .countries__intro {
+    margin-top: 60px;
+    margin-left: 30px;
+
+    order: 3;
+  }
+
+  .countries__list {
+    width: 560px;
+    margin: 150px 0 0 70px;
+
+    order: 1;
+  }
+
+  .countries__button {
+    margin-top: 100px;
+    margin-left: 30px;
+    padding-right: 100px;
+
+    order: 4;
+  }
 }

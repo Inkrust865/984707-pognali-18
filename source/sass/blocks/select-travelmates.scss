@@ -18,3 +18,12 @@
 .select-travelmates__form {
   margin: 20px 0;
 }
+
+@media (min-width: $desktop-width) {
+  .select-travelmates {
+    width: 280px;
+    margin: 0;
+
+    order: 2;
+  }
+}

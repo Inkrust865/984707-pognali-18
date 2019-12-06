@@ -1,7 +1,9 @@
+@import "mixins.scss";
 @import "variables/colors.scss";
 @import "variables/fonts.scss";
 @import "variables/width.scss";
 @import "blocks/body.scss";
+@import "blocks/container.scss";
 @import "blocks/page.scss";
 @import "blocks/button.scss";
 @import "blocks/page-header.scss";
@@ -10,6 +12,7 @@
 @import "blocks/user-list.scss";
 @import "blocks/contacts-list.scss";
 @import "blocks/intro.scss";
+@import "blocks/section.scss";
 @import "blocks/about.scss";
 @import "blocks/countries.scss";
 @import "blocks/travelmates.scss";
@@ -33,3 +36,4 @@
 @import "blocks/checkbox.scss";
 @import "blocks/calendar.scss";
 @import "blocks/country-choiсe.scss";
+@import "blocks/copyright.scss";

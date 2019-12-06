@@ -1,5 +1,11 @@
 .page-footer {
+  margin-top: -25px;
+
   background-color: $base-color-1;
+  border-radius: 25px 25px 0 0;
+
+  position: relative;
+  z-index: 2;
 }
 
 .page-footer__logo {
@@ -9,15 +15,29 @@
 }
 
 .page-footer__list {
+  @include list-reset;
+
   margin: 35px 0;
-  padding: 0;
-  list-style: none;
 
   text-align: center;
 }
 
 .page-footer__copyright {
-  padding: 0 25px;
-
   font-weight: 400;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    margin-top: -60px;
+
+    border-radius: 60px 60px 0 0;
+  }
+
+  .page-footer__container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 150px;
+  }
 }

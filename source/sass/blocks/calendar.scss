@@ -22,10 +22,9 @@
 }
 
 .calendar__week {
-  margin: 0;
+  @include list-reset;
+
   margin-top: 20px;
-  padding: 0;
-  list-style: none;
 
   font-family: $main-font;
   font-weight: 400;
