@@ -1,3 +1,11 @@
+.parameter-count {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .parameter-count__label {
   font-family: $main-font;
   font-weight: 500;
@@ -9,6 +17,14 @@
 }
 
 .parameter-count__unit {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  color: $base-color-4;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
   opacity: 0.3;
 }
 
@@ -18,7 +34,6 @@
   padding: 15px 35px;
   border: 1px solid $border-element;
   border-radius: 5px;
-  text-align: center;
 
   background-color: $element-background;
 
@@ -27,9 +42,69 @@
   font-size: 15px;
   line-height: 13.5px;
   color: $base-color-4;
+  text-align: center;
 }
 
 .parameter-count__button {
   border: none;
   background-color: $element-background;
+}
+
+@media (min-width: $tablet-width) {
+  .parameter-count {
+    width: 100%;
+    box-sizing: border-box;
+
+    &--people {
+      order: 3;
+    }
+
+    &--days {
+      order: 5;
+    }
+  }
+
+  .parameter-count__label {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .parameter-count__unit {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .parameter-count__input {
+    font-size: 20px;
+    line-height: 20px;
+
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .parameter-count {
+    flex-wrap: nowrap;
+
+    width: 485px;
+  }
+
+  .parameter-count__label {
+    width: 195px;
+
+    order: 1;
+  }
+
+  .parameter-count__unit {
+    width: 50px;
+
+    order: 3;
+  }
+
+  .parameter-count__input {
+    width: 185px;
+
+    order: 2;
+  }
 }

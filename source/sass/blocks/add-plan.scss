@@ -1,7 +1,15 @@
 .add-plan {
-  padding: 25px 25px 70px;
+  padding: 25px 0 70px;
+  margin-top: -25px;
 
   background-color: $add-plan-background;
+  border-radius: 25px 25px 0 0;
+
+  z-index: 4;
+}
+
+.add-plan__navigation-title {
+  display: none;
 }
 
 .add-plan__title {
@@ -14,4 +22,71 @@
 
 .add-plan__navigation-list {
   @include list-reset;
+}
+
+@media (min-width: $tablet-width) {
+  .add-plan__title {
+    margin-left: 35px;
+
+    font-size: 36px;
+    line-height: 50px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-plan {
+    border-radius: 60px 60px 0 0;
+    margin-top: -60px;
+  }
+
+  .add-plan__navigation-list {
+    &--top {
+      display: none;
+    }
+
+    &--step {
+      display: block;
+      position: absolute;
+      z-index: 5;
+      top: 100px;
+      right: 230px;
+    }
+  }
+
+  .add-plan__navigation-item {
+    &:not(:first-of-type) {
+      margin-top: 20px;
+    }
+
+    padding-left: 45px;
+  }
+
+  .add-plan__navigation-title {
+    display: block;
+
+    font-family: $main-font;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    color: $navigation;
+    text-transform: uppercase;
+
+    opacity: 0.6;
+
+    &--current {
+      opacity: 1;
+    }
+  }
+
+  .add-plan__title {
+    margin-left: 65px;
+  }
+
+  .add-plan__navigation-button {
+    opacity: 0.6;
+
+    &--current {
+      opacity: 1;
+    }
+  }
 }

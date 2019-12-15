@@ -1,5 +1,8 @@
 .calendar {
+  text-align: center;
   margin-top: 20px;
+
+  order: 6;
 }
 
 .calendar__title {
@@ -22,8 +25,14 @@
 }
 
 .calendar__week {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
   @include list-reset;
 
+  width: 195px;
+  margin: 0 auto;
   margin-top: 20px;
 
   font-family: $main-font;
@@ -34,8 +43,14 @@
   text-transform: uppercase;
 }
 
+.caledar__hidden-letter {
+  display: none;
+}
+
 .calendar__month {
+  margin: 0 auto;
   margin-top: 10px;
+  width: 220px;
 
   background-color: $element-background;
   border-collapse: collapse;
@@ -63,5 +78,58 @@
     background-color: $element-background-3;
 
     color: $text-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .calendar__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .calendar__week {
+    width: 475px;
+  }
+
+  .calendar__day-week {
+    display: flex;
+
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .caledar__hidden-letter {
+    display: block;
+
+    text-transform: none;
+  }
+
+  .calendar__month {
+    width: 530px;
+    height: 420px;
+
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+
+@media (min-width: $desktop-width) {
+  .calendar {
+    width: 100%;
+  }
+
+  .calendar__title {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .calendar__week {
+    width: 880px;
+  }
+
+  .calendar__month {
+    width: 100%;
+    height: 430px;
   }
 }
