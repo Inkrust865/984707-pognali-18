@@ -1,16 +1,100 @@
+.parameter__wrapper {
+  padding: 10px 0;
+  border-top: 1px solid $border-parameter;
+}
+
 .parameter__list {
   @include list-reset;
 
-  margin-bottom: 15px;
+  margin-top: 15px;
 
   font-family: $main-font;
   font-weight: 400;
   font-size: 15px;
   line-height: 15px;
   color: $text-color;
+
+  &--hobby,
+  &--food {
+    display: none;
+  }
 }
 
 .parameter__item {
-  padding-top: 7px;
   padding-left: 25px;
+
+  &:not(:first-of-type) {
+    padding-top: 7px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .parameter__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    border: none;
+  }
+
+  .parameter__list {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 0;
+
+    &--hobby,
+    &--food {
+      display: flex;
+    }
+  }
+
+  .parameter__item {
+    padding-left: 25px;
+
+    font-size: 20px;
+    line-height: 20px;
+
+    &:not(:first-of-type) {
+      padding-top: 0;
+    }
+  }
+
+  .parameter__legend {
+    width: 105px;
+    margin-right: 20px;
+
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .parameter__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: 10px 0;
+    border-top: 1px solid $border-parameter;
+  }
+
+  .parameter__list {
+    flex-direction: column;
+
+    margin-top: 15px;
+
+    &--hobby,
+    &--food {
+      display: none;
+    }
+  }
+
+  .parameter__item {
+    padding-left: 25px;
+
+    &:not(:first-of-type) {
+      padding-top: 7px;
+    }
+  }
 }

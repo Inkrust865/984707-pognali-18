@@ -5,10 +5,6 @@
 }
 
 .form-travelmates__legend {
-  width: 100%;
-  padding: 10px 0;
-  border-top: 1px solid $border-parameter;
-
   font-family: $main-font;
   font-weight: 700;
   font-size: 16px;
@@ -18,6 +14,7 @@
 }
 
 .form-travelmates__button {
+  width: 100%;
   margin-top: 20px;
   padding: 10px 70px;
 
@@ -31,4 +28,19 @@
   line-height: 30px;
   color: $base-color-3;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .form-travelmates__wrapper {
+    padding: 35px 0;
+    border-top: 1px solid $border-parameter;
+    border-bottom: 1px solid $border-parameter;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .form-travelmates__wrapper {
+    padding: 0;
+    border: none;
+  }
 }

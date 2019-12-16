@@ -79,64 +79,365 @@
 
 
       <section class="filter">
-        <h2 class="filter__title">Фильтрация по странам</h2>
-        <button class="filter__button" aria-label="Открыть фильтры"></button>
-        <div class="filter__modal">
-          <ul class="filter__list-parts-world">
+        <div class="filter__container container">
+          <h2 class="filter__title">Фильтрация по странам</h2>
+          <ul class="filter__list-parts-world filter__list-parts-world--top">
             <li class="filter__part-world filter__part-world--current">Европа</li>
             <li class="filter__part-world">Азия</li>
             <li class="filter__part-world">Америка</li>
             <li class="filter__part-world">Острова</li>
           </ul>
-          <table class="filter__alphabet">
-            <tr>
-              <td class="filter__letter filter__letter--current">a</td>
-              <td class="filter__letter">б</td>
-              <td class="filter__letter">в</td>
-              <td class="filter__letter">г</td>
-              <td class="filter__letter">д</td>
-            </tr>
-            <tr>
-              <td class="filter__letter">е</td>
-              <td class="filter__letter">з</td>
-              <td class="filter__letter">и</td>
-              <td class="filter__letter">к</td>
-              <td class="filter__letter">л</td>
-            </tr>
-            <tr>
-              <td class="filter__letter">м</td>
-              <td class="filter__letter">н</td>
-              <td class="filter__letter">о</td>
-              <td class="filter__letter">п</td>
-              <td class="filter__letter">р</td>
-            </tr>
-            <tr>
-              <td class="filter__letter">с</td>
-              <td class="filter__letter">т</td>
-              <td class="filter__letter">у</td>
-              <td class="filter__letter">ф</td>
-              <td class="filter__letter">х</td>
-            </tr>
-            <tr>
-              <td class="filter__letter">ч</td>
-              <td class="filter__letter">ш</td>
-              <td class="filter__letter">э</td>
-              <td class="filter__letter">ю</td>
-              <td class="filter__letter">я</td>
-            </tr>
-          </table>
-          <ul class="filter__countries">
-            <li class="filter__country">Афганистан</li>
-            <li class="filter__country">Албания</li>
-            <li class="filter__country">Алжир</li>
-            <li class="filter__country">Андорра</li>
-            <li class="filter__country">Аргентина</li>
-            <li class="filter__country">Армения</li>
-            <li class="filter__country">Австралия</li>
-            <li class="filter__country">Австрия</li>
-            <li class="filter__country">Азербайджан</li>
-          </ul>
-          <button class="filter__modal-close" type="button">Свернуть</button>
+          <button class="filter__button" aria-label="Открыть фильтры">
+            <span class="filter__button-name filter__button-name--open">Показать все</span>
+            <span class="filter__button-name filter__button-name--close">Свернуть</span>
+          </button>
+        </div>
+        <div class="filter__modal">
+          <div class="container filter__modal-container">
+            <ul class="filter__list-parts-world filter__list-parts-world--bottom">
+              <li class="filter__part-world filter__part-world--current">Европа</li>
+              <li class="filter__part-world">Азия</li>
+              <li class="filter__part-world">Америка</li>
+              <li class="filter__part-world">Острова</li>
+            </ul>
+            <table class="filter__alphabet">
+              <tr class="filter__letter-row">
+                <td class="filter__letter filter__letter--current">a</td>
+                <td class="filter__letter">б</td>
+                <td class="filter__letter">в</td>
+                <td class="filter__letter">г</td>
+                <td class="filter__letter">д</td>
+              </tr>
+              <tr class="filter__countries-row">
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Австралия</li>
+                    <li class="filter__country">Австрия</li>
+                    <li class="filter__country">Азербайджан</li>
+                    <li class="filter__country">Албания</li>
+                    <li class="filter__country">Алжир</li>
+                    <li class="filter__country">Ангола</li>
+                    <li class="filter__country">Андорра</li>
+                    <li class="filter__country">Антигуа и Барбуда</li>
+                    <li class="filter__country">Аргентина</li>
+                    <li class="filter__country">Армения</li>
+                    <li class="filter__country">Афганистан</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Багамские острова</li>
+                    <li class="filter__country">Бангладеш</li>
+                    <li class="filter__country">Барбадос</li>
+                    <li class="filter__country">Бахрейн</li>
+                    <li class="filter__country">Белоруссия</li>
+                    <li class="filter__country">Белиз</li>
+                    <li class="filter__country">Бельгия</li>
+                    <li class="filter__country">Бенин</li>
+                    <li class="filter__country">Болгария</li>
+                    <li class="filter__country">Боливия</li>
+                    <li class="filter__country">Босния и Герцеговина</li>
+                    <li class="filter__country">Ботсвана</li>
+                    <li class="filter__country">Бразилия</li>
+                    <li class="filter__country">Бруней</li>
+                    <li class="filter__country">Буркина-Фасо</li>
+                    <li class="filter__country">Бурунди</li>
+                    <li class="filter__country">Бутан</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Вануату</li>
+                    <li class="filter__country">Великобритания</li>
+                    <li class="filter__country">Венгрия</li>
+                    <li class="filter__country">Венесуэла</li>
+                    <li class="filter__country">Восточный Тимор</li>
+                    <li class="filter__country">Вьетнам</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Габон</li>
+                    <li class="filter__country">Гаити</li>
+                    <li class="filter__country">Гайана</li>
+                    <li class="filter__country">Гамбия</li>
+                    <li class="filter__country">Гана</li>
+                    <li class="filter__country">Гватемала</li>
+                    <li class="filter__country">Гвинея</li>
+                    <li class="filter__country">Гвинея-Бисау</li>
+                    <li class="filter__country">Германия</li>
+                    <li class="filter__country">Гондурас</li>
+                    <li class="filter__country">Гренада</li>
+                    <li class="filter__country">Греция</li>
+                    <li class="filter__country">Грузия</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Дания</li>
+                    <li class="filter__country">Джибути</li>
+                    <li class="filter__country">Доминика</li>
+                    <li class="filter__country">Доминикана</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="filter__letter-row">
+                <td class="filter__letter">е</td>
+                <td class="filter__letter">з</td>
+                <td class="filter__letter">и</td>
+                <td class="filter__letter">к</td>
+                <td class="filter__letter">л</td>
+              </tr>
+              <tr class="filter__countries-row">
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Египет</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Замбия</li>
+                    <li class="filter__country">Зимбабве</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Израиль</li>
+                    <li class="filter__country">Индия</li>
+                    <li class="filter__country">Индонезия</li>
+                    <li class="filter__country">Иордания</li>
+                    <li class="filter__country">Ирак</li>
+                    <li class="filter__country">Иран</li>
+                    <li class="filter__country">Ирландия</li>
+                    <li class="filter__country">Исландия</li>
+                    <li class="filter__country">Испания</li>
+                    <li class="filter__country">Италия</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Кабо-Верде</li>
+                    <li class="filter__country">Казахстан</li>
+                    <li class="filter__country">Камбоджа</li>
+                    <li class="filter__country">Камерун</li>
+                    <li class="filter__country">Канада</li>
+                    <li class="filter__country">Катар</li>
+                    <li class="filter__country">Кения</li>
+                    <li class="filter__country">Кипр</li>
+                    <li class="filter__country">Киргизия</li>
+                    <li class="filter__country">Кирибати</li>
+                    <li class="filter__country">Китай</li>
+                    <li class="filter__country">Колумбия</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Лаос</li>
+                    <li class="filter__country">Латвия</li>
+                    <li class="filter__country">Лесото</li>
+                    <li class="filter__country">Либерия</li>
+                    <li class="filter__country">Ливан</li>
+                    <li class="filter__country">Ливия</li>
+                    <li class="filter__country">Литва</li>
+                    <li class="filter__country">Лихтенштейн</li>
+                    <li class="filter__country">Люксембург</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="filter__letter-row">
+                <td class="filter__letter">м</td>
+                <td class="filter__letter">н</td>
+                <td class="filter__letter">о</td>
+                <td class="filter__letter">п</td>
+                <td class="filter__letter">р</td>
+              </tr>
+              <tr class="filter__countries-row">
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Маврикий</li>
+                    <li class="filter__country">Мавритания</li>
+                    <li class="filter__country">Мадагаскар</li>
+                    <li class="filter__country">Малави</li>
+                    <li class="filter__country">Малайзия</li>
+                    <li class="filter__country">Мали</li>
+                    <li class="filter__country">Мальдивы</li>
+                    <li class="filter__country">Мальта</li>
+                    <li class="filter__country">Марокко</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Намибия</li>
+                    <li class="filter__country">Науру</li>
+                    <li class="filter__country">Непал</li>
+                    <li class="filter__country">Нигер</li>
+                    <li class="filter__country">Нигерия</li>
+                    <li class="filter__country">Нидерланды</li>
+                    <li class="filter__country">Никарагуа</li>
+                    <li class="filter__country">Новая Зеландия</li>
+                    <li class="filter__country">Норвегия</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">ОАЭ</li>
+                    <li class="filter__country">Оман</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Пакистан</li>
+                    <li class="filter__country">Палау</li>
+                    <li class="filter__country">Панама</li>
+                    <li class="filter__country">Папуа - Новая Гвинея</li>
+                    <li class="filter__country">Парагвай</li>
+                    <li class="filter__country">Перу</li>
+                    <li class="filter__country">Польша</li>
+                    <li class="filter__country">Португалия</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Руанда</li>
+                    <li class="filter__country">Румыния</li>
+                    <li class="filter__country">Россия</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="filter__letter-row">
+                <td class="filter__letter">с</td>
+                <td class="filter__letter">т</td>
+                <td class="filter__letter">у</td>
+                <td class="filter__letter">ф</td>
+                <td class="filter__letter">х</td>
+              </tr>
+              <tr class="filter__countries-row">
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Сальвадор</li>
+                    <li class="filter__country">Самоа</li>
+                    <li class="filter__country">Сан-Марино</li>
+                    <li class="filter__country">Саудовская Аравия</li>
+                    <li class="filter__country">Сейшелы</li>
+                    <li class="filter__country">Сенегал</li>
+                    <li class="filter__country">Сербия</li>
+                    <li class="filter__country">Сингапур</li>
+                    <li class="filter__country">Сирия</li>
+                    <li class="filter__country">Словакия</li>
+                    <li class="filter__country">Словения</li>
+                    <li class="filter__country">США</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Таджикистан</li>
+                    <li class="filter__country">Таиланд</li>
+                    <li class="filter__country">Танзания</li>
+                    <li class="filter__country">Того</li>
+                    <li class="filter__country">Тонга</li>
+                    <li class="filter__country">Тринидад и Тобаго</li>
+                    <li class="filter__country">Тувалу</li>
+                    <li class="filter__country">Тунис</li>
+                    <li class="filter__country">Туркмения</li>
+                    <li class="filter__country">Турция</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Уганда</li>
+                    <li class="filter__country">Узбекистан</li>
+                    <li class="filter__country">Украина</li>
+                    <li class="filter__country">Уругвай</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Фиджи</li>
+                    <li class="filter__country">Филиппины</li>
+                    <li class="filter__country">Финляндия</li>
+                    <li class="filter__country">Франция</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Хорватия</li>
+                  </ul>
+                </td>
+              </tr>
+              <tr class="filter__letter-row">
+                <td class="filter__letter">ч</td>
+                <td class="filter__letter">ш</td>
+                <td class="filter__letter">э</td>
+                <td class="filter__letter">ю</td>
+                <td class="filter__letter">я</td>
+              </tr>
+              <tr class="filter__countries-row">
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Чад</li>
+                    <li class="filter__country">Черногория</li>
+                    <li class="filter__country">Чехия</li>
+                    <li class="filter__country">Чили</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Швейцария</li>
+                    <li class="filter__country">Швеция</li>
+                    <li class="filter__country">Шри-Ланка</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Эквадор</li>
+                    <li class="filter__country">Эритрея</li>
+                    <li class="filter__country">Эсватини</li>
+                    <li class="filter__country">Эстония</li>
+                    <li class="filter__country">Эфиопия</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">ЮАР</li>
+                    <li class="filter__country">Южный Судан</li>
+                  </ul>
+                </td>
+                <td class="filter__countries-cell">
+                  <ul class="filter__countries filter__countries--desktop">
+                    <li class="filter__country">Ямайка</li>
+                    <li class="filter__country">Япония</li>
+                  </ul>
+                </td>
+              </tr>
+            </table>
+            <ul class="filter__countries filter__countries--mobile">
+              <li class="filter__country">Афганистан</li>
+              <li class="filter__country">Албания</li>
+              <li class="filter__country">Алжир</li>
+              <li class="filter__country">Андорра</li>
+              <li class="filter__country">Аргентина</li>
+              <li class="filter__country">Армения</li>
+              <li class="filter__country">Австралия</li>
+              <li class="filter__country">Австрия</li>
+              <li class="filter__country">Азербайджан</li>
+            </ul>
+            <ul class="filter__countries filter__countries--tablet">
+              <li class="filter__country">Австралия</li>
+              <li class="filter__country">Австрия</li>
+              <li class="filter__country">Азербайджан</li>
+              <li class="filter__country">Албания</li>
+              <li class="filter__country">Алжир</li>
+              <li class="filter__country">Ангола</li>
+              <li class="filter__country">Андорра</li>
+              <li class="filter__country">Антигуа и Барбуда</li>
+              <li class="filter__country">Аргентина</li>
+              <li class="filter__country">Армения</li>
+              <li class="filter__country">Афганистан</li>
+            </ul>
+          </div>
+          <div class="container filter__button-container">
+            <button class="filter__modal-close" type="button">Свернуть</button>
+          </div>
         </div>
       </section>
 
@@ -145,61 +446,101 @@
           <h2 class="visually-hidden">Форма выбора попутчика</h2>
           <span class="select-travelmates__phrase">Подберите идеального попутчика</span>
           <form class="select-travelmates__form form-travelmates"  action="https://echo.htmlacademy.ru" method="get">
-            <fieldset class="form-travelmates__parameter parameter">
-              <legend class="form-travelmates__legend parameter__legend">Хобби</legend>
-            </fieldset>
-            <fieldset class="form-travelmates__parameter parameter">
-              <legend class="form-travelmates__legend parameter__legend">Музыка</legend>
-              <ul class="parameter__list">
-                <li class="parameter__item parameter__item--checkbox">
-                  <label class="" for="checkbox1">Тяжелый рок</label>
-                  <input class="visually-hidden input-checkbox" name="music" value="hard-rock" type="checkbox" id="checkbox1" checked>
-                </li>
-                <li class="parameter__item parameter__item--checkbox">
-                  <label class="" for="checkbox2">Русский рэп</label>
-                  <input class="visually-hidden input-checkbox" name="music" value="russian-rap" type="checkbox" id="checkbox2">
-                </li>
-                <li class="parameter__item parameter__item--checkbox">
-                  <label class="" for="checkbox3">Евроденс</label>
-                  <input class="visually-hidden input-checkbox" name="music" value="eurodance" type="checkbox" id="checkbox3">
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form-travelmates__parameter parameter">
-              <legend class="form-travelmates__legend parameter__legend">Еда</legend>
-            </fieldset>
-            <fieldset class="form-travelmates__parameter parameter">
-              <legend class="form-travelmates__legend parameter__legend">Транспорт</legend>
-              <ul class="form-travelmates__transport transport-list">
-                <li class="form-travelmates__transport transport-item transport-item--plane form-travelmates__transport--current">
-                  <label for="transport-plane"><span class="visually-hidden">Самолёт</span></label>
-                  <input class="visually-hidden" name="transport" value="plane" id="transport-plane" type="checkbox" checked>
-                </li>
-                <li class="form-travelmates__transport transport-item transport-item--bus form-travelmates__transport--current">
-                  <label for="transport-bus"><span class="visually-hidden">Автобус</span></label>
-                  <input class="visually-hidden" name="transport" value="bus" id="transport-bus" type="checkbox" checked>
-                </li>
-                <li class="form-travelmates__transport transport-item transport-item--bike">
-                  <label for="transport-bike"><span class="visually-hidden">Велосипед</span></label>
-                  <input class="visually-hidden" name="transport" value="bike" id="transport-bike" type="checkbox">
-                </li>
-                <li class="form-travelmates__transport transport-item transport-item--man form-travelmates__transport--current">
-                  <label for="transport-man"><span class="visually-hidden">Пешком</span></label>
-                  <input class="visually-hidden" name="transport" value="man" id="transport-man" type="checkbox" checked>
-                </li>
-              </ul>
-            </fieldset>
-            <fieldset class="form-travelmates__parameter parameter">
-              <legend class="form-travelmates__legend parameter__legend">Левел</legend>
-              <div class="input-range-wrapper">
-                <input class="input-range input-range--min" type="number" placeholder="30" aria-label="Минимальное значение">
-                <input class="input-range input-range--max" type="number" placeholder="100" aria-label="Максимальное значение">
-              </div>
-              <div class="input-range__multirange">
-                <span class="input-range__marker input-range__marker--min" tabindex="0"></span>
-                <span class="input-range__marker input-range__marker--max" tabindex="0"></span>
-              </div>
-            </fieldset>
+            <div class="form-travelmates__wrapper">
+              <fieldset class="form-travelmates__parameter parameter">
+                <div class="parameter__wrapper">
+                  <legend class="form-travelmates__legend parameter__legend">Хобби</legend>
+                  <ul class="parameter__list parameter__list--hobby">
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox1">Спортзал</label>
+                      <input class="visually-hidden input-checkbox" name="hobby" value="gym" type="checkbox" id="checkbox1" checked>
+                    </li>
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox2">Кальян</label>
+                      <input class="visually-hidden input-checkbox" name="hobby" value="hookah" type="checkbox" id="checkbox2">
+                    </li>
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox3">Диван</label>
+                      <input class="visually-hidden input-checkbox" name="hobby" value="sofa" type="checkbox" id="checkbox3">
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-travelmates__parameter parameter">
+                <div class="parameter__wrapper">
+                  <legend class="form-travelmates__legend parameter__legend">Музыка</legend>
+                  <ul class="parameter__list">
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox1">Тяжелый рок</label>
+                      <input class="visually-hidden input-checkbox" name="music" value="hard-rock" type="checkbox" id="checkbox1" checked>
+                    </li>
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox2">Русский рэп</label>
+                      <input class="visually-hidden input-checkbox" name="music" value="russian-rap" type="checkbox" id="checkbox2">
+                    </li>
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox3">Евроденс</label>
+                      <input class="visually-hidden input-checkbox" name="music" value="eurodance" type="checkbox" id="checkbox3">
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-travelmates__parameter parameter">
+                <div class="parameter__wrapper">
+                  <legend class="form-travelmates__legend parameter__legend">Еда</legend>
+                  <ul class="parameter__list parameter__list--food">
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox1">Мясоед</label>
+                      <input class="visually-hidden input-checkbox" name="food" value="meat" type="checkbox" id="checkbox1" checked>
+                    </li>
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox2">Сидит на ПП</label>
+                      <input class="visually-hidden input-checkbox" name="food" value="pp" type="checkbox" id="checkbox2">
+                    </li>
+                    <li class="parameter__item parameter__item--checkbox">
+                      <label class="" for="checkbox3">Веган-сыроед</label>
+                      <input class="visually-hidden input-checkbox" name="food" value="vegan" type="checkbox" id="checkbox3">
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-travelmates__parameter parameter">
+                <div class="parameter__wrapper">
+                  <legend class="form-travelmates__legend parameter__legend">Транспорт</legend>
+                  <ul class="form-travelmates__transport transport-list">
+                    <li class="form-travelmates__transport transport-item transport-item--plane form-travelmates__transport--current">
+                      <label for="transport-plane"><span class="visually-hidden">Самолёт</span></label>
+                      <input class="visually-hidden" name="transport" value="plane" id="transport-plane" type="checkbox" checked>
+                    </li>
+                    <li class="form-travelmates__transport transport-item transport-item--bus form-travelmates__transport--current">
+                      <label for="transport-bus"><span class="visually-hidden">Автобус</span></label>
+                      <input class="visually-hidden" name="transport" value="bus" id="transport-bus" type="checkbox" checked>
+                    </li>
+                    <li class="form-travelmates__transport transport-item transport-item--bike">
+                      <label for="transport-bike"><span class="visually-hidden">Велосипед</span></label>
+                      <input class="visually-hidden" name="transport" value="bike" id="transport-bike" type="checkbox">
+                    </li>
+                    <li class="form-travelmates__transport transport-item transport-item--man form-travelmates__transport--current">
+                      <label for="transport-man"><span class="visually-hidden">Пешком</span></label>
+                      <input class="visually-hidden" name="transport" value="man" id="transport-man" type="checkbox" checked>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+              <fieldset class="form-travelmates__parameter parameter">
+                <div class="parameter__wrapper">
+                  <legend class="form-travelmates__legend parameter__legend">Левел</legend>
+                  <div class="input-range-wrapper">
+                    <input class="input-range input-range--min" type="number" placeholder="30" aria-label="Минимальное значение">
+                    <input class="input-range input-range--max" type="number" placeholder="100" aria-label="Максимальное значение">
+                  </div>
+                  <div class="input-range__multirange">
+                    <span class="input-range__marker input-range__marker--min" tabindex="0"></span>
+                    <span class="input-range__marker input-range__marker--max" tabindex="0"></span>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
             <button class="form-travelmates__button button">Показать</button>
           </form>
         </section>
