@@ -1,5 +1,70 @@
-.transport-list {
+.transports {
   @include list-reset;
+}
 
-  margin-bottom: 20px;
+.transports__input:checked + .transports__label {
+  &::before {
+    opacity: 1;
+  }
+}
+
+.transports__label {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+  }
+
+  &--current {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &--plane {
+    &::before {
+      background-image: url("../../img/plane.svg");
+      background-size: 14px 16px;
+    }
+  }
+
+  &--bus {
+    &::before {
+      background-image: url("../../img/bus.svg");
+      background-size: 13px 16px;
+    }
+  }
+
+  &--bike {
+    &::before {
+      background-image: url("../../img/bike.svg");
+      background-size: 19px 17px;
+    }
+  }
+
+  &--man {
+    &::before {
+      background-image: url("../../img/run.svg");
+      background-size: 15px 17px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .transports__label {
+    &::before {
+      width: 43px;
+      height: 43px;
+    }
+  }
 }

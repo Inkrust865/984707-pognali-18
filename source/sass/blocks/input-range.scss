@@ -1,6 +1,28 @@
+.input-range-wrapper {
+  display: flex;
+  flex-direction: row;
+
+  position: relative;
+  margin-top: 15px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 102px;
+
+    width: 16px;
+    height: 11px;
+
+    background-image: linear-gradient(180deg, $base-color-1 5px, $border-element 5px, $border-element 6px, $base-color-1 6px);
+  }
+}
+
 .input-range {
-  padding: 10px 30px;
+  padding: 6px 30px;
   margin: 0;
+  width: 50%;
+
   border: 1px solid $border-element;
 
   font-family: $main-font;
@@ -8,6 +30,7 @@
   font-size: 15px;
   line-height: 13.5px;
   color: $base-color-4;
+  text-align: center;
 
   &::placeholder {
     color: $base-color-4;
@@ -15,6 +38,7 @@
 
   &--min {
     border-radius: 5px 0 0 5px;
+    border-right: none;
   }
 
   &--max {
@@ -23,5 +47,99 @@
 }
 
 .input-range__multirange {
-  margin-top: 20px;
+  position: relative;
+
+  margin-top: 25px;
+
+  width: 100%;
+  height: 2px;
+
+  background-color: rgba(29, 46, 91, 0.2);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 144px;
+    height: 2px;
+
+    background-color: $base-color-4;
+  }
+}
+
+.input-range__marker {
+  position: absolute;
+  top: -4px;
+  left: 67px;
+  width: 10px;
+  height: 10px;
+
+  background-color: $base-color-4;
+  border-radius: 50%;
+
+  &--max {
+    left: auto;
+    right: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .input-range__multirange {
+    margin: 0;
+
+    width: 277px;
+    height: 3px;
+
+    &::before {
+      width: 201px;
+      height: 3px;
+    }
+  }
+
+  .input-range-wrapper {
+    margin-top: 0;
+
+    &::before {
+      top: 15px;
+      left: 65px;
+
+      width: 21px;
+      height: 15px;
+
+      background-image: linear-gradient(180deg, $base-color-1 7px, $border-element 7px, $border-element 8px, $base-color-1 8px);
+    }
+  }
+
+  .input-range {
+    padding: 12px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .input-range-wrapper {
+    width: 100%;
+    margin-top: 20px;
+
+    &::before {
+      top: 14px;
+      left: 84px;
+    }
+  }
+
+  .input-range__multirange {
+    width: 100%;
+    margin-top: 35px;
+
+    &::before {
+      width: 125px;
+    }
+  }
+
+  .input-range__marker {
+    &--min {
+      left: 59px;
+    }
+  }
 }

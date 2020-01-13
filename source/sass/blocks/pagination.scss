@@ -1,3 +1,159 @@
+.pagination {
+  margin-top: 25px;
+}
+
+.pagination__pages {
+  display: none;
+}
+
+.pagination__nav {
+  @include list-reset;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
 .pagination__button {
+  display: block;
+  position: relative;
+
+  width: 134.5px;
+  height: 50px;
+
   background-color: $base-color-1;
+  border-radius: 20px 0 0 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 63px;
+
+    width: 10px;
+    height: 20px;
+
+    background-image: url("../../img/triangle-arrow-left.svg");
+    background-size: 10px 20px;
+    background-repeat: no-repeat;
+  }
+
+  &--next {
+    border-radius: 0 20px 20px 0;
+
+    &::before {
+      background-image: url("../../img/triangle-arrow-right.svg");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    background-color: $base-color-1;
+    border-radius: 20px;
+  }
+
+  .pagination__pages {
+    @include list-reset;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+
+    width: 400px;
+    padding: 25px;
+  }
+
+  .pagination__page {
+    padding: 10px;
+    width: 50px;
+
+    text-align: center;
+
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    a {
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: $base-color-3;
+    }
+
+    &--current {
+      background-color: $accent-color-1;
+    }
+  }
+
+  .pagination__nav {
+    width: 123px;
+  }
+
+  .pagination__button {
+    width: 61.5px;
+    height: 100px;
+
+    &::before {
+      top: 40px;
+      left: 25px;
+      width: 0;
+      height: 0;
+
+      background-image: none;
+      border: 10px solid $element-background;
+      border-right: 10px solid $base-color-2;
+    }
+
+    &--next {
+      &::before {
+        left: auto;
+        right: 25px;
+
+        border-right: 10px solid $element-background;
+        border-left: 10px solid $base-color-2;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .pagination {
+    margin-top: 65px;
+    margin-bottom: 65px;
+  }
+
+  .pagination__pages {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .pagination__nav {
+    width: 143px;
+  }
+
+  .pagination__button {
+    width: 71.5px;
+
+    &::before {
+      left: 35px;
+    }
+
+    &--next {
+      &::before {
+        left: auto;
+        right: 35px;
+      }
+    }
+  }
 }

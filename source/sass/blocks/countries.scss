@@ -28,15 +28,55 @@
   margin-top: 10px;
 
   background-color: $base-color-1;
-  border-radius: 15px;
+  border-radius: 10px;
 
   overflow: hidden;
+
+  &:last-of-type {
+    .countries__item-description {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 270px;
+        height: 110px;
+
+        background-image: linear-gradient(180deg, $element-background 20%, $element-background-3 80%);
+      }
+    }
+  }
+}
+
+.contries__item-image {
+  &--desktop {
+    display: none;
+  }
 }
 
 .countries__item-description {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  margin-top: -10px;
   padding: 25px 20px;
 
-  border-radius: 15px;
+  border-radius: 10px;
+  background-color: $base-color-1;
+
+  z-index: 2;
+}
+
+.countries__flag {
+  position: absolute;
+  top: -11.5px;
+  left: 25px;
 }
 
 .countries__name {
@@ -47,6 +87,8 @@
   font-size: 21px;
   line-height: 21px;
   color: $base-color-3;
+
+  order: 1;
 }
 
 .countries__slogan,
@@ -58,8 +100,28 @@
   color: $text-color-opacity;
 }
 
+.countries__slogan {
+  margin: 0;
+  margin-top: 5px;
+
+  order: 3;
+}
+
 .countries__visitors {
-  padding-left: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+
+  order: 2;
+
+  svg {
+    fill: $icon-user;
+
+    margin-top: 2px;
+    margin-right: 10px;
+  }
 }
 
 .countries__button {
@@ -73,9 +135,28 @@
   }
 
   .countries__container {
-    background-image: url("../../img/flags-back@1x.png");
+    background-image:
+      url("../../img/flags-back@1x.png"),
+      radial-gradient(circle at center, $filter-background 90%, $element-background 90%),
+      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
+      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
+      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
+      radial-gradient(circle at center, $filter-background 15px, $element-background 15px);
+    background-size:
+      auto,
+      141px 141px,
+      30px 30px,
+      30px 30px,
+      30px 30px,
+      30px 30px;
     background-repeat: no-repeat;
-    background-position: 92% 85px;
+    background-position:
+      92% 85px,
+      top 405px left 40px,
+      top 405px left 40px,
+      top 405px left 151px,
+      top 516px left 40px,
+      top 516px left 151px;
   }
 
   .countries__title {
@@ -95,6 +176,19 @@
   .countries__item {
     display: flex;
     flex-direction: row;
+
+    border-radius: 20px;
+
+    &:last-of-type {
+      .countries__item-description {
+        &::before {
+          width: 621px;
+          height: 155px;
+
+          background-image: linear-gradient(180deg, $element-background 40%, $element-background-3 85%);
+        }
+      }
+    }
   }
 
   .contries__item-image {
@@ -102,13 +196,46 @@
     height: auto;
 
     order: 2;
+
+    &--mobile {
+      display: none;
+    }
+
+    &--desktop {
+      display: block;
+    }
   }
 
   .countries__item-description {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-grow: 1;
 
     padding: 30px 30px 20px;
+    margin: 0;
     border-radius: 15px 0 0 15px;
+  }
+
+  .countries__flag {
+    top: 15px;
+    right: 35px;
+    left: auto;
+
+    &::before {
+      width: 70px;
+      height: 47px;
+
+      border-radius: 5px;
+    }
+
+    &--czech {
+      &::after {
+        border: 24px solid $element-background;
+        border-left: 24px solid $flag-color-2;
+        border-radius: 5px;
+      }
+    }
   }
 
   .countries__name {
@@ -125,10 +252,17 @@
 
   .countries__visitors {
     margin-top: 15px;
-    padding-left: 30px;
+    margin-left: 0;
 
     font-size: 20px;
     line-height: 30px;
+
+    order: 3;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
   }
 }
 
@@ -145,7 +279,13 @@
     max-height: 750px;
     padding-bottom: 140px;
 
-    background-position: 95% 85px;
+    background-position:
+      95% 85px,
+      top 90px left 60px,
+      top 90px left 60px,
+      top 90px left 171px,
+      top 201px left 60px,
+      top 201px left 171px;
   }
 
   .countries__title {
@@ -170,10 +310,13 @@
     order: 1;
   }
 
+  .countries__flag {
+    top: 23px;
+  }
+
   .countries__button {
     margin-top: 100px;
     margin-left: 30px;
-    padding-right: 100px;
 
     order: 4;
   }

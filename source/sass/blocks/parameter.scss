@@ -1,12 +1,49 @@
+.parameter {
+  position: relative;
+
+  &--closed {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 18px;
+      right: 0;
+      width: 0;
+      height: 0;
+
+      border: 4px solid $element-background;
+      border-top: 4px solid $base-color-2;
+    }
+  }
+
+  &--opened {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 14px;
+      right: 0;
+      width: 0;
+      height: 0;
+
+      border: 4px solid $element-background;
+      border-bottom: 4px solid $base-color-2;
+    }
+  }
+}
+
 .parameter__wrapper {
   padding: 10px 0;
   border-top: 1px solid $border-parameter;
+}
+
+.parameter__colon {
+  display: none;
 }
 
 .parameter__list {
   @include list-reset;
 
   margin-top: 15px;
+  margin-bottom: 10px;
 
   font-family: $main-font;
   font-weight: 400;
@@ -21,14 +58,18 @@
 }
 
 .parameter__item {
-  padding-left: 25px;
-
   &:not(:first-of-type) {
-    padding-top: 7px;
+    margin-top: 12px;
   }
 }
 
 @media (min-width: $tablet-width) {
+  .parameter {
+    &::before {
+      content: none;
+    }
+  }
+
   .parameter__wrapper {
     display: flex;
     flex-direction: row;
@@ -37,11 +78,26 @@
     border: none;
   }
 
+  .parameter__legend {
+    display: flex;
+
+    width: 105px;
+    margin-right: 20px;
+
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .parameter__colon {
+    display: block;
+  }
+
   .parameter__list {
     display: flex;
     flex-direction: row;
 
-    margin-top: 0;
+    margin: 0;
 
     &--hobby,
     &--food {
@@ -50,39 +106,36 @@
   }
 
   .parameter__item {
-    padding-left: 25px;
+    width: 170px;
 
-    font-size: 20px;
-    line-height: 20px;
 
     &:not(:first-of-type) {
-      padding-top: 0;
+      margin-top: 0;
     }
-  }
-
-  .parameter__legend {
-    width: 105px;
-    margin-right: 20px;
-
-    text-transform: uppercase;
-    font-size: 20px;
-    line-height: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .parameter {
+    &::before {
+      content: "";
+
+      border-width: 5px;
+    }
+  }
+
   .parameter__wrapper {
     flex-direction: column;
     align-items: flex-start;
 
     padding: 10px 0;
-    border-top: 1px solid $border-parameter;
   }
 
   .parameter__list {
     flex-direction: column;
 
-    margin-top: 15px;
+    margin-top: 25px;
+    margin-bottom: 15px;
 
     &--hobby,
     &--food {
@@ -90,11 +143,13 @@
     }
   }
 
-  .parameter__item {
-    padding-left: 25px;
+  .parameter__colon {
+    display: none;
+  }
 
+  .parameter__item {
     &:not(:first-of-type) {
-      padding-top: 7px;
+      padding-top: 16px;
     }
   }
 }

@@ -14,11 +14,18 @@
 .travelmates__container {
   background-image:
     url("../../img/rogovaya-back-mobile@1x.png"),
-    url("../../img/smolov-back-desktop@1x.png");
+    url("../../img/smolov-back-desktop@1x.png"),
+    radial-gradient(circle at center, $background-square 87%, $element-background 87%),
+    radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+    radial-gradient(circle at center, $background-square 15px, $element-background 15px);
+  background-size: auto, auto, 132px 132px, 30px 30px, 30px 30px;
   background-repeat: no-repeat;
   background-position:
     -10px 340px,
-    150px 65px;
+    150px 65px,
+    -20px 65px,
+    82px 65px,
+    82px 167px;
 }
 
 .travelmates__title {
@@ -41,34 +48,145 @@
 }
 
 .travelmates__item {
+  position: relative;
   width: 100%;
   margin-top: 10px;
 
   background-color: $base-color-1;
   border-radius: 15px;
+  overflow: hidden;
 
   text-align: center;
 }
 
+.travelmates__level {
+  position: absolute;
+  top: 16px;
+  left: 17px;
+  width: 60px;
+  height: 60px;
+
+  margin: 0;
+  padding: 10px 12px 4px 11px;
+}
+
+.travelmates__level-value {
+  margin-bottom: 3px;
+}
+
+.travelmates__item-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 45px 20px;
+}
+
+.travelmates__flags {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: -12px;
+  padding: 0;
+
+  order: 1;
+}
+
+.travelmates__flag {
+  position: relative;
+  width: 35px;
+  height: 24px;
+
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+}
+
 .travelmates__name {
   margin: 0;
-  padding-top: 25px;
+  margin-top: 11px;
 
   font-family: $main-font;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: $base-color-3;
+
+  order: 2;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -15px;
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+    background-color: $online;
+  }
+
+  &--offline {
+    &::before {
+      background-color: $offline;
+    }
+  }
 }
 
 .travelmates__hashtags {
   margin: 0;
+  margin-top: 15px;
 
   font-family: $main-font;
   font-weight: 400;
   font-size: 16px;
   line-height: 18px;
   color: $text-color;
+
+  order: 3;
+}
+
+.travelmates__transports {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 140px;
+  order: 4;
+}
+
+.travelmates__transport {
+  width: 32px;
+  height: 32px;
+
+  &--plane {
+    &::before {
+      background-size: 19px 21px;
+    }
+  }
+
+  &--bus {
+    &::before {
+      background-size: 17px 21px;
+    }
+  }
+
+  &--bike {
+    &::before {
+      background-size: 24px 21px;
+    }
+  }
+
+  &--man {
+    &::before {
+      background-size: 20px 21px;
+    }
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -82,11 +200,22 @@
   .travelmates__container {
     background-image:
       url("../../img/rogovaya-back-desktop@1x.png"),
-      url("../../img/smolov-back-desktop@1x.png");
+      url("../../img/smolov-back-desktop@1x.png"),
+      radial-gradient(circle at center, $background-square 95%, $element-background 95%),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px);
+    background-size: auto, auto, 213px 213px, 30px 30px, 30px 30px, 30px 30px, 30px 30px;
     background-repeat: no-repeat;
     background-position:
       85% 140px,
-      40px 475px;
+      40px 475px,
+      40px 140px,
+      40px 140px,
+      223px 140px,
+      40px 323px,
+      223px 323px;
   }
 
   .travelmates__title {
@@ -100,7 +229,7 @@
   }
 
   .travelmates__accent {
-    margin-top: 20px;
+    margin-top: 35px;
     margin-bottom: 0;
     width: 260px;
   }
@@ -116,6 +245,27 @@
 
   .travelmates__item {
     width: 285px;
+  }
+
+  .travelmates__item-description {
+    padding: 0 30px 30px;
+  }
+
+  .travelmates__item-image {
+    width: 285px;
+    height: 285px;
+  }
+
+  .travelmates__name {
+    margin-top: 16px;
+
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .travelmates__hashtags {
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .travelmates__button {
@@ -138,7 +288,12 @@
 
     background-position:
       190px 445px,
-      550px 195px;
+      550px 195px,
+      60px 140px,
+      60px 140px,
+      243px 140px,
+      60px 323px,
+      243px 323px;
   }
 
   .travelmates__title {

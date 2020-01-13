@@ -7,9 +7,13 @@
 }
 
 .about__container {
-  background-image: url("../../img/about-mobile@1x.png");
+  background-image:
+    url("../../img/about-mobile@1x.png"),
+    radial-gradient(circle at center, $background-square 87%, $element-background 87%),
+    radial-gradient(circle at center, $background-square 15px, $element-background 15px);
+  background-size: auto, 132px 132px, 30px 30px;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: top center, top 0 left -25px, top 0 left 77px;
 }
 
 .about__title {
@@ -43,9 +47,37 @@
   .about__container {
     align-items: flex-start;
 
-    background-image: url("../../img/about-tablet@1x.png");
+    background-image:
+      url("../../img/about-tablet@1x.png"),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      linear-gradient(-45deg, $background-square 97%, $element-background 97%),
+      linear-gradient(45deg, $background-square 97%, $element-background 97%),
+      linear-gradient(-135deg, $background-square 97%, $element-background 97%),
+      linear-gradient(135deg, $background-square 97%, $element-background 97%);
+    background-size:
+      auto,
+      30px 30px,
+      30px 30px,
+      30px 30px,
+      30px 30px,
+      344px 106.5px,
+      344px 106.5px,
+      344px 106.5px,
+      344px 106.5px;
     background-repeat: no-repeat;
-    background-position: 97% 30px;
+    background-position:
+      97% 30px,
+      top 0 left 40px,
+      top 0 right 40px,
+      top 183px left 40px,
+      top 183px right 40px,
+      top 0 left 40px,
+      top 0 right 40px,
+      top 106px left 40px,
+      top 106px right 40px;
   }
 
   .about__intro {
@@ -63,9 +95,11 @@
   }
 
   .about__button {
-    display: inline-block;
+    display: inline-flex;
+    width: 275px;
     margin-top: 50px;
     border-radius: 15px;
+    box-sizing: border-box;
 
     text-transform: none;
   }
@@ -79,10 +113,29 @@
   }
 
   .about__container {
-    padding: 130px 0 165px;
-    background-image: url("../../img/about-desktop@1x.png");
+    padding: 100px 0 165px;
+    background-image:
+      url("../../img/about-desktop@1x.png"),
+      radial-gradient(circle at center, $background-square 93%, $element-background 93%),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
+      radial-gradient(circle at center, $background-square 15px, $element-background 15px);
+    background-size:
+      auto,
+      213px 213px,
+      30px 30px,
+      30px 30px,
+      30px 30px,
+      30px 30px;
     background-repeat: no-repeat;
-    background-position: 93% bottom;
+    background-position:
+      93% bottom,
+      top 70px left 0,
+      top 70px left 0,
+      top 70px left 183px,
+      top 253px left 0,
+      top 253px left 183px;
   }
 
   .about__title {

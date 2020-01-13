@@ -28,11 +28,23 @@
 }
 
 .section__button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
   margin-top: 25px;
-  padding: 15px 56px 15px 23px;
+  padding: 15px 23px;
   border-radius: 15px;
 
   text-transform: none;
+  color: $base-color-4;
+
+  svg {
+    fill: $base-color-4;
+
+    margin-left: 30px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -65,7 +77,6 @@
   .section__button {
     margin: 40px 35px 0;
     padding: 30px;
-    padding-right: 125px;
   }
 }
 
@@ -93,5 +104,8 @@
 
   .section__button {
     margin: 0 70px;
+    padding-right: 35px;
+    width: 275px;
+    box-sizing: border-box;
   }
 }

@@ -1,0 +1,118 @@
+.flag {
+  display: block;
+
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 24px;
+
+    border-radius: 2px;
+  }
+
+  &--thailand {
+    &::before {
+      background-image: linear-gradient(180deg, $flag-color-1 20.8%, $base-color-1 20.8%, $base-color-1 29.2%, $flag-color-2 29.2%, $flag-color-2 70.8%, $base-color-1 70.8%, $base-color-1 79.2%, $flag-color-1 79.2%);
+    }
+  }
+
+  &--france {
+    &::before {
+      background-image: linear-gradient(90deg, $flag-color-2 34.3%, $base-color-1 34.3%, $base-color-1 65.7%, $flag-color-1 65.7%);
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: linear-gradient(180deg, $flag-color-8 50%, $flag-color-1 50%);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      border: 12px solid $element-background;
+      border-left: 12px solid $flag-color-2;
+    }
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-image: linear-gradient(90deg, $flag-color-3 5.7%, $flag-color-4 5.7%, $flag-color-4 20%, $flag-color-5 20%, $flag-color-5 34.3%, $flag-color-3 34.3%, $flag-color-3 40%, $flag-color-1 40%, $flag-color-1 94.3%, $flag-color-3 94.3%);
+      border-top: 2px solid $flag-color-3;
+      border-bottom: 2px solid $flag-color-3;
+      box-sizing: border-box;
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-image:
+        linear-gradient(115deg, $flag-color-2 23%, $element-background 23%),
+        linear-gradient(135deg, $flag-color-3 40%, $element-background 40%),
+        linear-gradient(155deg, $flag-color-1 58%, $element-background 58%),
+        linear-gradient(168deg, $base-color-1 75%, $element-background 75%),
+        linear-gradient(115deg, $flag-color-4 100%, $element-background 100%);
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-image: linear-gradient(90deg, $flag-color-6 33.3%, $flag-color-7 33.3%, $flag-color-7 66.6%, $flag-color-1 66.6%);
+    }
+  }
+
+  &--usa {
+    &::before {
+      width: 30px;
+      height: 30px;
+      background-image:
+        linear-gradient(90deg, $flag-usa 42%, $element-background 42%),
+        linear-gradient(180deg, $flag-color-1 20%, $flag-color-8 20%, $flag-color-8 40%, $flag-color-1 40%, $flag-color-1 60%, $flag-color-8 60%, $flag-color-8 80%, $flag-color-1 80%);
+      background-size:
+        100% 61%,
+        100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--australia {
+    &::before {
+      background-color: $flag-color-2;
+    }
+  }
+
+  &--dominican {
+    &::before {
+      background-color: $flag-dominican-1;
+      background-image:
+        radial-gradient(circle at center, $flag-color-1 33.3%, $element-background 33.3%),
+        linear-gradient(90deg, $element-background 38.5%, $flag-dominican-2 38.5%, $flag-dominican-2 46.5%, $flag-dominican-3 46.5%, $flag-dominican-3 54.5%, $base-color-1 54.5%, $base-color-1 62.5%, $element-background 62.5%),
+        linear-gradient(180deg, $element-background 33.3%, $flag-dominican-2 33.3%, $flag-dominican-2 44.4%, $flag-dominican-3 44.4%, $flag-dominican-3 55.5%, $base-color-1 55.5%, $base-color-1 66.6%, $element-background 66.6%);
+    }
+  }
+
+  &--britain {
+    &::before {
+      background-color: $flag-color-2;
+      background-image:
+        linear-gradient(90deg, $element-background 44%, $flag-color-1 44%, $flag-color-1 54%, $element-background 54%),
+        linear-gradient(180deg, $element-background 42%, $base-color-1 42%, $base-color-1 44%, $flag-color-1 44%, $flag-color-1 54%, $base-color-1 54%, $base-color-1 56%, $element-background 56%),
+        linear-gradient(90deg, $element-background 42%, $base-color-1 42%, $base-color-1 44%, $flag-color-1 44%, $flag-color-1 54%, $base-color-1 54%, $base-color-1 56%, $element-background 56%),
+        linear-gradient(-32deg, $element-background 46%, $base-color-1 46%, $base-color-1 48%, $flag-color-1 48%, $flag-color-1 52%, $base-color-1 52%, $base-color-1 54%, $element-background 54%),
+        linear-gradient(32deg, $element-background 46%, $base-color-1 46%, $base-color-1 48%, $flag-color-1 48%, $flag-color-1 52%, $base-color-1 52%, $base-color-1 54%, $element-background 54%);
+    }
+  }
+
+  &--germany {
+    &::before {
+      background-image: linear-gradient(180deg, $flag-color-6 33.3%, $flag-color-1 33.3%, $flag-color-1 66.6%, $flag-germany 66.6%);
+    }
+  }
+}

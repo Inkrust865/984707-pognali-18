@@ -16,6 +16,7 @@
 }
 
 .filter__title {
+  position: relative;
   padding: 0 25px;
   margin: 0;
 
@@ -25,26 +26,123 @@
   line-height: 22px;
   color: $base-color-2;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+    width: 15px;
+    height: 10px;
+
+    background-image: url("../../img/filter.svg");
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+  }
 }
 
 .filter__button {
+  position: relative;
+  padding: 0;
+
   border: none;
   background-color: $element-background;
-}
 
-.filter__button-name {
-  display: none;
+  &--opened {
+    width: 12px;
 
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: $base-color-2;
-  text-transform: uppercase;
+    &::before {
+      content: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 90px;
+      height: 24px;
+
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: $base-color-2;
+      text-transform: uppercase;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 0;
+
+      width: 12px;
+      height: 12px;
+
+      background-image: url("../../img/filter-close.svg");
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+    }
+  }
+
+  &--closed {
+    width: 17px;
+
+    &::before {
+      content: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 130px;
+      height: 24px;
+
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: $base-color-2;
+      text-transform: uppercase;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 9.5px;
+      right: 0;
+
+      width: 17px;
+      height: 3px;
+
+      background-image: url("../../img/dots.svg");
+      background-repeat: no-repeat;
+      background-size: 17px 3px;
+    }
+  }
 }
 
 .filter__modal {
+  display: none;
   padding-top: 35px;
+  padding-bottom: 25px;
+  width: 100%;
+
+  background-color: $filter-background;
+  border-radius: 0 0 20px 20px;
+
+  &--nojs {
+    display: block;
+  }
+
+  &--opened {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
+
+  &--closed {
+    display: none;
+  }
 }
 
 .filter__list-parts-world {
@@ -100,6 +198,7 @@
 .filter__letter {
   padding: 11px 15px;
   border: 1px solid $border-element;
+  text-align: center;
 
   &--current {
     background-color: $base-color-4;
@@ -125,8 +224,10 @@
 }
 
 .filter__modal-close {
+  position: relative;
+
   margin-top: 10px;
-  padding: 10px 10px 10px 25px;
+  padding: 5px 10px 5px 35px;
   border: none;
   border-radius: 35px;
 
@@ -139,13 +240,31 @@
   color: $base-color-3;
   text-transform: uppercase;
   text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 85px;
+
+    width: 12px;
+    height: 12px;
+
+    background-image: url("../../img/filter-close.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .filter {
     margin-top: -60px;
-    padding: 120px 0 75px;
+    padding: 120px 0 0;
     border-radius: 0 0 60px 60px;
+  }
+
+  .filter__container {
+    padding-bottom: 75px;
   }
 
   .filter__title {
@@ -178,14 +297,44 @@
   }
 
   .filter__button {
+    min-width: 175px;
     margin-right: 40px;
-    padding-right: 80px;
+
+
+    &--opened {
+      &::before {
+        content: "Свернуть";
+      }
+
+      &::after {
+        top: 2px;
+        width: 18px;
+        height: 18px;
+
+        background-size: 18px 18px;
+      }
+    }
+
+    &--closed {
+      &::before {
+        content: "Показать все";
+      }
+
+      &::after {
+        top: 8.5px;
+        width: 27px;
+        height: 5px;
+
+        background-size: 27px 5px;
+      }
+    }
   }
 
-  .filter__button-name {
-    &--close {
-      display: block;
-    }
+  .filter__modal {
+    top: 155px;
+    padding-bottom: 75px;
+
+    border-radius: 0 0 60px 60px;
   }
 
   .filter__modal-container {
@@ -249,24 +398,62 @@
 
   .filter__modal-close {
     margin: 40px 35px 0;
-    padding: 40px;
-    padding-left: 60px;
+    padding: 35px 40px 35px 80px;
     border-radius: 20px;
 
     font-size: 20px;
     line-height: 30px;
+
+    &::before {
+      top: 40px;
+      left: 245px;
+
+      width: 18px;
+      height: 18px;
+
+      background-size: 18px 18px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .filter {
-    padding: 110px 0 75px;
+    padding: 120px 0 0;
 
     background-color: $element-background;
   }
 
+  .filter__container {
+    padding-left: 80px;
+    padding-right: 125px;
+
+    width: 1235px;
+  }
+
   .filter__title {
     display: block;
+    padding-left: 45px;
+    padding-right: 0;
+    margin-right: 35px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      width: 23px;
+      height: 15px;
+
+      background-size: 23px 15px;
+    }
+
+    &::after {
+      content: ":";
+      position: relative;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
   }
 
   .filter__list-parts-world {
@@ -280,8 +467,7 @@
   }
 
   .filter__button {
-    margin-right: 40px;
-    padding-right: 80px;
+    margin-right: 0;
   }
 
   .filter__button-name {
@@ -290,15 +476,26 @@
     }
   }
 
+  .filter__modal {
+    position: relative;
+    top: 0;
+    padding-top: 55px;
+
+    background-color: $element-background-3;
+  }
+
   .filter__modal-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    padding: 0 95px;
+    width: 1250px;
   }
 
   .filter__alphabet {
     width: 100%;
-    margin: 20px 30px;
+    margin: 20px 0;
 
     font-weight: 700;
     font-size: 60px;
@@ -353,12 +550,11 @@
   }
 
   .filter__modal-close {
-    margin: 40px 35px 0;
-    padding: 40px;
+    margin: 40px 0 0;
     padding-left: 60px;
-    border-radius: 20px;
 
-    font-size: 20px;
-    line-height: 30px;
+    &::before {
+      left: 595px;
+    }
   }
 }

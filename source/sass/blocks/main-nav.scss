@@ -35,7 +35,25 @@
     align-items: flex-start;
 
     width: 768px;
-    padding: 0 95px 40px;
+    padding: 0 95px 90px;
+  }
+}
+
+@media (max-width: $tablet-width-only) {
+  .main-nav {
+    &--opened {
+      display: block;
+    }
+
+    &--closed {
+      display: none;
+    }
+
+    &--nojs {
+      display: block;
+      position: relative;
+      top: 0;
+    }
   }
 }
 
