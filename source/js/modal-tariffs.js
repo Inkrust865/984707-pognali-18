@@ -1,15 +1,14 @@
-var modal = document.querySelector('.modal');
-var buttonTariffs = document.querySelector('.tariffs__button');
-var modalClose = document.querySelector('.modal__close');
+var modal = document.querySelector('.js-tariffs');
+var buttonTariffs = document.querySelector('.js-tbutton');
+var modalClose = document.querySelector('.js-tclose');
+var body = document.querySelector('.js-body');
 
-modal.classList.remove('modal--nojs');
+body.classList.remove('body--nojs');
 
 buttonTariffs.addEventListener('click', function() {
-  modal.classList.remove('modal--closed');
-  modal.classList.add('modal--opened');
+  modal.classList.toggle('js-tariffs--opened');
 });
 
 modalClose.addEventListener('click', function() {
-  modal.classList.remove('modal--opened');
-  modal.classList.add('modal--closed');
+  modal.classList.toggle('js-tariffs--opened');
 });

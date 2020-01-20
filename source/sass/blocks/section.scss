@@ -29,6 +29,8 @@
 
 .section__button {
   display: flex;
+  position: relative;
+
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -40,10 +42,18 @@
   text-transform: none;
   color: $base-color-4;
 
-  svg {
-    fill: $base-color-4;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 34px;
+    right: 34px;
+    width: 10px;
+    height: 14px;
 
-    margin-left: 30px;
+    background-image: url("../../img/triangle-arrow-right.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 10px 14px;
   }
 }
 
@@ -104,8 +114,21 @@
 
   .section__button {
     margin: 0 70px;
-    padding-right: 35px;
+    padding-right: 80px;
     width: 275px;
     box-sizing: border-box;
+
+    &:hover {
+      background-color: $decoration-element;
+    }
+
+    &:active {
+      background-color: $decoration-element;
+      color: $element-state;
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
   }
 }

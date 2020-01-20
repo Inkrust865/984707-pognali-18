@@ -7,22 +7,46 @@
 }
 
 .about__container {
-  background-image:
-    url("../../img/about-mobile@1x.png"),
-    radial-gradient(circle at center, $background-square 87%, $element-background 87%),
-    radial-gradient(circle at center, $background-square 15px, $element-background 15px);
-  background-size: auto, 132px 132px, 30px 30px;
-  background-repeat: no-repeat;
-  background-position: top center, top 0 left -25px, top 0 left 77px;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -25px;
+
+    width: 132px;
+    height: 132px;
+
+    border-radius: 15px;
+    background-color: $background-square;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+
+    width: 292px;
+    height: 352px;
+    background-image: url("../../img/about-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
 }
 
 .about__title {
   padding-top: 30px;
+
+  z-index: 2;
 }
 
 .about__intro {
   margin-top: 20px;
   width: 210px;
+
+  z-index: 2;
 }
 
 .about__accent {
@@ -30,6 +54,8 @@
 
   margin-top: 20px;
   margin-bottom: 80px;
+
+  z-index: 2;
 }
 
 .about__button {
@@ -47,37 +73,22 @@
   .about__container {
     align-items: flex-start;
 
-    background-image:
-      url("../../img/about-tablet@1x.png"),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      linear-gradient(-45deg, $background-square 97%, $element-background 97%),
-      linear-gradient(45deg, $background-square 97%, $element-background 97%),
-      linear-gradient(-135deg, $background-square 97%, $element-background 97%),
-      linear-gradient(135deg, $background-square 97%, $element-background 97%);
-    background-size:
-      auto,
-      30px 30px,
-      30px 30px,
-      30px 30px,
-      30px 30px,
-      344px 106.5px,
-      344px 106.5px,
-      344px 106.5px,
-      344px 106.5px;
-    background-repeat: no-repeat;
-    background-position:
-      97% 30px,
-      top 0 left 40px,
-      top 0 right 40px,
-      top 183px left 40px,
-      top 183px right 40px,
-      top 0 left 40px,
-      top 0 right 40px,
-      top 106px left 40px,
-      top 106px right 40px;
+    &::before {
+      top: 0;
+      left: 40px;
+
+      width: 688px;
+      height: 213px;
+    }
+
+    &::after {
+      top: 48px;
+      right: 10px;
+
+      width: 376px;
+      height: 548px;
+      background-image: url("../../img/about-tablet@1x.png");
+    }
   }
 
   .about__intro {
@@ -96,6 +107,8 @@
 
   .about__button {
     display: inline-flex;
+    position: relative;
+
     width: 275px;
     margin-top: 50px;
     border-radius: 15px;
@@ -114,28 +127,24 @@
 
   .about__container {
     padding: 100px 0 165px;
-    background-image:
-      url("../../img/about-desktop@1x.png"),
-      radial-gradient(circle at center, $background-square 93%, $element-background 93%),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px);
-    background-size:
-      auto,
-      213px 213px,
-      30px 30px,
-      30px 30px,
-      30px 30px,
-      30px 30px;
-    background-repeat: no-repeat;
-    background-position:
-      93% bottom,
-      top 70px left 0,
-      top 70px left 0,
-      top 70px left 183px,
-      top 253px left 0,
-      top 253px left 183px;
+
+    &::before {
+      top: 70px;
+      left: 0;
+
+      width: 213px;
+      height: 213px;
+    }
+
+    &::after {
+      top: auto;
+      bottom: 0;
+      right: 0;
+
+      width: 630px;
+      height: 665px;
+      background-image: url("../../img/about-desktop@1x.png");
+    }
   }
 
   .about__title {

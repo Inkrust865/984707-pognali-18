@@ -39,10 +39,34 @@
   &--min {
     border-radius: 5px 0 0 5px;
     border-right: none;
+
+    &:hover {
+      border-right: 1px solid $range-border-hover;
+    }
+
+    &:hover + .input-range--max {
+      border-left: none;
+    }
+
+    &:active {
+      border-right: 1px solid $base-color-3;
+    }
+
+    &:active + .input-range--max {
+      border-left: none;
+    }
   }
 
   &--max {
     border-radius: 0 5px 5px 0;
+  }
+
+  &:hover {
+    border-color: $range-border-hover;
+  }
+
+  &:active {
+    border-color: $base-color-3;
   }
 }
 
@@ -81,7 +105,7 @@
 
   &--max {
     left: auto;
-    right: 0;
+    right: -1px;
   }
 }
 
@@ -140,6 +164,19 @@
   .input-range__marker {
     &--min {
       left: 59px;
+    }
+
+    &:hover {
+      top: -8.5px;
+      width: 19px;
+      height: 19px;
+    }
+
+    &:active {
+      top: -8.5px;
+      width: 19px;
+      height: 19px;
+      box-shadow: 0 3px 7px 0 $element-state;
     }
   }
 }

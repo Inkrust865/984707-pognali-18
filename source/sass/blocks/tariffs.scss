@@ -46,7 +46,8 @@
   }
 
   &::before {
-    content: "1";
+    counter-increment: number;
+    content: counter(number);
     position: absolute;
     top: 3px;
     right: -44px;
@@ -68,14 +69,12 @@
 
   &--second {
     &::before {
-      content: "2";
       background-color: $decoration-element;
     }
   }
 
   &--third {
     &::before {
-      content: "3";
       background-color: $accent-color-1;
     }
   }
@@ -104,30 +103,37 @@
   }
 
   .tariffs__container {
+    position: relative;
     padding-bottom: 65px;
+    background-image: none;
 
-    background-image:
-      url("../../img/rates@1x.png"),
-      radial-gradient(circle at center, $filter-background 95%, $element-background 95%),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px);
-    background-repeat: no-repeat;
-    background-size:
-      99px 99px,
-      200px 285px,
-      30px 30px,
-      30px 30px,
-      30px 30px,
-      30px 30px;
-    background-position:
-      top 410px right 85px,
-      top 150px right 40px,
-      top 150px right 210px,
-      top 150px right 40px,
-      top 405px right 210px,
-      top 405px right 40px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 150px;
+      right: 40px;
+
+      width: 200px;
+      height: 285px;
+
+      border-radius: 15px;
+      background-color: $filter-background;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 410px;
+      right: 85px;
+
+      width: 99px;
+      height: 99px;
+
+      background-image: url("../../img/rates@1x.png");
+      background-size: 99px 99px;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
   }
 
   .tariffs__phrase {
@@ -200,11 +206,22 @@
       height: 67px;
 
       background-color: $filter-background;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+
       background-image: url("../../img/business.svg");
       background-size: 17px 21px;
       background-repeat: no-repeat;
       background-position: top 21px left 25px;
-      border-radius: 50%;
     }
   }
 }
@@ -213,27 +230,23 @@
   .tariffs__container {
     padding-bottom: 165px;
 
-    background-image:
-      url("../../img/rates@1x.png"),
-      radial-gradient(circle at center, $filter-background 97%, $element-background 97%),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px);
-    background-size:
-      198px 198px,
-      445px 300px,
-      30px 30px,
-      30px 30px,
-      30px 30px,
-      30px 30px;
-    background-position:
-      top 285px right 135px,
-      top 235px right 245px,
-      top 235px right 245px,
-      top 235px right 660px,
-      top 505px right 245px,
-      top 505px right 660px;
+    &::before {
+      top: 235px;
+      right: 245px;
+
+      width: 445px;
+      height: 300px;
+    }
+
+    &::after {
+      top: 285px;
+      right: 135px;
+
+      width: 198px;
+      height: 198px;
+
+      background-size: 198px 198px;
+    }
   }
 
   .tariffs__phrase {
@@ -256,5 +269,21 @@
 
   .tariffs__button {
     margin-left: 70px;
+
+    &:hover {
+      color: $tariffs-hover;
+
+      &::after {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      color: $tariffs-active;
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 }

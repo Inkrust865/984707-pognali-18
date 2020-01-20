@@ -6,20 +6,6 @@
   background-color: $base-color-3;
 
   color: $base-color-1;
-
-  &--scroll {
-    background-color: $base-color-1;
-
-    .page-header__logo-image {
-      &--mobile {
-        display: none;
-      }
-
-      &--scroll-mobile {
-        display: block;
-      }
-    }
-  }
 }
 
 .page-header__wrapper {
@@ -63,12 +49,10 @@
   margin-right: 0;
   margin-left: auto;
 
-  &--closed {
-    width: 25px;
-    min-height: 11px;
-  }
+  width: 25px;
+  min-height: 11px;
 
-  &--closed::before {
+  &::before {
     content: "";
 
     position: absolute;
@@ -82,45 +66,6 @@
     background-color: $base-color-1;
     box-shadow: 0 8px 0 0 $base-color-1;
   }
-
-  &--opened {
-    width: 27px;
-    min-height: 30px;
-  }
-
-  &--opened::before {
-    content: "";
-
-    position: absolute;
-    top: 13.5px;
-    left: 0;
-
-    width: 27px;
-    height: 2px;
-    border-radius: 1px;
-
-    background-color: $toggle-closed;
-    transform: rotate(45deg);
-  }
-
-  &--opened::after {
-    content: "";
-
-    position: absolute;
-    top: 13.5px;
-    left: 0;
-
-    width: 27px;
-    height: 2px;
-    border-radius: 1px;
-
-    background-color: $toggle-closed;
-    transform: rotate(-45deg);
-  }
-
-  &--nojs {
-    display: none;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -129,21 +74,6 @@
 
     &--main {
       background-color: $tablet-background;
-    }
-
-    &--scroll {
-      background-color: $base-color-1;
-
-      .page-header__logo-image {
-        &--scroll-mobile,
-        &--tablet {
-          display: none;
-        }
-
-        &--scroll-tablet {
-          display: block;
-        }
-      }
     }
   }
 
@@ -180,30 +110,6 @@
     height: 100px;
 
     background-color: $base-color-3;
-
-    &--scroll {
-      height: 90px;
-      background-color: $base-color-1;
-
-      .main-nav__list a {
-        color: $base-color-2;
-      }
-
-      .site-list::before {
-        background-color: $base-color-2;
-      }
-
-      .page-header__logo-image {
-        &--scroll-tablet,
-        &--desktop {
-          display: none;
-        }
-
-        &--scroll-desktop {
-          display: block;
-        }
-      }
-    }
   }
 
   .page-header__wrapper {

@@ -12,28 +12,39 @@
 }
 
 .travelmates__container {
+  position: relative;
   background-image:
     url("../../img/rogovaya-back-mobile@1x.png"),
-    url("../../img/smolov-back-desktop@1x.png"),
-    radial-gradient(circle at center, $background-square 87%, $element-background 87%),
-    radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-    radial-gradient(circle at center, $background-square 15px, $element-background 15px);
-  background-size: auto, auto, 132px 132px, 30px 30px, 30px 30px;
+    url("../../img/smolov-back-desktop@1x.png");
   background-repeat: no-repeat;
   background-position:
     -10px 340px,
-    150px 65px,
-    -20px 65px,
-    82px 65px,
-    82px 167px;
+    150px 65px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 65px;
+    left: -20px;
+
+    width: 132px;
+    height: 132px;
+
+    border-radius: 15px;
+    background-color: $background-square;
+  }
 }
 
 .travelmates__title {
   padding-top: 95px;
+
+  z-index: 2;
 }
 
 .travelmates__intro {
   margin-top: 20px;
+
+  z-index: 2;
 }
 
 .travelmates__accent {
@@ -111,7 +122,7 @@
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
-  color: $base-color-3;
+  color: $base-color-4;
 
   order: 2;
   position: relative;
@@ -164,28 +175,9 @@
   width: 32px;
   height: 32px;
 
-  &--plane {
-    &::before {
-      background-size: 19px 21px;
-    }
-  }
-
-  &--bus {
-    &::before {
-      background-size: 17px 21px;
-    }
-  }
-
-  &--bike {
-    &::before {
-      background-size: 24px 21px;
-    }
-  }
-
-  &--man {
-    &::before {
-      background-size: 20px 21px;
-    }
+  &::before {
+    width: 32px;
+    height: 32px;
   }
 }
 
@@ -200,22 +192,18 @@
   .travelmates__container {
     background-image:
       url("../../img/rogovaya-back-desktop@1x.png"),
-      url("../../img/smolov-back-desktop@1x.png"),
-      radial-gradient(circle at center, $background-square 95%, $element-background 95%),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px),
-      radial-gradient(circle at center, $background-square 15px, $element-background 15px);
-    background-size: auto, auto, 213px 213px, 30px 30px, 30px 30px, 30px 30px, 30px 30px;
-    background-repeat: no-repeat;
+      url("../../img/smolov-back-desktop@1x.png");
     background-position:
       85% 140px,
-      40px 475px,
-      40px 140px,
-      40px 140px,
-      223px 140px,
-      40px 323px,
-      223px 323px;
+      40px 475px;
+
+    &::before {
+      top: 140px;
+      left: 40px;
+
+      width: 213px;
+      height: 213px;
+    }
   }
 
   .travelmates__title {
@@ -288,12 +276,12 @@
 
     background-position:
       190px 445px,
-      550px 195px,
-      60px 140px,
-      60px 140px,
-      243px 140px,
-      60px 323px,
-      243px 323px;
+      550px 195px;
+
+    &::before {
+      top: 140px;
+      left: 60px;
+    }
   }
 
   .travelmates__title {
@@ -321,6 +309,35 @@
     width: 630px;
 
     order: 5;
+  }
+
+  .travelmates__image-wrapper {
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+
+    overflow: hidden;
+  }
+
+  .travelmates__item {
+    overflow: visible;
+
+    &:hover {
+      .travelmates__item-image {
+        transform: scale(1.2);
+        transition: 0.3s;
+      }
+    }
+  }
+
+  .travelmates__name {
+    &:hover {
+      color: $element-state-2;
+    }
+
+    &:active {
+      color: $element-state;
+    }
   }
 
   .travelmates__button {

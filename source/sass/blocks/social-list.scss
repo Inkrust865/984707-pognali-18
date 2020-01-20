@@ -11,17 +11,15 @@
   }
 }
 
-.social-list__item {
-  &--yellow {
-    background-color: $accent-color-1;
-    border-radius: 50%;
-  }
-}
-
 .social-list__icon {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  &--dark-yellow {
+    background-color: $accent-color-1;
+    border-radius: 50%;
+  }
 
   svg {
     fill: $border-element;
@@ -73,6 +71,27 @@
   .social-list {
     &--header {
       display: none;
+    }
+  }
+
+  .social-list__icon {
+    &--dark-yellow {
+      &:hover {
+        background-color: $base-color-2;
+
+        svg {
+          fill: $base-color-1;
+        }
+      }
+
+      &:active {
+        background-color: $base-color-2;
+
+        svg {
+          fill: $base-color-1;
+          opacity: 0.3;
+        }
+      }
     }
   }
 }

@@ -41,28 +41,54 @@
   margin-right: 15px;
   width: 70px;
   height: 70px;
+}
+
+.catalog__heart {
+  display: block;
+  position: absolute;
+  top: 38px;
+  right: -10px;
+
+  width: 31px;
+  height: 31px;
 
   &::before {
     content: "";
     position: absolute;
-    top: 38px;
-    right: -10px;
+    top: 0;
+    right: 0;
 
     width: 31px;
     height: 31px;
 
     background-color: $element-background-3;
     border-radius: 50%;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 31px;
+    height: 31px;
+
     background-image: url("../../img/heart.svg");
     background-size: 13px 11px;
     background-position: 9px 11px;
     background-repeat: no-repeat;
+    opacity: 0.3;
   }
 
   &--like {
     &::before {
       background-color: $like;
+    }
+
+    &::after {
       background-image: url("../../img/heart-active.svg");
+      opacity: 1;
     }
   }
 }
@@ -183,13 +209,6 @@
   &::before {
     width: 26px;
     height: 18px;
-  }
-
-  &--czech {
-    &::after {
-      border: 9px solid $element-background;
-      border-left: 9px solid $flag-color-2;
-    }
   }
 }
 
@@ -319,16 +338,26 @@
   .catalog__image-wrapper {
     margin-right: 30px;
     width: 190px;
-    height: 190px;
+    height: auto;
 
     top: 35px;
     left: 35px;
+  }
+
+  .catalog__heart {
+    top: auto;
+    bottom: 0;
+    right: -227px;
+
+    width: 50px;
+    height: 50px;
 
     &::before {
-      top: auto;
-      bottom: 0;
-      right: -227px;
+      width: 50px;
+      height: 50px;
+    }
 
+    &::after {
       width: 50px;
       height: 50px;
 
@@ -466,33 +495,8 @@
     background-color: $element-background;
 
     &::before {
-      width: 31px;
-      height: 31px;
-    }
-
-    &--plane {
-      &::before {
-        margin-left: -2px;
-        background-size: 19px 21px;
-      }
-    }
-
-    &--bus {
-      &::before {
-        background-size: 17px 21px;
-      }
-    }
-
-    &--bike {
-      &::before {
-        background-size: 24px 21px;
-      }
-    }
-
-    &--man {
-      &::before {
-        background-size: 20px 21px;
-      }
+      width: 32px;
+      height: 32px;
     }
   }
 
@@ -581,7 +585,7 @@
     padding: 0;
 
     border-radius: 20px;
-    overflow: hidden;
+    overflow: visible;
 
     &:not(:first-of-type) {
       margin-top: 30px;
@@ -591,17 +595,13 @@
   .catalog__image-wrapper {
     top: 0;
     left: 0;
-    width: 285px;
-    height: 285px;
 
-    &::before {
-      right: -252px;
-      bottom: 48px;
-    }
+    width: 285px;
+    height: auto;
   }
 
   .catalog__image {
-    border-radius: 0;
+    border-radius: 20px 0 0 20px;
 
     &--tablet {
       display: none;
@@ -609,6 +609,53 @@
 
     &--desktop {
       display: block;
+    }
+  }
+
+  .catalog__heart {
+    right: -252px;
+    bottom: 48px;
+
+    &:hover {
+      &::before {
+        background-color: $filter-background;
+      }
+
+      &::after {
+        opacity: 0.5;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: $filter-background;
+      }
+
+      &::after {
+        opacity: 0.1;
+      }
+    }
+
+    &--like {
+      &:hover {
+        &::before {
+          background-color: $like-hover;
+        }
+
+        &::after {
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        &::before {
+          background-color: $like-hover;
+        }
+
+        &::after {
+          opacity: 0.3;
+        }
+      }
     }
   }
 
@@ -622,15 +669,40 @@
   .catalog__name {
     width: 285px;
 
-    a::after {
-      right: auto;
-      left: -25px;
+    a {
+      &::after {
+        right: auto;
+        left: -25px;
+      }
+
+      &:hover {
+        color: $element-state-3;
+      }
+
+      &:active {
+        color: $element-state;
+      }
     }
   }
 
   .catalog__hashtags {
     width: 285px;
     margin-top: 17px;
+  }
+
+  .catalog__item-button {
+    &:hover {
+      background-color: $decoration-element;
+    }
+
+    &:active {
+      background-color: $decoration-element;
+      color: $element-state;
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
   }
 
   .catalog__flags-wrapper {
@@ -674,15 +746,6 @@
       width: 35px;
       height: 24px;
     }
-
-    &--czech {
-      &::after {
-        top: 3px;
-
-        border: 12px solid $element-background;
-        border-left: 12px solid $flag-color-2;
-      }
-    }
   }
 
   .catalog__properties-wrapper {
@@ -722,5 +785,13 @@
 
   .catalog__button {
     margin-top: 55px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

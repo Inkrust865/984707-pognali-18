@@ -41,14 +41,6 @@
 }
 
 @media (min-width: $tablet-width) {
-  /*.checkbox label {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 24px;
-    color: $base-color-4;
-    text-transform: uppercase;
-  }*/
-
   .checkbox__label {
     font-size: 20px;
     line-height: 20px;
@@ -71,6 +63,22 @@
         height: 12px;
         background-size: 12px 12px;
       }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .checkbox__label {
+    &:hover {
+      color: $text-color-opacity-1;
+
+      &::before {
+        opacity: 0.6;
+      }
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

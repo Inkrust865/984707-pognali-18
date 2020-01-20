@@ -135,28 +135,23 @@
   }
 
   .countries__container {
-    background-image:
-      url("../../img/flags-back@1x.png"),
-      radial-gradient(circle at center, $filter-background 90%, $element-background 90%),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px),
-      radial-gradient(circle at center, $filter-background 15px, $element-background 15px);
-    background-size:
-      auto,
-      141px 141px,
-      30px 30px,
-      30px 30px,
-      30px 30px,
-      30px 30px;
+    position: relative;
+    background-image: url("../../img/flags-back@1x.png");
     background-repeat: no-repeat;
-    background-position:
-      92% 85px,
-      top 405px left 40px,
-      top 405px left 40px,
-      top 405px left 151px,
-      top 516px left 40px,
-      top 516px left 151px;
+    background-position: 92% 85px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 405px;
+      left: 40px;
+
+      width: 141px;
+      height: 141px;
+
+      border-radius: 15px;
+      background-color: $filter-background;
+    }
   }
 
   .countries__title {
@@ -228,14 +223,6 @@
 
       border-radius: 5px;
     }
-
-    &--czech {
-      &::after {
-        border: 24px solid $element-background;
-        border-left: 24px solid $flag-color-2;
-        border-radius: 5px;
-      }
-    }
   }
 
   .countries__name {
@@ -279,13 +266,12 @@
     max-height: 750px;
     padding-bottom: 140px;
 
-    background-position:
-      95% 85px,
-      top 90px left 60px,
-      top 90px left 60px,
-      top 90px left 171px,
-      top 201px left 60px,
-      top 201px left 171px;
+    background-position: 95% 85px;
+
+    &::before {
+      top: 90px;
+      left: 60px;
+    }
   }
 
   .countries__title {

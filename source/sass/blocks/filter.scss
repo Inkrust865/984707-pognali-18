@@ -44,79 +44,42 @@
 
 .filter__button {
   position: relative;
+
   padding: 0;
+  width: 17px;
 
   border: none;
   background-color: $element-background;
 
-  &--opened {
-    width: 12px;
+  &::before {
+    content: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    &::before {
-      content: none;
-      position: absolute;
-      top: 0;
-      left: 0;
+    width: 130px;
+    height: 24px;
 
-      width: 90px;
-      height: 24px;
-
-      font-family: $main-font;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      color: $base-color-2;
-      text-transform: uppercase;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 5px;
-      right: 0;
-
-      width: 12px;
-      height: 12px;
-
-      background-image: url("../../img/filter-close.svg");
-      background-repeat: no-repeat;
-      background-size: 12px 12px;
-    }
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $base-color-2;
+    text-transform: uppercase;
   }
 
-  &--closed {
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9.5px;
+    right: 0;
+
     width: 17px;
+    height: 3px;
 
-    &::before {
-      content: none;
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 130px;
-      height: 24px;
-
-      font-family: $main-font;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 24px;
-      color: $base-color-2;
-      text-transform: uppercase;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 9.5px;
-      right: 0;
-
-      width: 17px;
-      height: 3px;
-
-      background-image: url("../../img/dots.svg");
-      background-repeat: no-repeat;
-      background-size: 17px 3px;
-    }
+    background-image: url("../../img/dots.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 3px;
   }
 }
 
@@ -128,21 +91,6 @@
 
   background-color: $filter-background;
   border-radius: 0 0 20px 20px;
-
-  &--nojs {
-    display: block;
-  }
-
-  &--opened {
-    display: block;
-    position: absolute;
-    top: 70px;
-    left: 0;
-  }
-
-  &--closed {
-    display: none;
-  }
 }
 
 .filter__list-parts-world {
@@ -300,33 +248,16 @@
     min-width: 175px;
     margin-right: 40px;
 
-
-    &--opened {
-      &::before {
-        content: "Свернуть";
-      }
-
-      &::after {
-        top: 2px;
-        width: 18px;
-        height: 18px;
-
-        background-size: 18px 18px;
-      }
+    &::before {
+      content: "Показать все";
     }
 
-    &--closed {
-      &::before {
-        content: "Показать все";
-      }
+    &::after {
+      top: 8.5px;
+      width: 27px;
+      height: 5px;
 
-      &::after {
-        top: 8.5px;
-        width: 27px;
-        height: 5px;
-
-        background-size: 27px 5px;
-      }
+      background-size: 27px 5px;
     }
   }
 
@@ -464,24 +395,32 @@
 
   .filter__part-world {
     padding: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 
   .filter__button {
     margin-right: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 
   .filter__button-name {
     &--close {
       display: block;
     }
-  }
-
-  .filter__modal {
-    position: relative;
-    top: 0;
-    padding-top: 55px;
-
-    background-color: $element-background-3;
   }
 
   .filter__modal-container {
@@ -555,6 +494,19 @@
 
     &::before {
       left: 595px;
+    }
+
+    &:hover {
+      background-color: $filter-close-hover;
+    }
+
+    &:active {
+      background-color: $filter-close-hover;
+      color: $element-state;
+
+      &::before {
+        opacity: 0.3;
+      }
     }
   }
 }

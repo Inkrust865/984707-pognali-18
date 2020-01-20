@@ -60,6 +60,15 @@
     &--top {
       padding: 13px 25px;
       margin: 0;
+
+      &:hover {
+        background-color: $decoration-element;
+      }
+
+      &:active {
+        background-color: $decoration-element;
+        color: $text-active;
+      }
     }
 
     &--tablet {

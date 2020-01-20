@@ -32,6 +32,12 @@
     border-radius: 2.5px;
     background-color: $accent-color-2;
   }
+
+  &--form {
+    &::before {
+      width: 214px;
+    }
+  }
 }
 
 .page__link {
@@ -56,17 +62,21 @@
 
   .page__title {
     margin-left: 35px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
 
     font-size: 60px;
     line-height: 70px;
 
-    &--catalog {
-      &::before {
-        width: 287px;
-        height: 8px;
+    &::before {
+      width: 287px;
+      height: 8px;
 
-        border-radius: 4.5px;
+      border-radius: 4.5px;
+    }
+
+    &--form {
+      &::before {
+        width: 357px;
       }
     }
   }
@@ -123,5 +133,13 @@
 
   .page__link {
     margin-right: 60px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

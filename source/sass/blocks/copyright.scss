@@ -28,3 +28,15 @@
     margin-left: 25px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}

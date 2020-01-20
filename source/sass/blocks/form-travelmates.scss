@@ -65,33 +65,6 @@
     height: 43px;
   }
 
-  .form-travelmates__label {
-    &--plane {
-      &::before {
-        margin-left: -2px;
-        background-size: 19px 21px;
-      }
-    }
-
-    &--bus {
-      &::before {
-        background-size: 17px 21px;
-      }
-    }
-
-    &--bike {
-      &::before {
-        background-size: 24px 21px;
-      }
-    }
-
-    &--man {
-      &::before {
-        background-size: 20px 21px;
-      }
-    }
-  }
-
   .form-travelmates__inputs-wrapper {
     margin: 0;
     width: 150px;
@@ -116,6 +89,13 @@
     margin-bottom: 15px;
   }
 
+  .form-travelmates__transport {
+    .transports__label {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
   .form-travelmates__inputs-wrapper {
     margin: 0;
     margin-top: 20px;
@@ -124,5 +104,10 @@
 
   .form-travelmates__button {
     padding: 10px 35px;
+
+    &:active {
+      background-color: $border-parameter;
+      color: $text-active;
+    }
   }
 }

@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header page-header--main">
+  <body class="body body--nojs js-body">
+    <header class="page-header page-header--main js-header">
       <div class="page-header__wrapper">
         <div class="page-header__container container">
           <a class="page-header__logo">
@@ -20,24 +20,24 @@
             <img class="page-header__logo-image page-header__logo-image--desktop" src="img/logo-desktop-white@1x.png" width="200" height="52" alt="Погнали">
             <img class="page-header__logo-image page-header__logo-image--scroll-desktop" src="img/logo-desktop-blue@1x.png" width="200" height="52" alt="Погнали">
           </a>
-          <button class="page-header__toggle page-header__toggle--closed page-header__toggle--nojs" type="button" aria-label="Открыть меню"></button>
+          <button class="page-header__toggle js-toggle" type="button" aria-label="Открыть меню"></button>
           <ul class="main-nav__list user-list user-list--tablet">
             <li class="user-list__item">
               <a class="button user-list__login user-list__login--tablet" href="#">Авторизация</a>
             </li>
           </ul>
         </div>
-        <nav class="main-nav main-nav--nojs">
+        <nav class="main-nav main-nav js-nav">
           <div class="main-nav__container container">
             <ul class="main-nav__list site-list">
               <li class="site-list__item">
-                <a href="#">О сервисе</a>
+                <a href="#"><span data-hover="О сервисе">О сервисе</span></a>
               </li>
               <li class="site-list__item">
-                <a href="form.html">Направления</a>
+                <a href="../form.html"><span data-hover="Направления">Направления</span></a>
               </li>
               <li class="site-list__item">
-                <a href="catalog.html">Попутчики</a>
+                <a href="../catalog.html"><span data-hover="Попутчики">Попутчики</span></a>
               </li>
             </ul>
             <ul class="main-nav__list user-list--top">
@@ -45,13 +45,13 @@
                 <a class="button user-list__login user-list__login--top" href="#">Авторизация</a>
               </li>
             </ul>
-            <ul class="main-nav__list contacts-list contacts-list--top">
-              <li class="contacts-list__item contacts-list__item--phone contacts-list__item--top">
-                <a href="tel:88005558628">
+            <ul class="main-nav__list contacts-list contacts-list--header">
+              <li class="contacts-list__item contacts-list__item--phone contacts-list__item--header">
+                <a class="contacts-list__link contacts-list__link--phone contacts-list__link--header" href="tel:88005558628">
                   <span class="contacts-list__phone">8 800 555-86-28</span>
                 </a>
               </li>
-              <li class="contacts-list__item contacts-list__item--mail contacts-list__item--top contacts-list__item--top-mail">
+              <li class="contacts-list__item contacts-list__item--mail contacts-list__item--header contacts-list__item--header-mail">
                 <a href="mailto:mail@htmlacademy.ru">
                   <span class="contacts-list__mail">mail@htmlacademy.ru</span>
                 </a>
@@ -178,9 +178,6 @@
           </b>
           <a class="button about__button section__button" href="#">
             Подробнее
-            <svg width="10" height="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" style="enable-background:new 0 0 10 14;" xml:space="preserve">
-            <polygon points="0,14 0,0.1 10,7.1 "/>
-            </svg>
           </a>
         </div>
       </section>
@@ -256,11 +253,8 @@
               </div>
             </li>
           </ul>
-          <a class="button countries__button section__button" href="form.html">
+          <a class="button countries__button section__button" href="../form.html">
             Показать все
-            <svg width="10" height="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" style="enable-background:new 0 0 10 14;" xml:space="preserve">
-            <polygon points="0,14 0,0.1 10,7.1 "/>
-            </svg>
           </a>
         </div>
       </section>
@@ -276,35 +270,37 @@
           </b>
           <ul class="travelmates__list">
             <li class="travelmates__item">
-              <img class="travelmates__item-image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Изображение Тани Фирсовой">
+              <div class="travelmates__image-wrapper">
+                <img class="travelmates__item-image" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Изображение Тани Фирсовой">
+              </div>
               <div class="travelmates__item-description">
                 <h3 class="travelmates__name travelmates__name--offline">Таня Фирсова</h3>
                 <ul class="travelmates__flags flags">
                   <li class="travelmates__flag flag flag--sri-lanka">
-                    <span class="visually-hidden">Шри-Ланка</span>
+                    <span class="flag__tooltip">Шри-Ланка</span>
                   </li>
                   <li class="travelmates__flag flag flag--thailand">
-                    <span class="visually-hidden">Таиланд</span>
+                    <span class="flag__tooltip">Таиланд</span>
                   </li>
                   <li class="travelmates__flag flag flag--seychelles">
-                    <span class="visually-hidden">Сейшелы</span>
+                    <span class="flag__tooltip">Сейшелы</span>
                   </li>
                 </ul>
                 <p class="travelmates__hashtags">
                   #ЗОЖ #ПП #Фитнес #пляж #авокадо #смузи
                 </p>
                 <ul class="travelmates__transports transports">
-                  <li class="travelmates__transport transports__label--current transports__label transports__label--plane travelmates__transport--plane">
-                    <span class="visually-hidden">Самолёт</span>
+                  <li class="travelmates__transport transports__label--current transports__label transports__label--plane-travelmates">
+                    <span class="transports__tooltip">Авиаперелет</span>
                   </li>
-                  <li class="travelmates__transport transports__label transports__label--bus travelmates__transport--bus">
-                    <span class="visually-hidden">Автобус</span>
+                  <li class="travelmates__transport transports__label transports__label--bus-travelmates">
+                    <span class="transports__tooltip">Автотранспорт</span>
                   </li>
-                  <li class="travelmates__transport transports__label transports__label--bike travelmates__transport--bike">
-                    <span class="visually-hidden">Велосипед</span>
+                  <li class="travelmates__transport transports__label transports__label--bike-travelmates">
+                    <span class="transports__tooltip">Велосипед</span>
                   </li>
-                  <li class="travelmates__transport transports__label transports__label--man travelmates__transport--man">
-                    <span class="visually-hidden">Пешком</span>
+                  <li class="travelmates__transport transports__label transports__label--man-travelmates">
+                    <span class="transports__tooltip">Пешком</span>
                   </li>
                 </ul>
                 <p class="travelmates__level level level--99">
@@ -313,25 +309,27 @@
               </div>
             </li>
             <li class="travelmates__item">
-              <img class="travelmates__item-image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Изображение Пети Демина">
+              <div class="travelmates__image-wrapper">
+                <img class="travelmates__item-image" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Изображение Пети Демина">
+              </div>
               <div class="travelmates__item-description">
                 <h3 class="travelmates__name">Петя Демин</h3>
                 <ul class="travelmates__flags flags">
                   <li class="travelmates__flag flag flag--belgium">
-                    <span class="visually-hidden">Бельгия</span>
+                    <span class="flag__tooltip">Бельгия</span>
                   </li>
                   <li class="travelmates__flag flag flag--czech">
-                    <span class="visually-hidden">Чехия</span>
+                    <span class="flag__tooltip">Чехия</span>
                   </li>
                 </ul>
                 <p class="travelmates__hashtags">
                   #бургер #бар #футбол #концерт #крафт
                 </p>
                 <ul class="travelmates__transports transports">
-                  <li class="travelmates__transport  transports__label transports__label--plane travelmates__transport--plane transports__label--current"><span class="visually-hidden">Самолёт</span></li>
-                  <li class="travelmates__transport transports__label transports__label--bus travelmates__transport--bus transports__label--current"><span class="visually-hidden">Автобус</span></li>
-                  <li class="travelmates__transport transports__label transports__label--bike travelmates__transport--bike"><span class="visually-hidden">Велосипед</span></li>
-                  <li class="travelmates__transport transports__label transports__label--man travelmates__transport--man transports__label--current"><span class="visually-hidden">Пешком</span></li>
+                  <li class="travelmates__transport  transports__label transports__label--plane-travelmates transports__label--current"><span class="transports__tooltip">Авиаперелет</span></li>
+                  <li class="travelmates__transport transports__label transports__label--bus-travelmates transports__label--current"><span class="transports__tooltip">Автотранспорт</span></li>
+                  <li class="travelmates__transport transports__label transports__label--bike-travelmates"><span class="transports__tooltip">Велосипед</span></li>
+                  <li class="travelmates__transport transports__label transports__label--man-travelmates transports__label--current"><span class="transports__tooltip">Пешком</span></li>
                 </ul>
                 <p class="travelmates__level level level--80">
                   <span class="travelmates__level-value level-value">80</span>level
@@ -339,11 +337,8 @@
               </div>
             </li>
           </ul>
-          <a class="button travelmates__button section__button" href="catalog.html">
+          <a class="button travelmates__button section__button" href="../catalog.html">
             Показать всеx
-            <svg width="10" height="14" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" style="enable-background:new 0 0 10 14;" xml:space="preserve">
-            <polygon points="0,14 0,0.1 10,7.1 "/>
-            </svg>
           </a>
         </div>
       </section>
@@ -366,9 +361,9 @@
               <span class="tariffs__price">59 руб./мес</span>
             </li>
           </ul>
-          <a class="tariffs__button">Показать тарифы для бизнеса</a>
+          <a class="tariffs__button js-tbutton">Показать тарифы для бизнеса</a>
 
-          <div class="modal modal--nojs">
+          <div class="modal js-tariffs">
             <span class="modal__title">Бизнес-тарифы</span>
             <ul class="modal__list">
               <li class="modal__item">
@@ -388,7 +383,7 @@
                 <span class="modal__item-price">Индивидуально</span>
               </li>
             </ul>
-            <button class="modal__close" type="button">Закрыть окно</button>
+            <button class="modal__close js-tclose" type="button">Закрыть окно</button>
           </div>
         </div>
       </section>
@@ -411,11 +406,35 @@
             Остались вопросы? Мы&nbsp;с&nbsp;радостью на них ответим!
           </p>
           <ul class="contacts__list-bottom contacts-list contacts-list--bottom">
-            <li class="contacts-list__item contacts-list__item--phone contacts-list__item--bottom">
-              <a href="tel:88005558628">8 800 555-86-28</a>
+            <li class="contacts-list__item">
+              <a class="contacts-list__link--phone contacts-list__link--contacts" href="tel:88005558628">
+                <span>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 36" style="enable-background:new 0 0 36 36;" fill="#ffd74b" xml:space="preserve">
+                  <path class="st0" d="M18,0C11.6,0,5.2,1.1,2.8,3.4C0.9,5.3,0.2,8.7,0,10.8c0,0,0,0.2,0,0.3c0,0.8,0.7,1.5,1.5,1.5
+                    c0.1,0,3.7-0.3,5.9-0.5c0.1,0,0.1,0,0.2,0c0.8,0,1.5-0.7,1.5-1.5l0-3C9,6.7,9.7,6,10.7,6h14.7C26.2,6,27,6.7,27,7.7l0,3
+                    c0,0.8,0.7,1.5,1.5,1.5c0.1,0,0.1,0,0.2,0c2.2,0.2,5.8,0.5,5.9,0.5c0.8,0,1.5-0.7,1.5-1.5c0-0.1,0-0.3,0-0.3
+                    c-0.2-2.1-0.9-5.5-2.8-7.4C30.8,1.1,24.4,0,18,0z M18,19.5c-1.7,0-3,1.3-3,3s1.3,3,3,3c1.7,0,3-1.3,3-3S19.7,19.5,18,19.5z
+                    M15.7,12.7v-1.9c0-1-0.8-1.9-1.9-1.9S12,9.8,12,10.9v1.9L1.9,23.6c-0.7,0.7-1.1,1.6-1.1,2.7v3c0,1.7,1.3,3,3,3h0.8v1.9
+                    c0,1,0.8,1.9,1.9,1.9s1.9-0.8,1.9-1.9v-1.9h19.5v1.9c0,1,0.8,1.9,1.9,1.9c1,0,1.9-0.8,1.9-1.9v-1.9h0.8c1.7,0,3-1.3,3-3v-3
+                    c0-1.1-0.4-2-1.1-2.7L24,12.7v-1.9c0-1-0.8-1.9-1.9-1.9s-1.9,0.8-1.9,1.9v1.9H15.7z M18,16.5c3.3,0,6,2.7,6,6c0,3.3-2.7,6-6,6
+                    c-3.3,0-6-2.7-6-6C12,19.2,14.7,16.5,18,16.5z"/>
+                  </svg>
+                  8 800 555-86-28
+                </span>
+              </a>
             </li>
-            <li class="contacts-list__item contacts-list__item--mail contacts-list__item--bottom contacts-list__item--bottom-mail">
-              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <li class="contacts-list__item">
+              <a class="contacts-list__link--mail contacts-list__link--contacts contacts-list__link--contacts-mail" href="mailto:mail@htmlacademy.ru">
+                <span>
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36 26" style="enable-background:new 0 0 36 26;" fill="#ffd74b" xml:space="preserve">
+                  <path class="st0" d="M0,23c0,1.6,1.3,3,3,3h30c1.7,0,3-1.3,3-3V3c0-1.6-1.3-3-3-3H3C1.3,0,0,1.3,0,3L0,23L0,23z M11,13L4.2,6.2
+                    c-0.6-0.6-0.6-1.5,0-2c0.6-0.6,1.5-0.6,2.1,0l11,10.9c0.4,0.4,1.2,0.4,1.6,0l11-10.9c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2
+                    L25,13l6.9,6.8c0.6,0.6,0.6,1.5,0,2c-0.6,0.6-1.5,0.6-2.1,0l-6.9-6.8c0,0-2.1,2.2-2.5,2.5c-0.6,0.6-1.4,1-2.4,1
+                    c-0.9,0-1.8-0.4-2.4-1c-0.4-0.4-2.5-2.5-2.5-2.5l-6.9,6.8c-0.6,0.6-1.5,0.6-2.1,0c-0.6-0.6-0.6-1.5,0-2L11,13z"/>
+                  </svg>
+                  mail@htmlacademy.ru
+                </span>
+              </a>
             </li>
           </ul>
         </div>
@@ -427,7 +446,12 @@
             <address class="address__text">
             ул. Большая Конюшенная,&nbsp;19/8
             </address>
-            <a class="address__button" href="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387192,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474">Проложить маршрут</a>
+            <a class="address__button" href="https://www.google.ru/maps/place/%D0%91%D0%BE%D0%BB%D1%8C%D1%88%D0%B0%D1%8F+%D0%9A%D0%BE%D0%BD%D1%8E%D1%88%D0%B5%D0%BD%D0%BD%D0%B0%D1%8F+%D1%83%D0%BB.,+19%2F8,+%D0%A1%D0%B0%D0%BD%D0%BA%D1%82-%D0%9F%D0%B5%D1%82%D0%B5%D1%80%D0%B1%D1%83%D1%80%D0%B3,+191186/@59.9387192,30.3208587,17z/data=!3m1!4b1!4m5!3m4!1s0x4696310fca145cc1:0x42b32648d8238007!8m2!3d59.9387165!4d30.3230474">
+              Проложить маршрут
+              <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10 14" style="enable-background:new 0 0 10 14;" fill="#1d2e5b" xml:space="preserve">
+              <polygon points="0,14 0,0.1 10,7.1 "/>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -444,8 +468,8 @@
           <img class="page-footer__logo-image page-footer__logo-image--desktop" src="img/logo-desktop-blue@1x.png" width="200" height="52" alt="Погнали">
         </a>
         <ul class="page-footer__list social-list">
-          <li class="social-list__item social-list__item--yellow">
-            <a class="social-list__icon social-list__icon--fb social-list__icon--dark" href="#">
+          <li class="social-list__item">
+            <a class="social-list__icon social-list__icon--fb social-list__icon--dark social-list__icon--dark-yellow" href="#">
               <svg width="11" height="21" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11 21" style="enable-background:new 0 0 11 21;" xml:space="preserve">
               <g>
                 <path d="M7.8,21H2.2v-9.8H0V6.4h2.1C2,4.2,2.4,2.6,3.4,1.5C4.2,0.6,5.5,0.1,7.1,0L11,0v4.7H7.9C7.8,4.9,7.7,5.5,7.7,6.4H11v4.8H7.8
@@ -456,8 +480,8 @@
               <span class="visually-hidden">Facebook</span>
             </a>
           </li>
-          <li class="social-list__item social-list__item--yellow">
-            <a class="social-list__icon social-list__icon--vk social-list__icon--dark" href="#">
+          <li class="social-list__item">
+            <a class="social-list__icon social-list__icon--vk social-list__icon--dark social-list__icon--dark-yellow" href="#">
               <svg width="23" height="12" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 30 15.8" style="enable-background:new 0 0 30 15.8;" xml:space="preserve">
               <g>
                 <path d="M23.9,15.8c-0.4,0-1.2-0.1-2.1-0.6c-0.6-0.4-1.2-1-1.8-1.5c-0.4-0.4-1.2-1.2-1.4-1.2c-0.3,0.1-0.5,0.9-0.5,1.6
@@ -481,8 +505,8 @@
               <span class="visually-hidden">Vkontakte</span>
             </a>
           </li>
-          <li class="social-list__item social-list__item--yellow">
-            <a class="social-list__icon social-list__icon--ins social-list__icon--dark" href="#">
+          <li class="social-list__item">
+            <a class="social-list__icon social-list__icon--ins social-list__icon--dark social-list__icon--dark-yellow" href="#">
               <svg width="18" height="18" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 23 23" style="enable-background:new 0 0 23 23;" xml:space="preserve">
               <path class="st0" d="M17,1.5c2.5,0,4.5,2,4.5,4.5v11c0,2.5-2,4.5-4.5,4.5H6c-2.5,0-4.5-2-4.5-4.5V6c0-2.5,2-4.5,4.5-4.5L17,1.5
                 M17,0H6C2.7,0,0,2.7,0,6v11c0,3.3,2.7,6,6,6h11c3.3,0,6-2.7,6-6V6C23,2.7,20.3,0,17,0L17,0z"/>

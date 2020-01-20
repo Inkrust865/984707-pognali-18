@@ -65,6 +65,8 @@ body {
   color: $text-color;
 
   background-color: $element-background-3;
+
+  counter-reset: number;
 }
 
 a {
@@ -93,4 +95,35 @@ input[type="checkbox"].visually-hidden {
 
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.body--nojs {
+  .page-header__toggle {
+    display: none;
+  }
+
+  .main-nav {
+    display: block;
+    position: relative;
+    top: 0;
+  }
+
+  .modal {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .filter__modal {
+    display: block;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .body--nojs {
+    .modal {
+      top: 0;
+      left: 0;
+    }
+  }
 }

@@ -8,20 +8,6 @@
   overflow: hidden;
 
   box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.1);
-
-  &--nojs {
-    display: block;
-    position: relative;
-    margin: 0 auto;
-  }
-
-  &--opened {
-    display: block;
-  }
-
-  &--closed {
-    display: none;
-  }
 }
 
 .modal__title {
@@ -113,14 +99,20 @@
     top: 100px;
     left: 345px;
     width: 750px;
-
-    &--nojs {
-      top: 0;
-      left: 0;
-    }
   }
 
   .modal__list {
     margin: 45px 60px 50px;
+  }
+
+  .modal__close {
+    &:hover {
+      background-color: $element-background-3;
+    }
+
+    &:active {
+      background-color: $element-background-3;
+      color: $element-state;
+    }
   }
 }

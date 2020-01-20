@@ -59,17 +59,12 @@
   line-height: 18px;
   color: $base-color-4;
 
-  &::before {
-    content: "";
+  svg {
     position: absolute;
     top: 20px;
     right: 20px;
     width: 10px;
     height: 14px;
-
-    background-image: url("../../img/triangle-arrow-right.svg");
-    background-size: 10px 14px;
-    background-repeat: no-repeat;
   }
 }
 
@@ -110,7 +105,7 @@
     font-size: 24px;
     line-height: 24px;
 
-    &::before {
+    svg {
       top: 30px;
       right: 30px;
     }
@@ -147,5 +142,23 @@
 
   .address__button {
     margin: 0;
+
+    &:hover {
+      background-color: $base-color-2;
+      color: $base-color-1;
+
+      svg {
+        fill: $base-color-1;
+      }
+    }
+
+    &:active {
+      background-color: $base-color-2;
+      color: $address-button-active;
+
+      svg {
+        fill: $address-button-active;
+      }
+    }
   }
 }

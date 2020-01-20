@@ -54,6 +54,41 @@
   }
 
   .site-list__item a {
+    display: block;
     color: $base-color-1;
+    padding: 0 4px;
+    height: 1.5em;
+    overflow: hidden;
+
+    span {
+      position: relative;
+      display: inline-block;
+      transition: transform 0.3s;
+
+      &::before {
+        content: attr(data-hover);
+        position: absolute;
+        top: 100%;
+        box-sizing: border-box;
+
+        color: $accent-color-1;
+
+        transform: translate3d(0, 0, 0);
+      }
+    }
+
+    &:hover {
+      outline: none;
+
+      span {
+        transform: translateY(-100%);
+      }
+
+      &:active {
+        span::before {
+          opacity: 0.3;
+        }
+      }
+    }
   }
 }
