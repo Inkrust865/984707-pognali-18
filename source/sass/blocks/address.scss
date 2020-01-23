@@ -9,10 +9,12 @@
 }
 
 .address__container {
-  padding: 60px 0 35px;
+  padding: 55px 0 35px;
 }
 
 .address__text {
+  position: relative;
+
   padding-left: 60px;
 
   font-family: $main-font;
@@ -22,22 +24,48 @@
   line-height: 22px;
   text-transform: uppercase;
   color: $base-color-2;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+
+    background-color: $contacts-icon;
+    background-image: url("../../img/contacts-location.svg");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 14px 22px;
+    border-radius: 50%;
+  }
 }
 
 .address__button {
   display: block;
-  margin-top: 30px;
-  padding: 20px 50px 20px 20px;
-  border: 2px solid $base-color-2;
-  border-radius: 15px;
+  position: relative;
+
+  margin-top: 35px;
+  padding: 19px 50px 19px 20px;
 
   background-color: $element-background;
+  border: 2px solid $base-color-2;
+  border-radius: 15px;
 
   font-family: $main-font;
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
   color: $base-color-4;
+
+  svg {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 10px;
+    height: 14px;
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -47,22 +75,40 @@
   }
 
   .address__container {
-    padding: 100px 0 80px;
+    padding: 106px 0 87px;
   }
 
   .address__text {
-    padding-left: 125px;
+    display: flex;
+    align-items: center;
+
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-left: 93px;
+    min-height: 68px;
 
     font-size: 28px;
     line-height: 28px;
+
+    &::before {
+      width: 68px;
+      height: 68px;
+
+      background-size: 21px 32px;
+    }
   }
 
   .address__button {
-    margin: 40px 35px 0;
-    padding: 25px 70px 25px 30px;
+    margin: 45px 35px 0;
+    padding: 25px 70px 25px 35px;
 
     font-size: 24px;
     line-height: 24px;
+
+    svg {
+      top: 31px;
+      right: 35px;
+    }
   }
 }
 
@@ -78,10 +124,41 @@
     align-items: center;
 
     width: 1025px;
-    margin: 0 auto 0 220px;
+    margin: 0 auto 0 225px;
+  }
+
+  .address__text {
+    margin: 0;
+    padding-left: 120px;
+    min-height: 90px;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+
+      background-size: 28px 43px;
+    }
   }
 
   .address__button {
     margin: 0;
+
+    &:hover {
+      background-color: $base-color-2;
+      color: $base-color-1;
+
+      svg {
+        fill: $base-color-1;
+      }
+    }
+
+    &:active {
+      background-color: $base-color-2;
+      color: $address-button-active;
+
+      svg {
+        fill: $address-button-active;
+      }
+    }
   }
 }

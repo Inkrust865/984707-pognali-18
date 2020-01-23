@@ -1,5 +1,229 @@
-.transport-list {
+.transports {
   @include list-reset;
+}
 
-  margin-bottom: 20px;
+.transports__input:checked + .transports__label {
+  &::before {
+    opacity: 1;
+  }
+}
+
+.transports__label {
+  position: relative;
+  display: block;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+  }
+
+  &--current {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  &--plane {
+    &::before {
+      background-image: url("../../img/plane.svg");
+      background-size: 14px 16px;
+    }
+  }
+
+  &--bus {
+    &::before {
+      background-image: url("../../img/bus.svg");
+      background-size: 13px 16px;
+    }
+  }
+
+  &--bike {
+    &::before {
+      background-image: url("../../img/bike.svg");
+      background-size: 19px 17px;
+    }
+  }
+
+  &--man {
+    &::before {
+      background-image: url("../../img/run.svg");
+      background-size: 15px 17px;
+    }
+  }
+
+  &--plane-travelmates {
+    &::before {
+      background-image: url("../../img/plane.svg");
+      background-size: 19px 21px;
+    }
+  }
+
+  &--bus-travelmates {
+    &::before {
+      background-image: url("../../img/bus.svg");
+      background-size: 17px 21px;
+    }
+  }
+
+  &--bike-travelmates {
+    &::before {
+      background-image: url("../../img/bike.svg");
+      background-size: 24px 21px;
+    }
+  }
+
+  &--man-travelmates {
+    &::before {
+      background-image: url("../../img/run.svg");
+      background-size: 20px 21px;
+    }
+  }
+}
+
+.transports__tooltip {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .transports__label {
+    &::before {
+      width: 43px;
+      height: 43px;
+    }
+
+    &--plane {
+      &::before {
+        margin-left: -2px;
+        background-size: 19px 21px;
+      }
+    }
+
+    &--bus {
+      &::before {
+        background-size: 17px 21px;
+      }
+    }
+
+    &--bike {
+      &::before {
+        background-size: 24px 21px;
+      }
+    }
+
+    &--man {
+      &::before {
+        background-size: 20px 21px;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .transports__tooltip {
+    content: "";
+    position: absolute;
+    bottom: -65px;
+    left: -120%;
+
+    padding: 15px 20px;
+    box-sizing: border-box;
+
+    background-color: $tooltip-background;
+    border-radius: 3px;
+
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 20px;
+    line-height: 24px;
+    color: $base-color-1;
+    text-align: center;
+    z-index: 2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 45%;
+
+      width: 0;
+      height: 0;
+      border: 8px solid $element-background;
+      border-bottom: 8px solid $tooltip-background;
+    }
+  }
+
+  .transports__label {
+    &:hover {
+      .transports__tooltip {
+        display: block;
+      }
+    }
+
+    &--plane-travelmates,
+    &--plane {
+      &:hover {
+        .transports__tooltip {
+          left: -170%;
+        }
+      }
+    }
+
+    &--bus-travelmates,
+    &--bus {
+      &:hover {
+        .transports__tooltip {
+          left: -195%;
+        }
+      }
+    }
+
+    &--bike-travelmates,
+    &--bike {
+      &:hover {
+        .transports__tooltip {
+          left: -150%;
+        }
+      }
+    }
+
+    &--plane-form {
+      &:hover {
+        .transports__tooltip {
+          left: -120%;
+        }
+      }
+    }
+
+    &--bus-form {
+      &:hover {
+        .transports__tooltip {
+          left: -135%;
+        }
+      }
+    }
+
+    &--bike-form {
+      &:hover {
+        .transports__tooltip {
+          left: -100%;
+        }
+      }
+    }
+
+    &--man-form {
+      &:hover {
+        .transports__tooltip {
+          left: -80%;
+        }
+      }
+    }
+  }
 }

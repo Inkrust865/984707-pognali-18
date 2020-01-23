@@ -6,10 +6,17 @@
   border-radius: 0 0 25px 25px;
 }
 
+.tariffs__container {
+  background-image: url("../../img/rates@1x.png");
+  background-repeat: no-repeat;
+  background-size: 99px 99px;
+  background-position: top 35px right 25px;
+}
+
 .tariffs__phrase {
   display: block;
   margin: 0 25px;
-  margin-top: 75px;
+  margin-top: 50px;
   width: 100px;
 
   font-family: $main-font;
@@ -24,10 +31,53 @@
 
   margin: 0 25px;
   margin-top: 45px;
+  width: 245px;
 }
 
 .tariffs__value {
+  position: relative;
+  width: 200px;
   padding: 10px 0;
+
+  border-top: 1px solid $border-tariffs;
+
+  &:last-of-type {
+    border-bottom: 1px solid $border-tariffs;
+  }
+
+  &::before {
+    counter-increment: number;
+    content: counter(number);
+    position: absolute;
+    top: 3px;
+    right: -44px;
+
+    width: 34px;
+    height: 34px;
+    padding: 9px 13px;
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: $base-color-1;
+
+    background-color: $tariff-1;
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  &--second {
+    &::before {
+      background-color: $decoration-element;
+    }
+  }
+
+  &--third {
+    &::before {
+      background-color: $accent-color-1;
+    }
+  }
 }
 
 .tariffs__price {
@@ -53,13 +103,44 @@
   }
 
   .tariffs__container {
+    position: relative;
     padding-bottom: 65px;
+    background-image: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 150px;
+      right: 40px;
+
+      width: 200px;
+      height: 285px;
+
+      border-radius: 15px;
+      background-color: $filter-background;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 410px;
+      right: 85px;
+
+      width: 99px;
+      height: 99px;
+
+      background-image: url("../../img/rates@1x.png");
+      background-size: 99px 99px;
+      background-repeat: no-repeat;
+      background-position: top center;
+    }
   }
 
   .tariffs__phrase {
     width: 100%;
     margin-left: 0;
     margin-right: 0;
+    margin-top: 70px;
 
     font-size: 45px;
     line-height: 45px;
@@ -82,26 +163,90 @@
 
     padding: 15px 0;
     margin: 0 35px 0 90px;
-    border-top: 1px solid $border-tariffs;
+    width: 565px;
+    min-height: 67px;
 
-    &--third {
-      border-bottom: 1px solid $border-tariffs;
+    box-sizing: border-box;
+
+    &::before {
+      top: 0;
+      left: -90px;
+      right: auto;
+
+      width: 67px;
+      height: 67px;
+      padding: 20px 25px 20px 27px;
+
+      font-size: 28px;
+      line-height: 28px;
     }
   }
 
   .tariffs__button {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
     margin-top: 35px;
+    margin-bottom: 0;
     padding-left: 90px;
+    min-height: 67px;
 
     text-align: left;
     font-size: 20px;
     line-height: 20px;
+    color: $tariffs-icon;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+
+      background-color: $filter-background;
+      border-radius: 50%;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 67px;
+      height: 67px;
+
+      background-image: url("../../img/business.svg");
+      background-size: 17px 21px;
+      background-repeat: no-repeat;
+      background-position: top 21px left 25px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .tariffs__container {
     padding-bottom: 165px;
+
+    &::before {
+      top: 235px;
+      right: 245px;
+
+      width: 445px;
+      height: 300px;
+    }
+
+    &::after {
+      top: 285px;
+      right: 135px;
+
+      width: 198px;
+      height: 198px;
+
+      background-size: 198px 198px;
+    }
   }
 
   .tariffs__phrase {
@@ -111,7 +256,7 @@
   .tariffs__list {
     width: 910px;
     margin: 0;
-    margin-top: 130px;
+    margin-top: 134px;
     margin-left: 70px;
   }
 
@@ -119,9 +264,26 @@
     padding: 15px 0;
     margin: 0;
     margin-left: 90px;
+    width: 815px;
   }
 
   .tariffs__button {
     margin-left: 70px;
+
+    &:hover {
+      color: $tariffs-hover;
+
+      &::after {
+        opacity: 0.7;
+      }
+    }
+
+    &:active {
+      color: $tariffs-active;
+
+      &::after {
+        opacity: 0.3;
+      }
+    }
   }
 }

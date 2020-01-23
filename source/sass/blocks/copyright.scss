@@ -9,9 +9,38 @@
   border-top: 1px solid $border-copyright;
 }
 
+.copyright__link {
+  svg {
+    margin-top: 10px;
+
+    fill: $base-color-2;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .copyright {
     font-size: 20px;
     line-height: 24px;
+
+    border: none;
+  }
+
+  .copyright__link {
+    margin-top: 0;
+    margin-left: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .copyright {
+    margin-top: -4px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }

@@ -1,0 +1,165 @@
+.flag {
+  display: block;
+
+  box-sizing: border-box;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35px;
+    height: 24px;
+
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &--thailand {
+    &::before {
+      background-image: url("../../img/Thailand.png");
+    }
+  }
+
+  &--france {
+    &::before {
+      background-image: url("../../img/France.png");
+    }
+  }
+
+  &--czech {
+    &::before {
+      background-image: url("../../img/Czech.png");
+    }
+  }
+
+  &--sri-lanka {
+    &::before {
+      background-image: url("../../img/Sri-Lanka.png");
+    }
+  }
+
+  &--seychelles {
+    &::before {
+      background-image: url("../../img/Seychelles.png");
+    }
+  }
+
+  &--belgium {
+    &::before {
+      background-image: url("../../img/Belgium.png");
+    }
+  }
+
+  &--usa {
+    &::before {
+      width: 30px;
+      height: 30px;
+      background-image: url("../../img/United-States-of-America.png");
+    }
+  }
+
+  &--australia {
+    &::before {
+      background-image: url("../../img/Australia.png");
+    }
+  }
+
+  &--dominican {
+    &::before {
+      background-image: url("../../img/Dominican.png");
+    }
+  }
+
+  &--britain {
+    &::before {
+      background-image: url("../../img/United-Kingdom.png");
+    }
+  }
+
+  &--germany {
+    &::before {
+      background-image: url("../../img/Germany.png");
+    }
+  }
+}
+
+.flag__tooltip {
+  display: none;
+}
+
+@media (min-width: $desktop-width) {
+  .flag__tooltip {
+    content: "";
+    position: absolute;
+    bottom: -70px;
+    left: -120%;
+
+    padding: 15px 20px;
+    box-sizing: border-box;
+
+    background-color: $tooltip-background;
+    border-radius: 3px;
+
+    font-family: inherit;
+    font-weight: inherit;
+    font-size: 20px;
+    line-height: 24px;
+    color: $base-color-1;
+    text-align: center;
+    white-space: nowrap;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -16px;
+      left: 45%;
+
+      width: 0;
+      height: 0;
+      border: 8px solid $element-background;
+      border-bottom: 8px solid $tooltip-background;
+    }
+  }
+
+  .flag {
+    &:hover {
+      .flag__tooltip {
+        display: block;
+      }
+    }
+
+    &--sri-lanka {
+      &:hover {
+        .flag__tooltip {
+          left: -140%;
+        }
+      }
+    }
+
+    &--thailand {
+      &:hover {
+        .flag__tooltip {
+          left: -115%;
+        }
+      }
+    }
+
+    &--belgium {
+      &:hover {
+        .flag__tooltip {
+          left: -107%;
+        }
+      }
+    }
+
+    &--czech {
+      &:hover {
+        .flag__tooltip {
+          left: -85%;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,19 @@
 .modal {
+  display: none;
+  position: absolute;
+  width: 270px;
+
   background-color: $base-color-1;
   border-radius: 15px;
   overflow: hidden;
+
+  box-shadow: 0 20px 50px 0 rgba(0, 0, 0, 0.1);
+
+  z-index: 2;
+
+  &--opened {
+    display: block;
+  }
 }
 
 .modal__title {
@@ -24,6 +36,12 @@
 
 .modal__item {
   padding: 10px 0;
+
+  border-top: 1px solid $border-copyright;
+
+  &:last-of-type {
+    border-bottom: 1px solid $border-copyright;
+  }
 }
 
 .modal__item span {
@@ -43,4 +61,64 @@
   line-height: 16px;
   color: $base-color-2;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .modal {
+    width: 688px;
+    border-radius: 25px;
+  }
+
+  .modal__title {
+    padding-top: 50px;
+
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .modal__list {
+    margin: 45px 85px 50px;
+  }
+
+  .modal__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 15px 0;
+
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .modal__close {
+    padding: 40px 85px;
+
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal {
+    top: 100px;
+    left: 345px;
+    width: 750px;
+  }
+
+  .modal__list {
+    margin: 45px 60px 50px;
+  }
+
+  .modal__close {
+    &:hover {
+      background-color: $element-background-3;
+    }
+
+    &:active {
+      background-color: $element-background-3;
+      color: $element-state;
+    }
+  }
 }

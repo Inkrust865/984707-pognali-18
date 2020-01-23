@@ -5,12 +5,12 @@ iframe {
 
 @media (min-width: $tablet-width) {
   iframe {
-    height: 550px;
+    height: 577px;
     margin-top: -60px;
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   iframe {
     height: 515px;
   }

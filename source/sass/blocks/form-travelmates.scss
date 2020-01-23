@@ -13,10 +13,29 @@
   text-transform: uppercase;
 }
 
+.form-travelmates__transports {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.form-travelmates__transport {
+  position: relative;
+
+  width: 33px;
+  height: 33px;
+
+  background-color: $base-color-1;
+  border-radius: 50%;
+}
+
 .form-travelmates__button {
   width: 100%;
-  margin-top: 20px;
-  padding: 10px 70px;
+  margin-top: 15px;
+  padding: 5px 70px;
 
   background-color: $base-color-1;
   border: none;
@@ -32,9 +51,30 @@
 
 @media (min-width: $tablet-width) {
   .form-travelmates__wrapper {
-    padding: 35px 0;
+    padding: 35px 0 25px;
     border-top: 1px solid $border-parameter;
     border-bottom: 1px solid $border-parameter;
+  }
+
+  .form-travelmates__transports {
+    margin: 0;
+  }
+
+  .form-travelmates__transport {
+    width: 43px;
+    height: 43px;
+  }
+
+  .form-travelmates__inputs-wrapper {
+    margin: 0;
+    width: 150px;
+    margin-left: auto;
+    order: 3;
+  }
+
+  .form-travelmates__button {
+    margin-top: 35px;
+    padding: 10px 70px;
   }
 }
 
@@ -42,5 +82,32 @@
   .form-travelmates__wrapper {
     padding: 0;
     border: none;
+  }
+
+  .form-travelmates__transports {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-travelmates__transport {
+    .transports__label {
+      width: 43px;
+      height: 43px;
+    }
+  }
+
+  .form-travelmates__inputs-wrapper {
+    margin: 0;
+    margin-top: 20px;
+    order: 0;
+  }
+
+  .form-travelmates__button {
+    padding: 10px 35px;
+
+    &:active {
+      background-color: $border-parameter;
+      color: $text-active;
+    }
   }
 }

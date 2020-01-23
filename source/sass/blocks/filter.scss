@@ -1,6 +1,6 @@
 .filter {
   margin-top: -15px;
-  padding: 40px 0 20px;
+  padding: 31px 0 20px;
   border-radius: 0 0 15px 15px;
 
   background-color: $filter-background;
@@ -16,7 +16,8 @@
 }
 
 .filter__title {
-  padding: 0 25px;
+  position: relative;
+  padding: 0 27px;
   margin: 0;
 
   font-family: $main-font;
@@ -25,26 +26,113 @@
   line-height: 22px;
   color: $base-color-2;
   text-transform: uppercase;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 0;
+
+    width: 15px;
+    height: 10px;
+
+    background-image: url("../../img/filter.svg");
+    background-repeat: no-repeat;
+    background-size: 15px 10px;
+  }
 }
 
 .filter__button {
+  position: relative;
+
+  padding: 0;
+  width: 17px;
+
   border: none;
   background-color: $element-background;
-}
 
-.filter__button-name {
-  display: none;
+  &::before {
+    content: none;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-  font-family: $main-font;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 24px;
-  color: $base-color-2;
-  text-transform: uppercase;
+    width: 130px;
+    height: 24px;
+
+    font-family: $main-font;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: $base-color-2;
+    text-transform: uppercase;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9.5px;
+    right: 5px;
+
+    width: 17px;
+    height: 3px;
+
+    background-image: url("../../img/dots.svg");
+    background-repeat: no-repeat;
+    background-size: 17px 3px;
+  }
+
+  &--opened {
+    width: 12px;
+
+    &::before {
+      content: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 90px;
+      height: 24px;
+
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+      color: $base-color-2;
+      text-transform: uppercase;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      right: 7px;
+
+      width: 12px;
+      height: 12px;
+
+      background-image: url("../../img/filter-close.svg");
+      background-repeat: no-repeat;
+      background-size: 12px 12px;
+    }
+  }
 }
 
 .filter__modal {
-  padding-top: 35px;
+  display: none;
+  padding-top: 7px;
+  padding-bottom: 25px;
+  width: 100%;
+
+  background-color: $filter-background;
+  border-radius: 0 0 20px 20px;
+
+  &--opened {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: 0;
+  }
 }
 
 .filter__list-parts-world {
@@ -75,7 +163,7 @@
 }
 
 .filter__alphabet {
-  margin: 20px 25px;
+  margin: 22px 25px;
 
   background-color: $base-color-1;
   border-collapse: collapse;
@@ -100,6 +188,7 @@
 .filter__letter {
   padding: 11px 15px;
   border: 1px solid $border-element;
+  text-align: center;
 
   &--current {
     background-color: $base-color-4;
@@ -125,8 +214,10 @@
 }
 
 .filter__modal-close {
-  margin-top: 10px;
-  padding: 10px 10px 10px 25px;
+  position: relative;
+
+  margin-top: 15px;
+  padding: 5px 10px 5px 35px;
   border: none;
   border-radius: 35px;
 
@@ -139,13 +230,31 @@
   color: $base-color-3;
   text-transform: uppercase;
   text-align: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 14px;
+    left: 85px;
+
+    width: 12px;
+    height: 12px;
+
+    background-image: url("../../img/filter-close.svg");
+    background-repeat: no-repeat;
+    background-size: 12px 12px;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .filter {
     margin-top: -60px;
-    padding: 120px 0 75px;
+    padding: 116px 0 0;
     border-radius: 0 0 60px 60px;
+  }
+
+  .filter__container {
+    padding-bottom: 75px;
   }
 
   .filter__title {
@@ -178,14 +287,45 @@
   }
 
   .filter__button {
-    margin-right: 40px;
-    padding-right: 80px;
+    min-width: 175px;
+    margin-right: 38px;
+
+    &::before {
+      content: "Показать все";
+    }
+
+    &::after {
+      top: 8.5px;
+      right: 0;
+      width: 27px;
+      height: 5px;
+
+      background-size: 27px 5px;
+    }
+
+    &--opened {
+      min-width: 170px;
+
+      &::before {
+        content: "Свернуть";
+      }
+
+      &::after {
+        top: 2px;
+        width: 18px;
+        height: 18px;
+
+        background-size: 18px 18px;
+      }
+    }
   }
 
-  .filter__button-name {
-    &--close {
-      display: block;
-    }
+  .filter__modal {
+    top: 155px;
+    padding-top: 22px;
+    padding-bottom: 75px;
+
+    border-radius: 0 0 60px 60px;
   }
 
   .filter__modal-container {
@@ -212,7 +352,7 @@
     justify-content: space-between;
 
     &:not(:first-of-type) {
-      margin-top: 25px;
+      margin-top: 23px;
     }
   }
 
@@ -233,7 +373,8 @@
   }
 
   .filter__countries {
-    margin-right: 50px;
+    margin-top: 20px;
+    margin-right: 55px;
 
     font-size: 20px;
     line-height: 30px;
@@ -248,25 +389,64 @@
   }
 
   .filter__modal-close {
-    margin: 40px 35px 0;
-    padding: 40px;
-    padding-left: 60px;
+    margin: 48px 35px 0;
+    padding: 35px 40px 35px 80px;
     border-radius: 20px;
 
     font-size: 20px;
     line-height: 30px;
+
+    &::before {
+      top: 40px;
+      left: 245px;
+
+      width: 18px;
+      height: 18px;
+
+      background-size: 18px 18px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .filter {
-    padding: 110px 0 75px;
+    padding: 116px 0 0;
 
     background-color: $element-background;
   }
 
+  .filter__container {
+    padding-left: 80px;
+    padding-right: 125px;
+
+    width: 1235px;
+  }
+
   .filter__title {
     display: block;
+    padding-left: 42px;
+    padding-right: 0;
+    margin-right: 35px;
+
+    font-size: 20px;
+    line-height: 24px;
+
+    &::before {
+      top: 2px;
+      width: 23px;
+      height: 15px;
+
+      background-size: 23px 15px;
+    }
+
+    &::after {
+      content: ":";
+      position: relative;
+      font-family: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      color: inherit;
+    }
   }
 
   .filter__list-parts-world {
@@ -277,11 +457,36 @@
 
   .filter__part-world {
     padding: 0;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 1;
+    }
   }
 
   .filter__button {
-    margin-right: 40px;
-    padding-right: 80px;
+    margin-right: 0;
+
+    &::after {
+      right: 2px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+
+    &--opened {
+      &::before {
+        left: -5px;
+      }
+    }
   }
 
   .filter__button-name {
@@ -294,11 +499,23 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    padding: 0 95px;
+    width: 1250px;
+  }
+
+  .filter__modal {
+    position: relative;
+    top: 0;
+    padding-top: 0;
+    margin-top: -28px;
+
+    background-color: $element-background-3;
   }
 
   .filter__alphabet {
     width: 100%;
-    margin: 20px 30px;
+    margin: 20px 0;
 
     font-weight: 700;
     font-size: 60px;
@@ -311,7 +528,7 @@
     justify-content: space-between;
 
     &:not(:first-of-type) {
-      margin-top: 25px;
+      margin-top: 45px;
     }
   }
 
@@ -329,7 +546,13 @@
     flex-direction: row;
     justify-content: space-between;
 
-    margin-top: 50px;
+    margin-top: 36px;
+
+    &:last-of-type {
+      .filter__countries {
+        min-height: 155px;
+      }
+    }
   }
 
   .filter__countries-cell {
@@ -349,16 +572,29 @@
 
     &--desktop {
       display: block;
+      min-height: 295px;
     }
   }
 
   .filter__modal-close {
-    margin: 40px 35px 0;
-    padding: 40px;
-    padding-left: 60px;
-    border-radius: 20px;
+    margin: 40px 0 0;
+    padding-left: 73px;
 
-    font-size: 20px;
-    line-height: 30px;
+    &::before {
+      left: 595px;
+    }
+
+    &:hover {
+      background-color: $filter-close-hover;
+    }
+
+    &:active {
+      background-color: $filter-close-hover;
+      color: $element-state;
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
   }
 }
