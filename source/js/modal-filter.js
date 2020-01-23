@@ -6,11 +6,11 @@ var body = document.querySelector('.js-body');
 body.classList.remove('body--nojs');
 
 buttonFilter.addEventListener('click', function() {
-  filter.classList.toggle('js-filter--opened');
-  this.classList.toggle('js-fbutton--opened');
+  filter.classList.toggle('filter__modal--opened');
+  this.classList.toggle('filter__button--opened');
 });
 
 filterClose.addEventListener('click', function() {
-  filter.classList.toggle('js-filter--opened');
-  buttonFilter.classList.toggle('js-fbutton--opened');
+  filter.classList.toggle('filter__modal--opened');
+  buttonFilter.classList.toggle('filter__button--opened');
 })

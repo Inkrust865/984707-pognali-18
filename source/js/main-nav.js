@@ -6,7 +6,7 @@ var body = document.querySelector('.js-body');
 body.classList.remove('body--nojs');
 
 navToggle.addEventListener('click', function() {
-  navMain.classList.toggle('js-nav--opened');
-  navToggle.classList.toggle('js-toggle--opened');
-  pageHeader.classList.toggle('js-header--scroll');
+  navMain.classList.toggle('main-nav--opened');
+  navToggle.classList.toggle('page-header__toggle--opened');
+  pageHeader.classList.toggle('page-header--scroll');
 });

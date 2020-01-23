@@ -48,7 +48,7 @@
   display: flex;
   flex-direction: row;
 
-  margin: 30px 0;
+  margin: 30px 0 7px;
 
   position: relative;
 }
@@ -113,8 +113,7 @@
 
 .contacts__list-bottom {
   margin: 0;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 19px;
 }
 
 .contacts__list-bottom a {
@@ -127,8 +126,12 @@
     border-radius: 0 0 60px 60px;
   }
 
+  .contacts__container {
+    padding-bottom: 60px;
+  }
+
   .contacts__title {
-    padding-top: 120px;
+    padding-top: 130px;
 
     font-size: 45px;
     line-height: 45px;
@@ -153,13 +156,13 @@
   }
 
   .contacts__form {
-    margin: 60px 35px;
+    margin: 65px 35px 57px;
   }
 
   .contacts__input {
     flex-grow: 1;
 
-    padding: 30px 55px 30px 35px;
+    padding: 25px 55px 25px 35px;
     border-radius: 20px 0 0 20px;
 
     font-size: 24px;
@@ -176,15 +179,19 @@
     }
   }
 
-  .contacts__list-bottom a {
-    font-size: 28px;
-    line-height: 28px;
+  .contacts__list-bottom  {
+    margin-top: 43px;
+
+    a {
+      font-size: 28px;
+      line-height: 28px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .contacts__container {
-    padding-bottom: 70px;
+    padding-bottom: 55px;
   }
 
   .contacts__title {
@@ -192,7 +199,7 @@
   }
 
   .contacts__form {
-    margin: 60px 70px;
+    margin: 60px 70px 66px;
   }
 
   .contacts__link {
@@ -246,7 +253,7 @@
 
     &::before {
       top: 35px;
-      right: 35px;
+      right: 40px;
     }
 
     &:hover {
@@ -278,12 +285,18 @@
     text-align: left;
   }
 
+  .contacts__intro {
+    &:nth-of-type(2) {
+      letter-spacing: 0.5px;
+    }
+  }
+
   .contacts__list-bottom {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 
-    width: 870px;
-    margin: 30px auto;
+    width: 868px;
+    margin: 47px auto;
   }
 }

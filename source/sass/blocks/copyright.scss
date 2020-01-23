@@ -11,6 +11,8 @@
 
 .copyright__link {
   svg {
+    margin-top: 10px;
+
     fill: $base-color-2;
   }
 }
@@ -24,13 +26,15 @@
   }
 
   .copyright__link {
-    margin-top: 10px;
+    margin-top: 0;
     margin-left: 25px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .copyright {
+    margin-top: -4px;
+
     &:hover {
       opacity: 0.6;
     }

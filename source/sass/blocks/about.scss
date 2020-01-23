@@ -74,7 +74,7 @@
     align-items: flex-start;
 
     &::before {
-      top: 0;
+      top: -7px;
       left: 40px;
 
       width: 688px;
@@ -82,7 +82,7 @@
     }
 
     &::after {
-      top: 48px;
+      top: 40px;
       right: 10px;
 
       width: 376px;
@@ -92,7 +92,7 @@
   }
 
   .about__intro {
-    margin-top: 35px;
+    margin-top: 40px;
     width: 300px;
 
     font-size: 28px;
@@ -100,7 +100,7 @@
   }
 
   .about__accent {
-    margin-top: 30px;
+    margin-top: 33px;
     margin-bottom: 0;
     width: 260px;
   }
@@ -126,7 +126,7 @@
   }
 
   .about__container {
-    padding: 100px 0 165px;
+    padding: 98px 0 165px;
 
     &::before {
       top: 70px;
@@ -148,22 +148,22 @@
   }
 
   .about__title {
-    margin: 0 65px;
+    margin: 0 70px;
   }
 
   .about__intro {
-    margin: 0 65px;
-    margin-top: 50px;
+    margin: 0 70px;
+    margin-top: 60px;
     width: 620px;
   }
 
   .about__accent {
-    margin: 0 65px;
+    margin: 0 70px;
     margin-top: 40px;
     width: 420px;
   }
 
   .about__button {
-    margin: 85px 65px 0;
+    margin: 83px 70px 0;
   }
 }

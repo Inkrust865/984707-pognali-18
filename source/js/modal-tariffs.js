@@ -6,9 +6,9 @@ var body = document.querySelector('.js-body');
 body.classList.remove('body--nojs');
 
 buttonTariffs.addEventListener('click', function() {
-  modal.classList.toggle('js-tariffs--opened');
+  modal.classList.toggle('modal--opened');
 });
 
 modalClose.addEventListener('click', function() {
-  modal.classList.toggle('js-tariffs--opened');
+  modal.classList.toggle('modal--opened');
 });

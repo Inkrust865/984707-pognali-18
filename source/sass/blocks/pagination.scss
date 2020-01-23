@@ -1,5 +1,5 @@
 .pagination {
-  margin-top: 25px;
+  margin-top: 21px;
 }
 
 .pagination__pages {
@@ -77,7 +77,7 @@
   .pagination__page {
     a {
       display: block;
-      padding: 10px;
+      padding: 8px 8px 12px 12px;
       width: 50px;
 
       text-align: center;
@@ -131,7 +131,7 @@
 @media (min-width: $desktop-width) {
   .pagination {
     margin-top: 65px;
-    margin-bottom: 65px;
+    margin-bottom: 45px;
   }
 
   .pagination__pages {
@@ -139,16 +139,22 @@
     padding-right: 30px;
   }
 
-  .pagination__page:not(.pagination__page--current) {
-    a {
-      &:hover {
-        opacity: 0.6;
-      }
+  .pagination__page {
+    &:not(.pagination__page--current) {
+      a {
+        &:hover {
+          opacity: 0.6;
+        }
 
-      &:active {
-        opacity: 1;
-        background-color: $accent-color-1;
+        &:active {
+          opacity: 1;
+          background-color: $accent-color-1;
+        }
       }
+    }
+
+    a {
+      padding: 12px 12px 8px 8px;
     }
   }
 

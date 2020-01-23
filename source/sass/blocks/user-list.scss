@@ -40,10 +40,11 @@
   .user-list__login {
     &--tablet {
       display: block;
-      padding: 10px 25px;
+      padding: 10px 27px;
 
       font-size: 20px;
       line-height: 30px;
+      letter-spacing: 0.6px;
     }
   }
 }
@@ -58,8 +59,10 @@
 
   .user-list__login {
     &--top {
-      padding: 13px 25px;
+      padding: 13px 30px;
       margin: 0;
+
+      font-size: 20px;
 
       &:hover {
         background-color: $decoration-element;

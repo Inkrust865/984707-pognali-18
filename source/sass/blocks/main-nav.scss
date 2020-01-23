@@ -39,6 +39,14 @@
   }
 }
 
+@media (max-width: $tablet-width-only) {
+  .main-nav {
+    &--opened {
+      display: block;
+    }
+  }
+}
+
 @media (min-width: $desktop-width) {
   .main-nav {
     display: flex;

@@ -36,17 +36,18 @@
   align-items: center;
 
   margin-top: 25px;
-  padding: 15px 23px;
+  padding: 17px 23px;
   border-radius: 15px;
 
   text-transform: none;
+  letter-spacing: 0.5px;
   color: $base-color-4;
 
   &::before {
     content: "";
     position: absolute;
-    top: 34px;
-    right: 34px;
+    top: 27px;
+    right: 23px;
     width: 10px;
     height: 14px;
 
@@ -86,7 +87,13 @@
 
   .section__button {
     margin: 40px 35px 0;
-    padding: 30px;
+    padding: 30px 33px;
+    letter-spacing: 0;
+
+    &::before {
+      top: 35px;
+      right: 37px;
+    }
   }
 }
 
@@ -96,7 +103,7 @@
     align-items: flex-start;
     justify-content: space-between;
 
-    padding: 50px 60px;
+    padding: 75px 60px 50px;
     width: 1320px;
   }
 

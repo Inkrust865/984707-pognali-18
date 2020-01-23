@@ -7,7 +7,7 @@
 }
 
 .page__title-container {
-  padding-top: 20px;
+  padding-top: 35px;
 }
 
 .page__title {
@@ -57,12 +57,12 @@
     flex-direction: row;
     justify-content: space-between;
 
-    padding-top: 80px;
+    padding-top: 82px;
   }
 
   .page__title {
     margin-left: 35px;
-    padding-bottom: 65px;
+    padding-bottom: 70px;
 
     font-size: 60px;
     line-height: 70px;
@@ -127,12 +127,16 @@
     margin: 0;
   }
 
+  .page__title-container {
+    padding-top: 113px;
+  }
+
   .page__title {
-    margin-left: 70px;
+    margin-left: 66px;
   }
 
   .page__link {
-    margin-right: 60px;
+    margin-right: 64px;
 
     &:hover {
       opacity: 0.6;
