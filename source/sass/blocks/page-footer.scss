@@ -14,13 +14,6 @@
   text-align: center;
 }
 
-.page-footer__logo-image {
-  &--tablet,
-  &--desktop {
-    display: none;
-  }
-}
-
 .page-footer__list {
   @include list-reset;
 
@@ -55,13 +48,8 @@
   }
 
   .page-footer__logo-image {
-    &--tablet {
-      display: block;
-    }
-
-    &--mobile {
-      display: none;
-    }
+    width: 166px;
+    height: 42px;
   }
 
   .page-footer__list {
@@ -72,13 +60,8 @@
 
 @media (min-width: $desktop-width) {
   .page-footer__logo-image {
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    width: 200px;
+    height: 52px;
   }
 
   .page-footer__list {

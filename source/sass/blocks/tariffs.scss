@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
   background-size: 99px 99px;
   background-position: top 35px right 25px;
+
+  @media (min-resolution: $retina-dppx) {
+    background-image: url("../../img/rates@2x.png");
+  }
 }
 
 .tariffs__phrase {
