@@ -49,10 +49,9 @@
   }
 }
 
-.contries__item-image {
-  &--desktop {
-    display: none;
-  }
+.countries__item-image {
+  width: 270px;
+  height: 110px;
 }
 
 .countries__item-description {
@@ -151,6 +150,11 @@
       border-radius: 15px;
       background-color: $filter-background;
     }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image: url("../../img/flags-back@2x.png");
+      background-size: 289px 575px;
+    }
   }
 
   .countries__title {
@@ -183,21 +187,15 @@
         }
       }
     }
+
+    picture {
+      order: 2;
+    }
   }
 
   .contries__item-image {
-    width: 185px;
+    width: 186px;
     height: auto;
-
-    order: 2;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
   }
 
   .countries__item-description {
@@ -209,6 +207,8 @@
     padding: 28px 30px 20px;
     margin: 0;
     border-radius: 15px 0 0 15px;
+
+    order: 1;
   }
 
   .countries__flag {

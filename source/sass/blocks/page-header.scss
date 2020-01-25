@@ -11,11 +11,11 @@
     background-color: $base-color-1;
 
     .page-header__logo-image {
-      &--mobile {
+      &--main {
         display: none;
       }
 
-      &--scroll-mobile {
+      &--scroll {
         display: block;
       }
     }
@@ -44,15 +44,7 @@
 }
 
 .page-header__logo-image {
-  &--mobile {
-    display: block;
-  }
-
-  &--scroll-mobile,
-  &--tablet,
-  &--scroll-tablet,
-  &--desktop,
-  &--scroll-desktop, {
+  &--scroll {
     display: none;
   }
 }
@@ -132,17 +124,6 @@
 
     &--scroll {
       background-color: $base-color-1;
-
-      .page-header__logo-image {
-        &--scroll-mobile,
-        &--tablet {
-          display: none;
-        }
-
-        &--scroll-tablet {
-          display: block;
-        }
-      }
     }
   }
 
@@ -156,21 +137,12 @@
   }
 
   .page-header__logo-image {
+    margin-right: 23px;
+
+    width: 166px;
+    height: 42px;
+
     vertical-align: top;
-
-    &--mobile,
-    &--scroll-mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-      margin-right: 23px;
-    }
-
-    &--scroll-tablet {
-      margin-right: 23px;
-    }
   }
 
   .page-header__toggle {
@@ -195,17 +167,6 @@
 
       .site-list::before {
         background-color: $base-color-2;
-      }
-
-      .page-header__logo-image {
-        &--scroll-tablet,
-        &--desktop {
-          display: none;
-        }
-
-        &--scroll-desktop {
-          display: block;
-        }
       }
     }
   }
@@ -232,14 +193,8 @@
   }
 
   .page-header__logo-image {
-    &--tablet,
-    &--scroll-tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
+    width: 200px;
+    height: 52px;
   }
 
   .page-header__toggle {

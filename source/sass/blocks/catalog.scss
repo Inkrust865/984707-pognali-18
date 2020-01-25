@@ -52,7 +52,7 @@
 
   margin-right: 15px;
   width: 70px;
-  height: 70px;
+  height: auto;
 }
 
 .catalog__heart {
@@ -106,14 +106,7 @@
 }
 
 .catalog__image {
-  &--mobile {
-    border-radius: 50%;
-  }
-
-  &--tablet,
-  &--desktop {
-    display: none;
-  }
+  border-radius: 50%;
 }
 
 .catalog__name {
@@ -399,15 +392,9 @@
   }
 
   .catalog__image {
+    width: 190px;
+    height: auto;
     border-radius: 15px;
-
-    &--mobile {
-      display: none;
-    }
-
-    &--tablet {
-      display: block;
-    }
   }
 
   .catalog__item-description {
@@ -646,15 +633,9 @@
   }
 
   .catalog__image {
+    width: 285px;
+    height: auto;
     border-radius: 20px 0 0 20px;
-
-    &--tablet {
-      display: none;
-    }
-
-    &--desktop {
-      display: block;
-    }
   }
 
   .catalog__heart {

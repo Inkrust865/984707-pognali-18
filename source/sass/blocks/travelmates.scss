@@ -33,6 +33,15 @@
     border-radius: 15px;
     background-color: $background-square;
   }
+
+  @media (min-resolution: $retina-dppx) {
+    background-image:
+      url("../../img/rogovaya-back-mobile@2x.png"),
+      url("../../img/smolov-back-desktop@2x.png");
+    background-size:
+      71px 71px,
+      143px 143px;
+  }
 }
 
 .travelmates__title {
@@ -202,7 +211,7 @@
       url("../../img/smolov-back-desktop@1x.png");
     background-position:
       85% 140px,
-      40px 475px;
+      40px 485px;
 
     &::before {
       top: 140px;
@@ -210,6 +219,15 @@
 
       width: 213px;
       height: 213px;
+    }
+
+    @media (min-resolution: $retina-dppx) {
+      background-image:
+        url("../../img/rogovaya-back-desktop@2x.png"),
+        url("../../img/smolov-back-desktop@2x.png");
+      background-size:
+        285px 285px,
+        143px 143px;
     }
   }
 
@@ -219,7 +237,7 @@
   }
 
   .travelmates__intro {
-    margin-top: 55px;
+    margin-top: 56px;
     width: 430px;
   }
 
