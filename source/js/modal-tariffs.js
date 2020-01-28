@@ -12,3 +12,14 @@ buttonTariffs.addEventListener('click', function() {
 modalClose.addEventListener('click', function() {
   modal.classList.toggle('modal--opened');
 });
+
+var contactsInput = document.querySelector('.js-contacts-input');
+var contactsButton = document.querySelector('.js-contacts-button');
+
+contactsButton.addEventListener('click', function(evt) {
+  if (!contactsInput.value) {
+    evt.preventDefault();
+    contactsInput.placeholder = 'Введите e-mail';
+    contactsInput.classList.add('contacts__input--error');
+  }
+});

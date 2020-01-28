@@ -6,8 +6,10 @@
 }
 
 .calendar__title {
+  position: relative;
+
   margin: 0;
-  padding: 10px 35px;
+  padding: 11px 35px;
   border-top: 1px solid $border-element;
   border-bottom: 1px solid $border-element;
 
@@ -20,8 +22,28 @@
 }
 
 .calendar__button {
+  position: absolute;
+  top: 13px;
+  left: 0;
+
+  width: 9px;
+  height: 17px;
+
+  background-image: url("../../img/month-arrow-left.svg");
+  background-repeat: no-repeat;
+  background-size: 9px 17px;
   border: none;
   background-color: $element-background;
+
+  opacity: 0.3;
+
+  &--next {
+    top: 13px;
+    left: auto;
+    right: 0;
+
+    background-image: url("../../img/month-arrow-right.svg");
+  }
 }
 
 .calendar__week {
@@ -31,7 +53,7 @@
 
   @include list-reset;
 
-  width: 195px;
+  width: 197px;
   margin: 0 auto;
   margin-top: 20px;
 
@@ -62,7 +84,15 @@
   color: $text-color-opacity;
 }
 
+.calendar__day-week {
+  &--red {
+    color: $calendar-accent;
+  }
+}
+
 .calendar__day-number {
+  position: relative;
+
   border: 1px solid $border-element;
   padding: 6px 7.5px;
 
@@ -79,16 +109,57 @@
 
     color: $text-color;
   }
+
+  &--today {
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -1px;
+
+      width: 29px;
+      height: 28px;
+
+      border: 2px solid $calendar-accent;
+      border-radius: 1px;
+
+      z-index: 2;
+    }
+  }
+}
+
+.calendar__note {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
+  .calendar {
+    margin-top: 44px;
+  }
+
   .calendar__title {
+    padding: 23.5px 35px;
     font-size: 36px;
     line-height: 36px;
   }
 
+  .calendar__button {
+    top: 26px;
+    left: 15px;
+    width: 19px;
+    height: 34px;
+
+    background-size: 19px 34px;
+
+    &--next {
+      left: auto;
+      right: 15px;
+    }
+  }
+
   .calendar__week {
-    width: 475px;
+    margin-top: 32px;
+    width: 470px;
   }
 
   .calendar__day-week {
@@ -105,11 +176,28 @@
   }
 
   .calendar__month {
+    margin-top: 4px;
     width: 530px;
-    height: 420px;
+    height: 415px;
 
     font-size: 20px;
     line-height: 20px;
+  }
+
+  .calendar__day-number {
+    letter-spacing: 2px;
+    padding: 6px 7.5px 6px 13.5px;
+
+    &--today {
+      &::before {
+        top: -2px;
+        left: -2px;
+        width: 70px;
+        height: 64px;
+
+        border-width: 4px;
+      }
+    }
   }
 }
 
@@ -117,6 +205,7 @@
 @media (min-width: $desktop-width) {
   .calendar {
     width: 100%;
+    margin-top: 16px;
   }
 
   .calendar__title {
@@ -124,12 +213,108 @@
     box-sizing: border-box;
   }
 
+  .calendar__button {
+    left: 0;
+
+    &--next {
+      left: auto;
+      right: 0;
+    }
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+  }
+
   .calendar__week {
-    width: 880px;
+    width: 872px;
+    margin-top: 12px;
+    margin-left: 17px;
   }
 
   .calendar__month {
+    margin-top: 14px;
     width: 100%;
     height: 430px;
+  }
+
+  .calendar__day-number {
+    padding: 10px 15px;
+    text-align: left;
+    vertical-align: top;
+
+    &--today {
+      &::before {
+        width: 140px;
+        height: 68px;
+      }
+    }
+
+    &:hover {
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -3px;
+
+        width: 140px;
+        height: 68px;
+
+        border: 4px solid $calendar-accent;
+        border-radius: 1px;
+
+        z-index: 2;
+      }
+    }
+
+    &:active {
+      &::before {
+        content: none;
+      }
+    }
+
+    &--future {
+      &:hover {
+        &::before {
+          content: "";
+          position: absolute;
+          top: -2px;
+          left: -3px;
+
+          width: 140px;
+          height: 68px;
+
+          border: 4px solid $calendar-accent;
+          border-radius: 1px;
+
+          z-index: 2;
+        }
+      }
+
+      &:active {
+        background-color: $calendar-day-active;
+        color: $base-color-1;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .calendar__note {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 34px;
+
+    &--trip {
+      top: 35px;
+      left: 15px;
+    }
   }
 }

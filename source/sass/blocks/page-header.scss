@@ -38,8 +38,12 @@
   width: 270px;
   min-height: 75px;
 
-  &--catalog {
+  &--short {
     min-height: 55px;
+
+    & + .main-nav {
+      top: 55px;
+    }
   }
 }
 
@@ -130,6 +134,14 @@
   .page-header__container {
     width: 690px;
     padding: 0 40px;
+
+    &--short {
+      min-height: 130px;
+
+      & + .main-nav {
+        top: 129px;
+      }
+    }
   }
 
   .page-header__logo {
@@ -161,6 +173,10 @@
       height: 90px;
       background-color: $base-color-1;
 
+      .page-header__wrapper {
+        margin-top: 0;
+      }
+
       .main-nav__list a {
         color: $base-color-2;
       }
@@ -186,6 +202,14 @@
     width: auto;
     padding: 0;
     margin: 0;
+
+    &--short {
+      min-height: 0;
+
+      & + .main-nav {
+        top: 0;
+      }
+    }
   }
 
   .page-header__logo {

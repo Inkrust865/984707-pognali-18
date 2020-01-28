@@ -1,9 +1,23 @@
 .step {
-  padding: 20px 25px;
+  padding: 22px 24px;
   margin-top: 10px;
 
   background-color: $base-color-1;
   border-radius: 10px;
+
+  &:not(:first-of-type) {
+    padding-bottom: 11px;
+  }
+
+  &:last-of-type {
+    .step__button {
+      margin-top: 15px;
+
+      &--prev {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 .step__title {
@@ -29,32 +43,79 @@
 
 .step__checkbox {
   margin: 0;
-  margin-top: 20px;
+  margin-top: 22px;
 }
 
 .step__parameter-count {
-  margin-top: 20px;
+  margin-top: 21px;
 }
 
-.step__country-choiсe {
-  margin-top: 20px;
+.step__country-choice {
+  margin-top: 22px;
 }
 
 .step__country-title {
-  display: block;
-  padding-left: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: relative;
+
+  padding-left: 12px;
 
   font-family: $main-font;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   color: $base-color-4;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+
+    background-color: $base-color-4;
+    border-radius: 50%;
+  }
+}
+
+.step__country-name {
+  position: relative;
+  display: block;
+  width: 145px;
+
+  white-space: nowrap;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 25px;
+    height: 20px;
+
+    background-image: linear-gradient(90deg, $element-background 25%, $base-color-1);
+  }
+}
+
+.step__country-flag {
+  position: relative;
+  width: 35px;
+  height: 24px;
 }
 
 .step__country-textarea {
+  position: relative;
   width: 100%;
+  height: 220px;
   margin-top: 15px;
-  padding: 10px;
+  padding: 7px 14px;
   border: 1px solid $border-element;
   border-radius: 5px;
   box-sizing: border-box;
@@ -70,22 +131,55 @@
   }
 }
 
+.step__country-error {
+  display: none;
+}
+
 .step__country-item {
-  margin-top: 20px;
+  position: relative;
+  margin-top: 15px;
+
+  &:first-of-type {
+    margin-top: 21px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 11px;
+      left: -14px;
+      width: 9px;
+      height: 279px;
+
+      border: 2px solid $base-color-4;
+      border-right: 2px solid $element-background;
+    }
+  }
+}
+
+.step__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .step__button {
+  width: 100%;
   margin-top: 20px;
-  padding: 10px 40px;
+  padding: 6px 40px;
+  box-sizing: border-box;
+
+  text-align: center;
+  letter-spacing: 0.1px;
 
   &--prev {
+    padding: 0;
+    margin-top: 10px;
     background-color: $element-background;
   }
+}
 
-  &--submit {
-    padding: 10px 60px;
-    margin-top: 20px;
-  }
+.step__paragraph {
+  display: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -94,10 +188,21 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    padding: 40px;
-    margin-top: 40px;
+    padding: 45px 43px 55px;
+    margin-top: 22px;
     margin-left: 35px;
     margin-right: 35px;
+    border-radius: 20px;
+
+    &:not(:first-of-type) {
+      margin-top: 40px;
+      padding-bottom: 54px;
+    }
+
+    &:last-of-type {
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
   }
 
   .step__title {
@@ -108,28 +213,125 @@
   }
 
   .step__intro {
+    margin-top: 35px;
+
     font-size: 20px;
     line-height: 24px;
 
     order: 2;
   }
 
+  .step__paragraph {
+    display: block;
+  }
+
+  .step__parameter-count {
+    margin-top: 40px;
+  }
+
   .step__checkbox {
+    margin-top: 8px;
     order: 4;
   }
 
+  .step__inputs-wrapper {
+    position: relative;
+    width: 100%;
+    margin-top: 35px;
+    padding-top: 26px;
+
+    border-top: 1px solid $parameter-count-border;
+    order: 3;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 135px;
+
+      width: 1px;
+      height: 415px;
+
+      background-image: linear-gradient(180deg, $parameter-count-border 80%, $element-background 95%);
+    }
+  }
+
+  .step__country-choice {
+    margin-top: 15px;
+  }
+
   .step__country-title {
+    padding: 0;
+    font-weight: 700;
     font-size: 30px;
     line-height: 30px;
+
+    &::before {
+      top: 19px;
+      left: auto;
+      right: -3px;
+      width: 15px;
+      height: 15px;
+    }
   }
 
   .step__country-item {
+    margin-top: 40px;
     width: 100%;
 
     order: 3;
+
+    &:first-of-type {
+      padding-top: 25px;
+      margin-top: 35px;
+      border-top: 1px solid $parameter-count-border;
+
+      &::before {
+        top: 59px;
+        left: auto;
+        right: -1px;
+
+        width: 3px;
+        height: 250px;
+
+        border-top: none;
+        border-bottom: 0;
+      }
+    }
+
+    &:not(:first-of-type) {
+      margin-top: 38px;
+      margin-bottom: 26px;
+    }
+  }
+
+  .step__country-name {
+    width: auto;
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .step__country-flag {
+    margin-right: 33px;
+    width: 70px;
+    height: 47px;
+
+    &::before {
+      width: 70px;
+      height: 47px;
+
+      background-size: 70px 47px;
+    }
   }
 
   .step__country-textarea {
+    margin-top: 30px;
+    padding: 16px 19px;
+    width: 499px;
+    height: 141px;
+
     font-size: 20px;
     line-height: 24px;
   }
@@ -145,14 +347,47 @@
   }
 
   .step__button {
-    padding: 25px 35px;
-    border-radius: 15px;
+    position: relative;
+    margin-top: 46px;
+    padding: 29px 75px 29px 33px;
+    width: 285px;
+    border-radius: 18px;
+    box-sizing: border-box;
+
+    color: $base-color-4;
+    letter-spacing: 0;
+    text-align: left;
 
     order: 7;
 
-    &--submit {
-      padding: 25px 35px;
-      border-radius: 15px;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 33px;
+      right: 35px;
+
+      width: 10px;
+      height: 14px;
+
+      background-image: url("../../img/triangle-arrow-right.svg");
+      background-repeat: no-repeat;
+      background-size: 10px 14px;
+    }
+
+    &--prev {
+      padding-left: 31px;
+      padding-right: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      width: 178px;
+
+      &::before {
+        top: 5px;
+        right: auto;
+        left: 0;
+
+        background-image: url("../../img/triangle-arrow-left.svg");
+      }
     }
   }
 }
@@ -163,11 +398,20 @@
     align-items: center;
 
     margin: 0;
-    margin-top: 45px;
-    padding: 90px 160px;
+    margin-top: 22px;
+    padding: 95px 160px 103px;
     border-radius: 60px;
 
     position: relative;
+
+    &:not(:first-of-type) {
+      margin-top: 45px;
+      padding-bottom: 104px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 60px;
+    }
   }
 
   .step__title {
@@ -182,15 +426,131 @@
   }
 
   .step__intro {
-    width: 585px;
+    width: 100%;
+    padding-bottom: 56px;
+    padding-right: 420px;
+    margin-top: 35px;
+
+    border-bottom: 1px solid $parameter-count-border;
+  }
+
+  .step__parameter-count {
     margin-top: 30px;
   }
 
   .step__checkbox {
-    width: 245px;
+    margin: 0;
+    margin-top: 16px;
+  }
+
+  .step__inputs-wrapper {
+    margin: 0;
+    padding-top: 50px;
+    border: none;
+
+    &::before {
+      height: 530px;
+      right: 224px;
+    }
   }
 
   .step__country-item {
     width: 730px;
+
+    &:first-of-type {
+      border: none;
+      padding: 0;
+      margin-top: 70px;
+
+      &::before {
+        top: 28px;
+        right: -49px;
+        height: 261px;
+      }
+    }
+
+    &:not(:first-of-type) {
+      margin-bottom: 35px;
+    }
+  }
+
+  .step__country-title {
+    &::before {
+      right: -50px;
+    }
+  }
+
+  .step__country-flag {
+    margin-right: -155px;
+  }
+
+  .step__country-textarea {
+    padding: 21px 20px 21px 24px;
+    width: 730px;
+    height: 142px;
+
+    &:hover {
+      border-color: $range-border-hover;
+    }
+
+    &:active {
+      color: $text-color;
+      border-color: $base-color-3;
+    }
+
+    &--error {
+      border-color: $border-error;
+
+      & + .step__country-error {
+        display: block;
+      }
+    }
+  }
+
+  .step__country-error {
+    position: absolute;
+    left: 1px;
+    bottom: 7px;
+    width: 728px;
+    height: 56px;
+    padding: 15px 20px;
+    border-radius: 0 0 5px 5px;
+    box-sizing: border-box;
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: $input-error;
+    background-color: $input-disabled;
+  }
+
+  .step__button {
+    margin-top: 53px;
+
+    &:hover {
+      background-color: $decoration-element;
+    }
+
+    &:active {
+      background-color: $decoration-element;
+      color: $element-state;
+
+      &::before {
+        opacity: 0.3;
+      }
+    }
+
+    &--prev {
+      &:hover {
+        background-color: $element-background;
+        opacity: 0.7;
+      }
+
+      &:active {
+        background-color: $element-background;
+        opacity: 0.3;
+      }
+    }
   }
 }
