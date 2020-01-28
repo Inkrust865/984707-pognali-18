@@ -11,7 +11,7 @@
   <body class="body body--nojs js-body">
     <header class="page-header js-header">
       <div class="page-header__wrapper">
-        <div class="page-header__container container">
+        <div class="page-header__container page-header__container--short container">
           <a href="../index.html" class="page-header__logo">
             <picture>
               <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png 1x, img/logo-desktop-white@2x.png 2x">
@@ -122,10 +122,13 @@
         <div class=" container page__title-container">
           <h1 class="page__title page__title--form">Направления</h1>
           <div class="page__photo-desktop">
-            <p class="personal-data__level personal-data__level--top level">
-              <span class="personal-data__level-value level-value">80</span>level
+            <p class="personal-data__level personal-data__level--top level level--80">
+              <span class="personal-data__level-value level-value">
+                80
+                <span class="personal-data__level-word">level</span>
+              </span>
             </p>
-            <img class="personal-data__image personal-data__image--top" src="img/personal-data/1.jpg" width="100" height="100" alt="Мое изображение">
+            <img class="personal-data__image personal-data__image--top" src="img/demin-tablet@1x.jpg" width="190" height="190" srcset="img/demin-tablet@1x.jpg 2x" alt="Мое изображение">
           </div>
         </div>
       </div>
@@ -133,35 +136,38 @@
       <section class="personal-data">
         <div class="container personal-data__container">
           <h2 class="visually-hidden">Персональные данные</h2>
-          <p class="personal-data__level personal-data__level--bottom level">
-            <span class="personal-data__level-value level-value">80</span>level
+          <p class="personal-data__level personal-data__level--bottom level level--80">
+            <span class="personal-data__level-value level-value">
+              80
+              <span class="personal-data__level-word">level</span>
+            </span>
           </p>
-          <img class="personal-data__image personal-data__image--bottom" src="img/personal-data/1.jpg" width="100" height="100" alt="Мое изображение">
+          <img class="personal-data__image personal-data__image--bottom" src="img/demin-tablet@1x.jpg" width="190" height="190" srcset="img/demin-tablet@1x.jpg 2x" alt="Мое изображение">
           <button class="personal-data__button button" type="button">
             <span class="personal-data__hidden-letter">Сменить</span> фото
           </button>
           <div class="personal-data__hashtags personal-data__parameter">
             <label class="personal-data__caption" for="textarea1">Тэги</label>
-            <textarea class="personal-data__textarea" name="hashtags" id="textarea1">#бургер #бар #футбол #концерт #крафт</textarea>
+            <textarea class="personal-data__textarea" name="hashtags" id="textarea1" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
           </div>
           <div class="personal-data__parameter">
-            <span class="personal-data__caption">Транспорт</span>
-            <ul class="transport-list personal-data__transports">
+            <span class="personal-data__caption personal-data__caption--transport">Транспорт</span>
+            <ul class="personal-data__transports transports">
               <li class="personal-data__transport transport-item transport-item--plane personal-data__transport--current">
-                <label for="transport-plane"><span class="visually-hidden">Самолёт</span></label>
-                <input class="visually-hidden" name="transport" value="plane" id="transport-plane" type="checkbox" checked>
+                <input class="visually-hidden transports__input" name="transport" value="plane" id="transport-plane" type="checkbox" checked>
+                <label class="personal-data__transport-label transports__label transports__label--plane" for="transport-plane"><span class="visually-hidden">Авиаперелет</span></label>
               </li>
               <li class="personal-data__transport transport-item transport-item--bus personal-data__transport--current">
-                <label for="transport-bus"><span class="visually-hidden">Автобус</span></label>
-                <input class="visually-hidden" name="transport" value="bus" id="transport-bus" type="checkbox" checked>
+                <input class="visually-hidden transports__input" name="transport" value="bus" id="transport-bus" type="checkbox" checked>
+                <label class="personal-data__transport-label transports__label transports__label--bus" for="transport-bus"><span class="visually-hidden">Автотранспорт</span></label>
               </li>
               <li class="personal-data__transport transport-item transport-item--bike">
-                <label for="transport-bike"><span class="visually-hidden">Велосипед</span></label>
-                <input class="visually-hidden" name="transport" value="bike" id="transport-bike" type="checkbox">
+                <input class="visually-hidden transports__input" name="transport" value="bike" id="transport-bike" type="checkbox">
+                <label class="personal-data__transport-label transports__label transports__label--bike" for="transport-bike"><span class="visually-hidden">Велосипед</span></label>
               </li>
               <li class="personal-data__transport transport-item transport-item--man personal-data__transport--current">
-                <label for="transport-man"><span class="visually-hidden">Пешком</span></label>
-                <input class="visually-hidden" name="transport" value="man" id="transport-man" type="checkbox" checked>
+                <input class="visually-hidden transports__input" name="transport" value="man" id="transport-man" type="checkbox" checked>
+                <label class="personal-data__transport-label transports__label transports__label--man" for="transport-man"><span class="visually-hidden">Пешком</span></label>
               </li>
             </ul>
           </div>
@@ -204,19 +210,13 @@
             <h2 class="add-plan__title">Добавить план:</h2>
             <ul class="add-plan__navigation-list add-plan__navigation-list--top">
               <li class="add-plan__navigation-item">
-                <a class="add-plan__navigation-button add-plan__navigation-button--current" href="#">
-                  <span class="add-plan__navigation-title">Даты</span>
-                </a>
+                <a class="add-plan__navigation-button add-plan__navigation-button--current" href="#"></a>
               </li>
               <li class="add-plan__navigation-item">
-                <a class="add-plan__navigation-button add-plan__navigation-button--current" href="#">
-                  <span class="add-plan__navigation-title">Маршрут</span>
-                </a>
+                <a class="add-plan__navigation-button" href="#"></a>
               </li>
               <li class="add-plan__navigation-item">
-                <a class="add-plan__navigation-button add-plan__navigation-button--current" href="#">
-                  <span class="add-plan__navigation-title">Развлечения</span>
-                </a>
+                <a class="add-plan__navigation-button" href="#"></a>
               </li>
             </ul>
             <div class="step">
@@ -259,8 +259,8 @@
                 <button class="parameter-count__button parameter-count__button--plus" type="button" aria-label="Увеличить"></button>
               </p>
               <p class="step__checkbox checkbox">
-                <label for="checkbox-children">Можно с детьми</label>
-                <input class="visually-hidden" name="with-children" id="checkbox-children" type="checkbox" checked>
+                <input class="visually-hidden checkbox__input" name="with-children" id="checkbox-children" type="checkbox" checked>
+                <label class="checkbox__label checkbox__label--children" for="checkbox-children">Можно с детьми</label>
               </p>
               <div class="calendar">
                 <p class="calendar__title">
@@ -291,7 +291,7 @@
                   </li>
                   <li class="calendar__day-week calendar__day-week--red">
                     с
-                    <span class="caledar__hidden-letter">р</span>
+                    <span class="caledar__hidden-letter">б</span>
                   </li>
                   <li class="calendar__day-week calendar__day-week--red">
                     в
@@ -319,7 +319,7 @@
                       28
                     </td>
                     <td class="calendar__day-number">
-                      1
+                      1<span class="calendar__note">мар</span>
                     </td>
                   </tr>
                   <tr>
@@ -398,11 +398,13 @@
                     <td class="calendar__day-number">
                       24
                     </td>
-                    <td class="calendar__day-numbert">
+                    <td class="calendar__day-number">
                       25
                     </td>
                     <td class="calendar__day-number calendar__day-number--current calendar__day-number--today">
-                      <label for="input-date-32">26</label>
+                      <label for="input-date-32">
+                        26<span class="calendar__note calendar__note--trip">Заезд</span>
+                      </label>
                       <input class="visually-hidden" id="input-date-32" type="date" name="day" value="2019-04-26">
                     </td>
                     <td class="calendar__day-number calendar__day-number--current">
@@ -410,7 +412,9 @@
                       <input class="visually-hidden" id="input-date-33" type="date" name="day" value="2019-04-27">
                     </td>
                     <td class="calendar__day-number calendar__day-number--current">
-                      <label for="input-date-34">28</label>
+                      <label for="input-date-34">
+                        28<span class="calendar__note calendar__note--trip">Выезд</span>
+                      </label>
                       <input class="visually-hidden" id="input-date-34" type="date" name="day" value="2019-04-28">
                     </td>
                     <td class="calendar__day-number calendar__day-number--future">
@@ -425,7 +429,7 @@
                       31
                     </td>
                     <td class="calendar__day-number calendar__day-number--future">
-                      1
+                      1<span class="calendar__note">апр</span>
                     </td>
                     <td class="calendar__day-number calendar__day-number--future">
                       2
@@ -450,7 +454,7 @@
                 <span class="step__subtitle">Маршрут</span>
               </h3>
               <p class="step__intro">
-                Укажите страны, которые вы хотели по посетить. Это может быть одна или сразу несколько.
+                Укажите страны, которые вы хотели по посетить. <br class="step__paragraph">Это может быть одна или сразу несколько.
               </p>
               <ul class="add-plan__navigation-list add-plan__navigation-list--step">
                 <li class="add-plan__navigation-item">
@@ -469,25 +473,78 @@
                   </a>
                 </li>
               </ul>
-              <div class="step__country-choiсe country-choiсe country-choiсe--done">
-                <select class="country-choiсe__select" name="country-1">
-                  <option value="bosnia">Босния и Герцеговина</option>
-                </select>
-                <span class="flag flag--bosnia"></span>
-              </div>
-              <div class="step__country-choiсe country-choiсe country-choiсe--done">
-                <select class="country-choiсe__select" name="country-2">
-                  <option value="czech">Чехия</option>
-                </select>
-                <span class="flag flag--czech"></span>
-              </div>
-              <div class="step__country-choiсe country-choiсe country-choiсe--choose">
-                <select class="country-choiсe__select country-choiсe__select--choose" name="country-3">
-                  <option value="null">Выберите страну</option>
-                </select>
-              </div>
-              <div class="step__country-choiсe country-choiсe country-choiсe--add">
-                <button class="country-choiсe__select country-choiсe__select--button" type="button">Добавить страну</button>
+              <div class="step__inputs-wrapper">
+                <div class="step__country-choice country-choice country-choice--done">
+                  <input class="country-choice__select country-choice__select--done" name="country-1" type="text" value="Босния и Герцеговина">
+                  <button class="country-choice__button" type="button" aria-label="Выбрать страну"></button>
+                  <span class="country-choice__flag flag flag--bosnia"></span>
+                  <button class="country-choice__button-close" type="button" aria-label="Убрать поле"></button>
+                </div>
+                <div class="step__country-choice country-choice country-choice--done">
+                  <input class="country-choice__select country-choice__select--done" name="country-2" type="text" value="Чехия">
+                  <button class="country-choice__button" type="button" aria-label="Выбрать страну"></button>
+                  <span class="country-choice__flag flag flag--czech"></span>
+                  <button class="country-choice__button-close" type="button" aria-label="Убрать поле"></button>
+                </div>
+                <div class="step__country-choice country-choice country-choice--choose js-choice-wrapper">
+                  <input class="country-choice__select country-choice__select--choose js-choice-input" name="country-3" type="text" value="Выберите страну">
+                  <button class="country-choice__button country-choice__button--choose js-choice-button" type="button" aria-label="Выбрать страну"></button>
+                  <button class="country-choice__button-close js-choice-close" type="button" aria-label="Убрать поле"></button>
+                  <div class="country-choice__modal js-choice-modal">
+                    <table class="country-choice__alphabet filter__alphabet--form">
+                      <tr class="country-choice__letter-row filter__letter-row">
+                        <td class="country-choice__letter country-choice__letter--current filter__letter filter__letter--current">a</td>
+                        <td class="country-choice__letter filter__letter">б</td>
+                        <td class="country-choice__letter filter__letter">в</td>
+                        <td class="country-choice__letter filter__letter">г</td>
+                        <td class="country-choice__letter filter__letter">д</td>
+                      </tr>
+                      <tr class="country-choice__letter-row filter__letter-row">
+                        <td class="country-choice__letter filter__letter">е</td>
+                        <td class="country-choice__letter filter__letter">з</td>
+                        <td class="country-choice__letter filter__letter">и</td>
+                        <td class="country-choice__letter filter__letter">к</td>
+                        <td class="country-choice__letter filter__letter">л</td>
+                      </tr>
+                      <tr class="country-choice__letter-row filter__letter-row">
+                        <td class="country-choice__letter filter__letter">м</td>
+                        <td class="country-choice__letter filter__letter">н</td>
+                        <td class="country-choice__letter filter__letter">о</td>
+                        <td class="country-choice__letter filter__letter">п</td>
+                        <td class="country-choice__letter filter__letter">р</td>
+                      </tr>
+                      <tr class="country-choice__letter-row filter__letter-row">
+                        <td class="country-choice__letter filter__letter">с</td>
+                        <td class="country-choice__letter filter__letter">т</td>
+                        <td class="country-choice__letter filter__letter">у</td>
+                        <td class="country-choice__letter filter__letter">ф</td>
+                        <td class="country-choice__letter filter__letter">х</td>
+                      </tr>
+                      <tr class="country-choice__letter-row filter__letter-row">
+                        <td class="country-choice__letter filter__letter">ч</td>
+                        <td class="country-choice__letter filter__letter">ш</td>
+                        <td class="country-choice__letter filter__letter">э</td>
+                        <td class="country-choice__letter filter__letter">ю</td>
+                        <td class="country-choice__letter filter__letter">я</td>
+                      </tr>
+                    </table>
+                    <ul class="country-choice__countries filter__countries">
+                      <li class="filter__country">Афганистан</li>
+                      <li class="filter__country">Албания</li>
+                      <li class="filter__country">Алжир</li>
+                      <li class="filter__country">Андорра</li>
+                      <li class="filter__country">Аргентина</li>
+                      <li class="filter__country">Армения</li>
+                      <li class="filter__country">Австралия</li>
+                      <li class="filter__country">Австрия</li>
+                      <li class="filter__country">Азербайджан</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="step__country-choice country-choice country-choice--add">
+                  <button class="country-choice__select country-choice__select--button" type="button">Добавить страну</button>
+                  <button class="country-choice__button country-choice__button--add" type="button" aria-label="Выбрать страну"></button>
+                </div>
               </div>
               <div class="step__buttons">
                 <a class="button step__button" href="#">Следующий шаг</a>
@@ -500,7 +557,7 @@
                 <span class="step__subtitle">Развлечения</span>
               </h3>
               <p class="step__intro">
-                Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.
+                Наконец, расскажите о своих планах времяпровождения. <br class="step__paragraph">Можно писать в свободной форме и ставить тэги.
               </p>
               <ul class="add-plan__navigation-list add-plan__navigation-list--step">
                 <li class="add-plan__navigation-item">
@@ -524,17 +581,19 @@
                   <span class="step__country-name">Босния и Герцеговина</span>
                   <span class="step__country-flag flag flag--bosnia"></span>
                 </label>
-                <textarea class="step__country-textarea" name="action-plan-bosnia" id="action-plan-1" cols="30" rows="10" placeholder="План действий"></textarea>
+                <textarea class="step__country-textarea js-textarea" name="action-plan-bosnia" id="action-plan-1" cols="30" rows="10" placeholder="План действий"></textarea>
+                <span class="step__country-error">Это поле должно быть заполнено</span>
               </div>
               <div class="step__country-item">
                 <label class="step__country-title" for="action-plan-2">
                   <span class="step__country-name">Чехия</span>
                   <span class="step__country-flag flag flag--czech"></span>
                 </label>
-                <textarea class="step__country-textarea" name="action-plan-czech" id="action-plan-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                <textarea class="step__country-textarea js-textarea" name="action-plan-czech" id="action-plan-2" cols="30" rows="10" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться&nbsp;архитектурой и вот это все.</textarea>
+                <span class="step__country-error">Это поле должно быть заполнено</span>
               </div>
               <div class="step__buttons">
-                <button class="button step__button--submit">Отправить</button>
+                <button class="button step__button js-button-send">Отправить</button>
                 <a class="button step__button step__button--prev" href="#">На шаг назад</a>
               </div>
             </div>
@@ -620,5 +679,7 @@
     </footer>
 
     <script src="js/main-nav.js"></script>
+    <script src="js/country-choice.js"></script>
+    <script src="js/textarea-error.js"></script>
   </body>
 </html>

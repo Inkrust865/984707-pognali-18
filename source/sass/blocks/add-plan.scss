@@ -1,6 +1,6 @@
 .add-plan {
   padding: 25px 0 70px;
-  margin-top: -25px;
+  margin-top: -22px;
 
   background-color: $add-plan-background;
   border-radius: 25px 25px 0 0;
@@ -8,11 +8,63 @@
   z-index: 4;
 }
 
+.add-plan__container {
+  position: relative;
+}
+
+.add-plan__navigation-list {
+  @include list-reset;
+
+  &--top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 15px;
+    right: 43px;
+
+    width: 47px;
+  }
+
+  &--step {
+    display: none;
+  }
+}
+
+.add-plan__navigation-button {
+  position: relative;
+  display: block;
+
+  width: 5px;
+  height: 5px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 5px;
+
+    background-color: $navigation-dot;
+    border-radius: 50%;
+  }
+
+  &--current {
+    &::before {
+      background-color: $base-color-4;
+    }
+  }
+}
+
 .add-plan__navigation-title {
   display: none;
 }
 
 .add-plan__title {
+  margin-top: 5px;
+
   font-family: $main-font;
   font-weight: 700;
   font-size: 24px;
@@ -20,16 +72,19 @@
   color: $base-color-4;
 }
 
-.add-plan__navigation-list {
-  @include list-reset;
-}
-
 @media (min-width: $tablet-width) {
   .add-plan__title {
+    margin-top: 17px;
     margin-left: 35px;
 
     font-size: 36px;
     line-height: 50px;
+  }
+
+  .add-plan__navigation-list {
+    top: 40px;
+    right: 75px;
+    width: 75px;
   }
 }
 
@@ -47,18 +102,35 @@
     &--step {
       display: block;
       position: absolute;
+      top: 107px;
+      right: 207px;
+
+      width: 180px;
       z-index: 5;
-      top: 100px;
-      right: 230px;
     }
   }
 
   .add-plan__navigation-item {
     &:not(:first-of-type) {
-      margin-top: 20px;
+      margin-top: 23px;
+    }
+  }
+
+  .add-plan__navigation-button {
+    padding-left: 41px;
+    width: auto;
+    height: auto;
+
+    opacity: 0.6;
+
+    &::before {
+      top: 7px;
+      left: 0;
     }
 
-    padding-left: 45px;
+    &--current {
+      opacity: 1;
+    }
   }
 
   .add-plan__navigation-title {
@@ -70,6 +142,7 @@
     line-height: 20px;
     color: $navigation;
     text-transform: uppercase;
+    letter-spacing: 2px;
 
     opacity: 0.6;
 
@@ -79,14 +152,7 @@
   }
 
   .add-plan__title {
-    margin-left: 65px;
-  }
-
-  .add-plan__navigation-button {
-    opacity: 0.6;
-
-    &--current {
-      opacity: 1;
-    }
+    margin-top: 26px;
+    margin-left: 70px;
   }
 }

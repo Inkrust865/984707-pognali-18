@@ -22,6 +22,18 @@
     background-color: $base-color-1;
     border-radius: 3px;
   }
+
+  &--children {
+    min-height: 26px;
+    padding-left: 40px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+
+      border: 1px solid $border-element;
+    }
+  }
 }
 
 .checkbox__input:checked {
@@ -36,6 +48,13 @@
       background-image: url("../../img/tick.svg");
       background-repeat: no-repeat;
       background-size: 9px 9px;
+    }
+
+    &--children {
+      &::after {
+        top: 8px;
+        left: 9px;
+      }
     }
   }
 }
@@ -52,6 +71,23 @@
       width: 24px;
       height: 24px;
     }
+
+    &--children {
+      min-height: 36px;
+      padding-left: 60px;
+
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: $base-color-4;
+
+      &::before {
+        width: 34px;
+        height: 34px;
+      }
+    }
   }
 
   .checkbox__input:checked {
@@ -62,6 +98,13 @@
         width: 12px;
         height: 12px;
         background-size: 12px 12px;
+      }
+
+      &--children {
+        &::after {
+          top: 13px;
+          left: 14px;
+        }
       }
     }
   }
@@ -78,7 +121,33 @@
     }
 
     &:active {
-      opacity: 0.3;
+      &::after {
+        opacity: 0.3;
+      }
+    }
+
+    &--children {
+      width: 186px;
+
+      &:hover {
+        color: $base-color-4;
+
+        &::before {
+          border-color: $range-border-hover;
+          opacity: 1;
+        }
+      }
+
+      &:active {
+        &::before {
+          background-color: $filter-background;
+          border-color: $filter-background;
+        }
+
+        &::after {
+          opacity: 0.3;
+        }
+      }
     }
   }
 }

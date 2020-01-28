@@ -236,7 +236,7 @@
       background-color: $element-background;
     }
 
-    &:disabled {
+    &--error {
       position: relative;
       background-color: $input-disabled;
 

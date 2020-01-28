@@ -111,10 +111,16 @@
 }
 
 @media (min-width: $desktop-width) {
-  .page--form .page__title-wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  .page--form {
+    .page__title-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .page__title-container {
+      padding-top: 60px;
+    }
   }
 
   .page--form .page__photo-desktop {
@@ -133,6 +139,10 @@
 
   .page__title {
     margin-left: 66px;
+
+    &--form {
+      margin-top: 52px;
+    }
   }
 
   .page__link {
