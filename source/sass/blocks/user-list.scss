@@ -1,6 +1,9 @@
 .user-list {
+  @include list-reset;
   display: flex;
   position: relative;
+
+  text-transform: uppercase;
 
   &--intro {
     flex-grow: 1;

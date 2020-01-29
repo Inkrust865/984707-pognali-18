@@ -37,13 +37,15 @@
 
 @media (min-width: $desktop-width) {
   .select-travelmates {
-    width: 280px;
+    width: 283px;
     margin: 0;
-    padding-left: 45px;
-    padding-right: 45px;
-    padding-bottom: 45px;
+    padding: 47px 45px 45px;
     box-sizing: border-box;
 
     order: 2;
+  }
+
+  .select-travelmates__phrase {
+    margin-bottom: 22px;
   }
 }

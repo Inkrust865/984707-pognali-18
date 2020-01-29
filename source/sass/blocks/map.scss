@@ -1,0 +1,39 @@
+.map {
+  position: relative;
+  margin-top: -25px;
+  width: 100%;
+  height: 320px;
+
+  overflow: hidden;
+}
+
+.map__iframe {
+  width: 100%;
+  height: 320px;
+}
+
+.map__image {
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: $tablet-width) {
+  .map {
+    height: 577px;
+    margin-top: -60px;
+  }
+
+  .map__iframe {
+    height: 577px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .map {
+    height: 515px;
+  }
+
+  .map__iframe {
+    height: 515px;
+  }
+}

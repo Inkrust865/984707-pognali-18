@@ -7,6 +7,11 @@
 
   position: relative;
   z-index: 2;
+
+  &--form {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .filter__container {
@@ -252,6 +257,11 @@
     margin-top: -60px;
     padding: 116px 0 0;
     border-radius: 0 0 60px 60px;
+
+    &--form {
+      margin: 0;
+      padding: 0;
+    }
   }
 
   .filter__container {
@@ -414,6 +424,10 @@
     padding: 116px 0 0;
 
     background-color: $element-background;
+
+    &--form {
+      padding: 0;
+    }
   }
 
   .filter__container {
